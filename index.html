@@ -12,574 +12,236 @@
         * { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; background-color: var(--dark); color: #fff; margin: 0; }
         .font-serif { font-family: 'Playfair Display', serif; }
-
-        /* Rainbow gradient text */
         .rainbow-text {
             background: linear-gradient(90deg, #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #8b5cf6);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
-
-        /* Ticker tape */
         @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .ticker-inner { display: flex; width: max-content; animation: ticker 20s linear infinite; }
-        .ticker-inner:hover { animation-play-state: paused; }
-
-        /* Factory gallery infinite scroll */
+        .ticker-inner { display: flex; width: max-content; animation: ticker 25s linear infinite; }
         @keyframes galleryScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .gallery-track:hover { animation-play-state: paused; cursor: grab; }
-
-        /* Floating CTA pulse */
+        .gallery-track { display: flex; width: max-content; animation: galleryScroll 45s linear infinite; gap: 15px; }
+        .gallery-track:hover { animation-play-state: paused; }
         @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.6); } 70% { box-shadow: 0 0 0 16px rgba(201,168,76,0); } }
         .pulse-btn { animation: pulse-gold 2s infinite; }
-
-        /* Product card hover */
-        .product-card { transition: all 0.35s ease; border: 1px solid rgba(255,255,255,0.08); }
+        .product-card { transition: all 0.35s ease; border: 1px solid rgba(255,255,255,0.08); background: #111; }
         .product-card:hover { transform: translateY(-8px); border-color: var(--gold); }
-        .product-card img { transition: transform 0.5s ease; }
-        .product-card:hover img { transform: scale(1.05); }
-
-        /* Section fade-in */
         .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-        /* Process step */
-        .step-dot { width: 48px; height: 48px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; color: #000; flex-shrink: 0; }
-        .step-line { flex: 1; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin: 0 12px; }
-
-        /* WhatsApp green */
-        .wa-btn { background: #25D366; }
-        .wa-btn:hover { background: #1ebe5a; }
     </style>
 </head>
 <body>
 
-    <!-- ══════════════════════════════════════�?         HEADER �?Fixed navigation
-    ════════════════════════════════════════ -->
+    <!-- HEADER -->
     <header class="fixed top-0 w-full z-50 bg-black/85 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold tracking-tight">
-                YFON <span class="rainbow-text">HOME</span>
-            </a>
-            <nav class="hidden md:flex items-center gap-5 text-sm font-medium text-gray-300">
+            <a href="index.html" class="text-2xl font-bold tracking-tight">YFON <span class="rainbow-text">HOME</span></a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
                 <a href="rugs.html" class="hover:text-white transition">Rugs</a>
                 <a href="pillows.html" class="hover:text-white transition">Pillows</a>
                 <a href="blankets.html" class="hover:text-white transition">Blankets</a>
                 <a href="towels.html" class="hover:text-white transition">Towels</a>
                 <a href="pins.html" class="hover:text-white transition">Pins</a>
                 <a href="gifts.html" class="hover:text-white transition">Gifts</a>
-                <a href="#inquiry" class="px-5 py-2 rounded-full text-black font-bold" style="background:var(--gold)">Get a Free Quote</a>
+                <a href="#inquiry" class="px-5 py-2 rounded-full text-black font-bold" style="background:var(--gold)">Get a Quote</a>
             </nav>
-            <!-- Mobile menu button -->
-            <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-white/10 px-6 py-4 space-y-3 text-sm">
-            <a href="#products" class="block text-gray-300 hover:text-white">Products</a>
-            <a href="#factory" class="block text-gray-300 hover:text-white">Our Factory</a>
-            <a href="#process" class="block text-gray-300 hover:text-white">How It Works</a>
-            <a href="#inquiry" class="block font-bold" style="color:var(--gold)">Get a Free Quote</a>
         </div>
     </header>
 
-
-    <!-- ══════════════════════════════════════�?         1. HERO �?Full-screen banner
-    ════════════════════════════════════════ -->
-    <section class="relative h-screen min-h-[600px] flex items-center overflow-hidden">
-        <!-- Hero Image �?luxury custom rug showroom -->
-        <img src="https://sc02.alicdn.com/kf/Ab3d7b2331a3d48619c4ea248b9e999feb.png"
-             alt="YFON HOME Custom Rugs"
-             class="absolute inset-0 w-full h-full object-cover opacity-60">
-        <!-- Gradient overlay -->
-        <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(10,10,10,0.95) 40%, rgba(10,10,10,0.2) 100%);"></div>
-
-        <!-- Hero copy �?left aligned -->
+    <!-- HERO SECTION -->
+    <section class="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+        <img src="https://sc02.alicdn.com/kf/Ab3d7b2331a3d48619c4ea248b9e999feb.png" alt="YFON HOME Luxury Rug" class="absolute inset-0 w-full h-full object-contain bg-black opacity-70">
+        <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(10,10,10,0.95) 30%, rgba(10,10,10,0) 100%);"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
             <div class="max-w-2xl">
-                <p class="text-xs tracking-[0.3em] uppercase mb-4" style="color:var(--gold)">Custom Home Products Manufacturer · Est. 2014</p>
-                <h1 class="font-serif text-5xl md:text-7xl leading-[1.05] mb-6">
-                    Transform Your<br>Vision into <span class="rainbow-text italic">Art.</span>
-                </h1>
-                <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-                    The full-service partner for fashion brands, designers & artists. We craft high-end custom rugs, pillows, blankets and more �?from concept to final stitch.
-                </p>
+                <p class="text-xs tracking-[0.3em] uppercase mb-4 font-semibold" style="color:var(--gold)">B2B MANUFACTURING EXPERT · SINCE 2014</p>
+                <h1 class="font-serif text-5xl md:text-8xl leading-none mb-6">Transform Your<br>Vision into <span class="rainbow-text italic">Art.</span></h1>
+                <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-10">The full-service partner for fashion brands, designers and artists. We craft high-end custom rugs, pillows, blankets and more — from concept to final stitch.</p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#inquiry" class="px-8 py-4 rounded-full text-black font-bold text-lg hover:opacity-90 transition" style="background:var(--gold)">
-                        START YOUR PROJECT �?                    </a>
-                    <a href="#products" class="px-8 py-4 rounded-full border border-white/30 text-white font-semibold text-lg hover:bg-white/10 transition">
-                        View Our Products
-                    </a>
+                    <a href="#inquiry" class="px-10 py-5 rounded-full text-black font-bold text-lg hover:opacity-90 transition shadow-2xl" style="background:var(--gold)">START YOUR PROJECT</a>
+                    <a href="#products" class="px-10 py-5 rounded-full border border-white/30 text-white font-semibold text-lg hover:bg-white/10 transition">View Products</a>
                 </div>
             </div>
         </div>
-
-        <!-- Scroll hint -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 text-xs tracking-widest animate-bounce">SCROLL</div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/30 text-xs tracking-widest animate-bounce">SCROLL DOWN</div>
     </section>
 
-
-    <!-- ══════════════════════════════════════�?         1.5 CUSTOMIZATION BANNER �?Full-width
-    ════════════════════════════════════════ -->
-    <div class="w-full overflow-hidden" style="max-height:640px;">
-        <img src="https://sc02.alicdn.com/kf/Hef8f99857bd54dcd97b515c31edfeffcm.jpg"
-             alt="All Is About Customization �?Design, Size, Color, Shape"
-             style="width:100%; height:640px; object-fit:cover; object-position:center; display:block;">
-    </div>
-
-
-    <!-- ══════════════════════════════════════�?         2. FACTORY PHOTO GALLERY �?Infinite scroll
-    ════════════════════════════════════════ -->
-    <div class="factory-gallery-wrap overflow-hidden border-y border-white/10" style="background:#0a0a0a; padding: 0;">
-
-        <!-- Label -->
-        <div class="text-center py-6">
-            <p class="text-xs tracking-[0.3em] uppercase" style="color:var(--gold)">�?Real Factory · Real Craftsmanship · Real Capacity �?/p>
+    <!-- CUSTOMIZATION BANNER -->
+    <section class="w-full bg-[#050505] overflow-hidden">
+        <div class="max-w-7xl mx-auto py-10 px-6 text-center">
+             <p class="text-xs tracking-[0.3em] uppercase mb-4" style="color:var(--gold)">Craftsmanship Reimagined</p>
         </div>
+        <img src="https://sc02.alicdn.com/kf/Hef8f99857bd54dcd97b515c31edfeffcm.jpg" alt="All Is About Customization" class="w-full h-auto object-contain bg-black shadow-2xl" style="max-height:800px;">
+    </section>
 
-        <!-- Scrolling track �?images duplicated for seamless infinite loop -->
-        <div class="gallery-track" style="display:flex; width:max-content; animation: galleryScroll 40s linear infinite; gap:12px; padding: 0 6px 24px 6px;">
-
-            <!-- === SET 1 === -->
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H21bb756f9349441c8518ce9c9cf05be1p.jpg" alt="YFON Factory �?Die cut rug production" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H60c4d2695cff41a384000e4b1df0bbb1m.jpg" alt="YFON Factory �?Coir mats outdoor drying" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H910871d3dedc4d749972881a1672da88h.jpg" alt="YFON Factory �?Branded rug machine production" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/Hd38cae2562b64c35ad2d983af34d6724h.jpg" alt="YFON Factory �?Large custom rug machinery" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/Hdae222b596a6470099ee14200f716903S.jpg" alt="YFON Factory �?Workers die-cutting rugs" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H0f50e01663194f2396a0df1e135c895fZ.jpg" alt="YFON Factory �?Mass production floor" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H906b8f1a633342a9ba78260ad38336c67.jpg" alt="YFON Factory �?Towel printing rolls" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H2d1f83f40cce4059b4d70b9abdcafe49j.jpg" alt="YFON Factory �?Hand tufting artisan" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H9b92654641d048809315489c31c35322E.jpg" alt="YFON Factory �?Laser cut rug shapes" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H12bc664813004a6aa7584a2f31a07644K.jpg" alt="YFON Factory �?Enamel pin machine filling" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/Hba6f99baccb54b21a44744f94d9b4606T.jpg" alt="YFON Factory �?Blanket QC warehouse" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H2abf7bffaf2c46eca094abac3655bfe4v.jpg" alt="YFON Factory �?Pin assembly workers" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/He52618aa076d481ba15e9977d964d3b36.jpg" alt="YFON Factory �?Finished rugs packing" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-
-            <!-- === SET 2 �?exact duplicate for seamless infinite loop === -->
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H21bb756f9349441c8518ce9c9cf05be1p.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H60c4d2695cff41a384000e4b1df0bbb1m.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H910871d3dedc4d749972881a1672da88h.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/Hd38cae2562b64c35ad2d983af34d6724h.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/Hdae222b596a6470099ee14200f716903S.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H0f50e01663194f2396a0df1e135c895fZ.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H906b8f1a633342a9ba78260ad38336c67.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H2d1f83f40cce4059b4d70b9abdcafe49j.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H9b92654641d048809315489c31c35322E.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H12bc664813004a6aa7584a2f31a07644K.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/Hba6f99baccb54b21a44744f94d9b4606T.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/H2abf7bffaf2c46eca094abac3655bfe4v.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div class="gallery-item" style="flex-shrink:0; width:340px; height:240px; overflow:hidden; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <img src="https://sc02.alicdn.com/kf/He52618aa076d481ba15e9977d964d3b36.jpg" alt="Factory" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
+    <!-- FACTORY PHOTO GALLERY -->
+    <div class="py-20 border-y border-white/10 bg-[#0a0a0a]">
+        <div class="text-center mb-12">
+            <p class="text-xs tracking-[0.4em] uppercase font-bold" style="color:var(--gold)">REAL FACTORY · REAL QUALITY · REAL CAPACITY</p>
         </div>
-
-        <!-- Bottom data strip -->
-        <div class="ticker-inner text-xs font-semibold tracking-widest text-white/50 whitespace-nowrap border-t border-white/5 py-3" style="animation-duration:25s;">
-            <span class="px-10">�?10+ YEARS INDUSTRY EXPERIENCE</span>
-            <span class="px-10" style="color:var(--gold)">�?2000+ HAPPY CLIENTS WORLDWIDE</span>
-            <span class="px-10">�?MOQ FROM 1 PIECE</span>
-            <span class="px-10" style="color:var(--gold)">�?15-DAY SAMPLE TURNAROUND</span>
-            <span class="px-10">�?50+ COUNTRIES SERVED</span>
-            <span class="px-10" style="color:var(--gold)">�?98.92% RESPONSE RATE</span>
-            <span class="px-10">�?PARTNER OF LEADING US BRANDS</span>
-            <span class="px-10">�?10+ YEARS INDUSTRY EXPERIENCE</span>
-            <span class="px-10" style="color:var(--gold)">�?2000+ HAPPY CLIENTS WORLDWIDE</span>
-            <span class="px-10">�?MOQ FROM 1 PIECE</span>
-            <span class="px-10" style="color:var(--gold)">�?15-DAY SAMPLE TURNAROUND</span>
-            <span class="px-10">�?50+ COUNTRIES SERVED</span>
-            <span class="px-10" style="color:var(--gold)">�?98.92% RESPONSE RATE</span>
-            <span class="px-10">�?PARTNER OF LEADING US BRANDS</span>
+        <div class="overflow-hidden px-4">
+            <div class="gallery-track">
+                <!-- SET 1 -->
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H21bb756f9349441c8518ce9c9cf05be1p.jpg" class="w-full h-full object-cover"></div>
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H60c4d2695cff41a384000e4b1df0bbb1m.jpg" class="w-full h-full object-cover"></div>
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H910871d3dedc4d749972881a1672da88h.jpg" class="w-full h-full object-cover"></div>
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/Hd38cae2562b64c35ad2d983af34d6724h.jpg" class="w-full h-full object-cover"></div>
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/Hdae222b596a6470099ee14200f716903S.jpg" class="w-full h-full object-cover"></div>
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H0f50e01663194f2396a0df1e135c895fZ.jpg" class="w-full h-full object-cover"></div>
+                <!-- SET 2 -->
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H21bb756f9349441c8518ce9c9cf05be1p.jpg" class="w-full h-full object-cover"></div>
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H60c4d2695cff41a384000e4b1df0bbb1m.jpg" class="w-full h-full object-cover"></div>
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H910871d3dedc4d749972881a1672da88h.jpg" class="w-full h-full object-cover"></div>
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/Hd38cae2562b64c35ad2d983af34d6724h.jpg" class="w-full h-full object-cover"></div>
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/Hdae222b596a6470099ee14200f716903S.jpg" class="w-full h-full object-cover"></div>
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H0f50e01663194f2396a0df1e135c895fZ.jpg" class="w-full h-full object-cover"></div>
+            </div>
         </div>
     </div>
 
+    <!-- DATA TICKER -->
+    <div class="bg-white py-4 overflow-hidden">
+        <div class="ticker-inner text-black font-bold text-xs tracking-widest uppercase">
+            <span class="px-10">10+ YEARS EXPERIENCE</span><span class="px-10">2000+ HAPPY CLIENTS</span><span class="px-10">MOQ FROM 1 PIECE</span><span class="px-10">98.92% RESPONSE RATE</span><span class="px-10">PARTNER OF LEADING US BRANDS</span>
+            <span class="px-10">10+ YEARS EXPERIENCE</span><span class="px-10">2000+ HAPPY CLIENTS</span><span class="px-10">MOQ FROM 1 PIECE</span><span class="px-10">98.92% RESPONSE RATE</span><span class="px-10">PARTNER OF LEADING US BRANDS</span>
+        </div>
+    </div>
 
-    <!-- ══════════════════════════════════════�?         3. PRODUCT SHOWCASE �?6 category cards
-    ════════════════════════════════════════ -->
-    <section id="products" class="py-28 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16 fade-up">
-            <p class="text-xs tracking-[0.3em] uppercase mb-3" style="color:var(--gold)">What We Create</p>
-            <h2 class="font-serif text-4xl md:text-6xl mb-4">Customization is <span class="rainbow-text">Our Essence.</span></h2>
-            <p class="text-gray-400 max-w-2xl mx-auto text-lg">From one-of-a-kind shaped rugs to die-cut branded pillows �?if you can dream it, we can make it.</p>
+    <!-- PRODUCT SHOWCASE -->
+    <section id="products" class="py-32 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20 fade-up">
+            <p class="text-xs tracking-[0.3em] uppercase mb-4" style="color:var(--gold)">What We Create</p>
+            <h2 class="font-serif text-5xl md:text-7xl mb-6">Customization is <span class="rainbow-text">Our Essence.</span></h2>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">From one-of-a-kind shaped rugs to die-cut branded pillows — we bring your designs to life.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
-            <!-- Card 1: Custom Rugs (HERO product �?wide card) -->
-            <a href="rugs.html" class="product-card rounded-xl overflow-hidden sm:col-span-2 fade-up block" style="background:#111">
-                <div class="overflow-hidden" style="height:480px;">
-                    <img src="https://sc02.alicdn.com/kf/Ab2a44b104e0b4748ac31dc991b20dfa8y.png" alt="YFON HOME �?Custom Rug in Luxury Retail Store" class="w-full h-full object-cover">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Card 1: Custom Rugs (WIDE) -->
+            <a href="rugs.html" class="product-card rounded-2xl overflow-hidden sm:col-span-2 fade-up block">
+                <div class="overflow-hidden bg-black" style="height:550px;">
+                    <img src="https://sc02.alicdn.com/kf/Ab2a44b104e0b4748ac31dc991b20dfa8y.png" class="w-full h-full object-contain">
                 </div>
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-2">
-                        <h3 class="text-xl font-bold">Custom Rugs</h3>
-                        <span class="text-xs px-3 py-1 rounded-full border" style="border-color:var(--gold);color:var(--gold)">�?#1 Best Seller</span>
+                <div class="p-8">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-2xl font-bold">Custom Rugs & Carpets</h3>
+                        <span class="text-xs px-4 py-1 rounded-full border border-yellow-500 text-yellow-500 font-bold uppercase tracking-wider">Top Seller</span>
                     </div>
-                    <p class="text-gray-400 text-sm mb-4">Hand-tufted, die-cut irregular shapes, high-pile jacquard. Any logo, any shape �?we make it real.</p>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                        <span class="px-2 py-1 rounded bg-white/10">MOQ from 1 sq.m</span>
-                        <span class="px-2 py-1 rounded bg-white/10">3D High-Pile</span>
-                        <span class="px-2 py-1 rounded bg-white/10">Any Shape</span>
-                        <span class="px-2 py-1 rounded bg-white/10">Eco-Friendly</span>
+                    <p class="text-gray-400 mb-6">Hand-tufted, die-cut, jacquard woven. Any shape, logo or size. From 1 sq.m.</p>
+                    <div class="flex gap-3 text-xs font-semibold uppercase tracking-widest text-gray-500">
+                        <span class="px-3 py-1 bg-white/5 rounded">Hand-Tufted</span><span class="px-3 py-1 bg-white/5 rounded">Eco-Friendly</span><span class="px-3 py-1 bg-white/5 rounded">Fast Lead Time</span>
                     </div>
                 </div>
             </a>
-
-            <!-- Card 1b: Rug Lifestyle -->
-            <a href="rugs.html" class="product-card rounded-xl overflow-hidden fade-up block" style="background:#111">
-                <div class="overflow-hidden h-72">
-                    <img src="https://sc02.alicdn.com/kf/H5f5ece528d0b46ea8f2d2d0a435dff81A.jpg" alt="Custom Rug Lifestyle" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-bold mb-2">Brand Logo Rugs</h3>
-                    <p class="text-gray-400 text-sm">Branded, statement rugs that anchor any space. Ideal for showrooms, studios and retail.</p>
-                </div>
-            </div>
-
-            <!-- Card 2: Custom Pillows -->
-            <a href="pillows.html" class="product-card rounded-xl overflow-hidden fade-up block" style="background:#111">
-                <div class="overflow-hidden h-72">
-                    <img src="https://sc02.alicdn.com/kf/A4e9c76510d944478a94c4c2e699d2272d.png" alt="Custom Pillows" class="w-full h-full object-cover" style="object-position:center top;">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-bold mb-2">Custom Pillows</h3>
-                    <p class="text-gray-400 text-sm">Irregular & die-cut plush pillows with full-color sublimation print. MOQ from 1 pc.</p>
-                </div>
-            </div>
-
-            <!-- Card 3: Blankets & Tapestry -->
-            <a href="blankets.html" class="product-card rounded-xl overflow-hidden fade-up block" style="background:#111">
-                <div class="overflow-hidden h-72">
-                    <img src="https://sc02.alicdn.com/kf/A12607853391f4d4299cc60dd9ac7fa50q.png" alt="Blankets" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-bold mb-2">Blankets & Tapestry</h3>
-                    <p class="text-gray-400 text-sm">Jacquard woven cotton tapestry with tassel fringe. Bohemian & fully custom designs.</p>
-                </div>
-            </div>
-
-            <!-- Card 4: Beach Towels -->
-            <a href="towels.html" class="product-card rounded-xl overflow-hidden fade-up block" style="background:#111">
-                <div class="overflow-hidden h-72">
-                    <img src="https://sc02.alicdn.com/kf/A9cceb576ec994ae49b30dde3034e7792G.png" alt="Beach Towels" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-bold mb-2">Beach Towels</h3>
-                    <p class="text-gray-400 text-sm">Quick-dry microfiber & 100% cotton. Vibrant full-bleed sublimation. MOQ from 5 pcs.</p>
-                </div>
-            </div>
-
-            <!-- Card 5: Enamel Pins -->
-            <a href="pins.html" class="product-card rounded-xl overflow-hidden fade-up block" style="background:#111">
-                <div class="overflow-hidden h-72">
-                    <img src="https://sc02.alicdn.com/kf/A8612e17c6bcf49988c5b5e1518f364323.png" alt="Enamel Pins" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-bold mb-2">Enamel Pins & Accessories</h3>
-                    <p class="text-gray-400 text-sm">Hard & soft enamel, brooches, lapel pins. Perfect brand merchandise. MOQ 100 pcs.</p>
-                </div>
-            </div>
-
-            <!-- Card 6: Gifts & Crafts -->
-            <a href="gifts.html" class="product-card rounded-xl overflow-hidden fade-up block" style="background:#111">
-                <div class="overflow-hidden h-72">
-                    <img src="https://sc02.alicdn.com/kf/Hfe286ff7e4ce4336acd16e87844b9aa53.jpg" alt="Gifts & Crafts" class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-bold mb-2">Gifts & Crafts</h3>
-                    <p class="text-gray-400 text-sm">Custom event tents, branded pop-up displays and promotional crafts. Make your brand impossible to miss.</p>
-                </div>
-            </div>
-
+            <!-- Regular Cards -->
+            <a href="pillows.html" class="product-card rounded-2xl overflow-hidden fade-up block">
+                <div class="h-80 bg-black"><img src="https://sc02.alicdn.com/kf/A4e9c76510d944478a94c4c2e699d2272d.png" class="w-full h-full object-contain"></div>
+                <div class="p-6"><h4 class="text-xl font-bold mb-2">Custom Pillows</h4><p class="text-gray-400 text-sm">Irregular shape plush pillows. MOQ 1 pc.</p></div>
+            </a>
+            <a href="blankets.html" class="product-card rounded-2xl overflow-hidden fade-up block">
+                <div class="h-80 bg-black"><img src="https://sc02.alicdn.com/kf/A12607853391f4d4299cc60dd9ac7fa50q.png" class="w-full h-full object-contain"></div>
+                <div class="p-6"><h4 class="text-xl font-bold mb-2">Blankets & Tapestry</h4><p class="text-gray-400 text-sm">Woven & fleece custom throws. MOQ 5 pcs.</p></div>
+            </a>
+            <a href="towels.html" class="product-card rounded-2xl overflow-hidden fade-up block">
+                <div class="h-80 bg-black"><img src="https://sc02.alicdn.com/kf/A9cceb576ec994ae49b30dde3034e7792G.png" class="w-full h-full object-contain"></div>
+                <div class="p-6"><h4 class="text-xl font-bold mb-2">Beach Towels</h4><p class="text-gray-400 text-sm">Quick-dry microfiber & cotton. MOQ 5 pcs.</p></div>
+            </a>
+            <a href="pins.html" class="product-card rounded-2xl overflow-hidden fade-up block">
+                <div class="h-80 bg-black"><img src="https://sc02.alicdn.com/kf/A8612e17c6bcf49988c5b5e1518f364323.png" class="w-full h-full object-contain"></div>
+                <div class="p-6"><h4 class="text-xl font-bold mb-2">Enamel Pins</h4><p class="text-gray-400 text-sm">Hard & soft enamel brooches. MOQ 100 pcs.</p></div>
+            </a>
         </div>
     </section>
 
-
-    <!-- ══════════════════════════════════════�?         3.5 OUR VALUED CUSTOMERS �?Full-width
-    ════════════════════════════════════════ -->
-    <section class="py-20 max-w-7xl mx-auto px-6 fade-up">
-        <p class="text-white font-bold text-3xl md:text-4xl tracking-wide mb-6">Our Valued Customers</p>
-        <div class="overflow-hidden rounded-2xl shadow-2xl" style="height:500px;">
-            <img src="https://sc02.alicdn.com/kf/H97fe577180a34ec49a954ced058c263cB.jpg"
-                 alt="YFON HOME �?Our Valued Customers"
-                 style="width:100%; height:100%; object-fit:cover; object-position:center;">
+    <!-- OUR VALUED CUSTOMERS -->
+    <section class="py-24 max-w-7xl mx-auto px-6 fade-up">
+        <h2 class="font-serif text-4xl mb-8">Our Valued Customers</h2>
+        <div class="rounded-3xl overflow-hidden bg-black shadow-2xl border border-white/10" style="height:600px;">
+            <img src="https://sc02.alicdn.com/kf/H97fe577180a34ec49a954ced058c263cB.jpg" class="w-full h-full object-contain">
         </div>
     </section>
 
-
-    <!-- ══════════════════════════════════════�?         4. FACTORY ADVANTAGE �?4 core strengths
-    ════════════════════════════════════════ -->
-    <section id="factory" class="py-28" style="background:#0f0f0f">
+    <!-- WHY PARTNER -->
+    <section id="factory" class="py-32 bg-[#0f0f0f]">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="fade-up mb-12">
-                <p class="text-xs tracking-[0.3em] uppercase mb-3" style="color:var(--gold)">Why Partner With Us</p>
-                <h2 class="font-serif text-4xl md:text-5xl mb-6 leading-tight">
-                    Beyond a Factory.<br>We Are Your <span class="rainbow-text">Brand Partner.</span>
-                </h2>
-                <p class="text-gray-400 text-lg max-w-3xl">We bridge the gap between your imagination and reality �?with open communication, top-tier craftsmanship and industry-leading flexibility.</p>
+            <div class="fade-up mb-16 max-w-3xl">
+                <p class="text-xs tracking-[0.3em] uppercase mb-4" style="color:var(--gold)">Beyond Manufacturing</p>
+                <h2 class="font-serif text-5xl md:text-6xl leading-tight mb-6">We Are Your <span class="rainbow-text">Brand Partner.</span></h2>
+                <p class="text-gray-400 text-xl">Bridging the gap between imagination and reality with open communication and top-tier craftsmanship.</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-                <div class="flex items-start gap-4 bg-white/5 rounded-xl p-6">
-                    <div class="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-black font-bold text-lg" style="background:var(--gold)">01</div>
-                    <div>
-                        <h4 class="font-bold text-base mb-1">Full-Service Brand Development</h4>
-                        <p class="text-gray-400 text-sm">From initial sketch to packaged shipment �?one partner, zero gaps.</p>
-                    </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 fade-up">
+                <div class="p-8 bg-white/5 rounded-2xl border border-white/5">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center text-black font-bold text-xl mb-6" style="background:var(--gold)">01</div>
+                    <h5 class="font-bold text-lg mb-3">Full-Service Development</h5>
+                    <p class="text-gray-500 text-sm leading-relaxed">From sketch to packaged shipment — zero gaps, total reliability.</p>
                 </div>
-                <div class="flex items-start gap-4 bg-white/5 rounded-xl p-6">
-                    <div class="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-black font-bold text-lg" style="background:var(--gold)">02</div>
-                    <div>
-                        <h4 class="font-bold text-base mb-1">Unlimited Material & Design Options</h4>
-                        <p class="text-gray-400 text-sm">Any material, size, shape, color. We match your exact specs with zero compromise.</p>
-                    </div>
+                <div class="p-8 bg-white/5 rounded-2xl border border-white/5">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center text-black font-bold text-xl mb-6" style="background:var(--gold)">02</div>
+                    <h5 class="font-bold text-lg mb-3">Unlimited Options</h5>
+                    <p class="text-gray-500 text-sm leading-relaxed">Any material, size, shape or color. Zero design compromise.</p>
                 </div>
-                <div class="flex items-start gap-4 bg-white/5 rounded-xl p-6">
-                    <div class="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-black font-bold text-lg" style="background:var(--gold)">03</div>
-                    <div>
-                        <h4 class="font-bold text-base mb-1">Flexible MOQ �?Small Batch, Big Impact</h4>
-                        <p class="text-gray-400 text-sm">Custom rugs starting from just 1 square meter. Every great brand starts bold.</p>
-                    </div>
+                <div class="p-8 bg-white/5 rounded-2xl border border-white/5">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center text-black font-bold text-xl mb-6" style="background:var(--gold)">03</div>
+                    <h5 class="font-bold text-lg mb-3">Flexible MOQ</h5>
+                    <p class="text-gray-500 text-sm leading-relaxed">From 1 sq.m rugs. We believe every brand starts with one bold idea.</p>
                 </div>
-                <div class="flex items-start gap-4 bg-white/5 rounded-xl p-6">
-                    <div class="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-black font-bold text-lg" style="background:var(--gold)">04</div>
-                    <div>
-                        <h4 class="font-bold text-base mb-1">98.92% Response Rate · �?h Reply</h4>
-                        <p class="text-gray-400 text-sm">Your project never hits a wall. Our team is always on standby.</p>
-                    </div>
+                <div class="p-8 bg-white/5 rounded-2xl border border-white/5">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center text-black font-bold text-xl mb-6" style="background:var(--gold)">04</div>
+                    <h5 class="font-bold text-lg mb-3">Priority Support</h5>
+                    <p class="text-gray-500 text-sm leading-relaxed">98.92% Response Rate. We bridge the communication gap instantly.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- ══════════════════════════════════════�?         5. 4-STEP PROCESS �?How it works
-    ════════════════════════════════════════ -->
-    <section id="process" class="py-28 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16 fade-up">
-            <p class="text-xs tracking-[0.3em] uppercase mb-3" style="color:var(--gold)">Simple & Transparent</p>
-            <h2 class="font-serif text-4xl md:text-5xl mb-4">From Concept to <span class="rainbow-text">Doorstep</span></h2>
-            <p class="text-gray-400 max-w-xl mx-auto">Four clear steps. No surprises. Full visibility throughout your production journey.</p>
-        </div>
-
-        <!-- Steps �?horizontal on desktop, vertical on mobile -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center fade-up">
-
-            <div class="flex flex-col items-center">
-                <div class="w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-5 border-2" style="border-color:var(--gold);background:#111">💡</div>
-                <h3 class="font-bold text-lg mb-2">Step 1</h3>
-                <h4 class="font-semibold text-base mb-2" style="color:var(--gold)">Share Your Concept</h4>
-                <p class="text-gray-400 text-sm">Send us your artwork, mood board, sketch or just an idea. We handle the rest.</p>
-            </div>
-
-            <div class="hidden md:flex items-center justify-center text-2xl opacity-40">�?/div>
-
-            <div class="flex flex-col items-center">
-                <div class="w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-5 border-2" style="border-color:var(--gold);background:#111">🧵</div>
-                <h3 class="font-bold text-lg mb-2">Step 2</h3>
-                <h4 class="font-semibold text-base mb-2" style="color:var(--gold)">Sample Development</h4>
-                <p class="text-gray-400 text-sm">We create a physical sample matching your exact specs within 15 business days.</p>
-            </div>
-
-            <div class="hidden md:flex items-center justify-center text-2xl opacity-40">�?/div>
-
-            <div class="flex flex-col items-center">
-                <div class="w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-5 border-2" style="border-color:var(--gold);background:#111">🏭</div>
-                <h3 class="font-bold text-lg mb-2">Step 3</h3>
-                <h4 class="font-semibold text-base mb-2" style="color:var(--gold)">Mass Production</h4>
-                <p class="text-gray-400 text-sm">Precision manufacturing with rigorous QC checkpoints and live progress updates.</p>
-            </div>
-
-            <div class="hidden md:flex items-center justify-center text-2xl opacity-40">�?/div>
-
-            <div class="flex flex-col items-center">
-                <div class="w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-5 border-2" style="border-color:var(--gold);background:#111">🚀</div>
-                <h3 class="font-bold text-lg mb-2">Step 4</h3>
-                <h4 class="font-semibold text-base mb-2" style="color:var(--gold)">Global Delivery</h4>
-                <p class="text-gray-400 text-sm">Secure, insured worldwide shipping straight to your warehouse or studio.</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ══════════════════════════════════════�?         6. INQUIRY FORM �?Smart contact form
-    ════════════════════════════════════════ -->
-    <section id="inquiry" class="py-28 bg-white text-black">
+    <!-- INQUIRY FORM -->
+    <section id="inquiry" class="py-32 bg-white text-black">
         <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-14">
-                <p class="text-xs tracking-[0.3em] uppercase mb-3 text-gray-500">Start Your Project Today</p>
-                <h2 class="font-serif text-4xl md:text-5xl mb-4">Ready to Bring Your<br><span class="rainbow-text">Vision to Life?</span></h2>
-                <p class="text-gray-500 text-lg">Send us your artwork for a <strong>free digital mockup</strong> and no-obligation quote.</p>
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-5xl md:text-6xl mb-4">Ready to Bring Your<br><span class="rainbow-text">Vision to Life?</span></h2>
+                <p class="text-gray-500 text-lg font-medium">Send us your artwork for a free digital mockup and wholesale quote.</p>
             </div>
-
-            <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-5">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Full Name *</label>
-                        <input name="name" type="text" required placeholder="e.g. John Smith" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:border-transparent outline-none" style="--tw-ring-color:#c9a84c">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Company / Brand *</label>
-                        <input name="company" type="text" required placeholder="e.g. Supreme, Studio XYZ" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 outline-none">
-                    </div>
+            <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input name="name" type="text" required placeholder="Full Name" class="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-yellow-500 transition">
+                    <input name="company" type="text" required placeholder="Company / Brand" class="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-yellow-500 transition">
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Email Address *</label>
-                        <input name="email" type="email" required placeholder="you@brand.com" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">WhatsApp Number</label>
-                        <input name="whatsapp" type="tel" placeholder="+1 234 567 890" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 outline-none">
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input name="email" type="email" required placeholder="Email Address" class="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-yellow-500 transition">
+                    <input name="whatsapp" type="tel" placeholder="WhatsApp Number" class="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-yellow-500 transition">
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Product Category *</label>
-                        <select name="product" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 outline-none">
-                            <option value="">Select a category...</option>
-                            <option>Custom Rugs</option>
-                            <option>Custom Pillows</option>
-                            <option>Blankets & Tapestry</option>
-                            <option>Beach Towels</option>
-                            <option>Enamel Pins & Accessories</option>
-                            <option>Table Cloths</option>
-                            <option>Multiple / Other</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Estimated Quantity</label>
-                        <input name="quantity" type="text" placeholder="e.g. 50 pcs, 100 sq.m" class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 outline-none">
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <select name="product" class="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-2xl outline-none">
+                        <option>Product Category: Custom Rugs</option><option>Custom Pillows</option><option>Blankets & Tapestry</option><option>Beach Towels</option><option>Enamel Pins</option><option>Other</option>
+                    </select>
+                    <input name="quantity" type="text" placeholder="Estimated Quantity" class="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-yellow-500 transition">
                 </div>
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Tell Us About Your Project</label>
-                    <textarea name="message" rows="4" placeholder="Describe your design idea, material preference, deadline or any special requirements..." class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 outline-none resize-none"></textarea>
-                </div>
-                <div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
-                    <button type="submit" class="w-full sm:w-auto px-12 py-5 rounded-full text-black font-bold text-lg hover:opacity-90 transition shadow-lg" style="background:var(--gold)">
-                        GET A FREE MOCKUP �?                    </button>
-                    <a href="https://wa.me/8613613866590" target="_blank"
-                       class="wa-btn w-full sm:w-auto px-8 py-5 rounded-full text-white font-bold text-lg text-center transition">
-                        💬 WhatsApp Us Directly
-                    </a>
+                <textarea name="message" rows="4" placeholder="Tell us about your project (size, shape, design ideas)..." class="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-2xl outline-none resize-none"></textarea>
+                <div class="flex flex-col sm:flex-row items-center gap-4 pt-6">
+                    <button type="submit" class="w-full sm:w-auto px-16 py-6 rounded-full text-black font-bold text-xl hover:opacity-90 transition shadow-xl" style="background:var(--gold)">GET A FREE QUOTE</button>
+                    <a href="https://wa.me/8613613866590" target="_blank" class="w-full sm:w-auto px-10 py-6 rounded-full text-white font-bold text-xl text-center transition" style="background:#25D366">WhatsApp Us</a>
                 </div>
             </form>
         </div>
     </section>
 
-
-    <!-- ══════════════════════════════════════�?         7. FLOATING CTA BUTTON �?Always visible
-    ════════════════════════════════════════ -->
-    <a href="#inquiry"
-       class="fixed bottom-8 right-8 z-50 pulse-btn rounded-full px-6 py-4 text-black font-bold text-sm shadow-2xl flex items-center gap-2 hover:opacity-90 transition"
-       style="background:var(--gold)">
-        �?GET FREE QUOTE �?    </a>
-
-
-    <!-- ══════════════════════════════════════�?         8. FOOTER �?Professional footer
-    ════════════════════════════════════════ -->
-    <footer style="background:#050505" class="border-t border-white/10 pt-16 pb-8">
+    <!-- FOOTER -->
+    <footer style="background:#050505" class="py-16 border-t border-white/5 text-center">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <!-- Brand -->
-                <div class="md:col-span-2">
-                    <div class="text-2xl font-bold mb-4">YFON <span class="rainbow-text">HOME</span></div>
-                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
-                        Your full-service partner for premium custom home products. From concept to final stitch, we transform your vision into beautifully crafted pieces.
-                    </p>
-                    <div class="flex gap-4 mt-6">
-                        <a href="https://yfonhome.m.en.alibaba.com" target="_blank" class="px-4 py-2 rounded-full text-xs border border-white/20 hover:border-yellow-500 transition" style="color:var(--gold)">Alibaba Store �?/a>
-                        <a href="mailto:info@yfonhomecustom.com" class="px-4 py-2 rounded-full text-xs border border-white/20 hover:border-white/50 text-gray-300 transition">Email Us �?/a>
-                    </div>
-                </div>
-                <!-- Quick Nav -->
-                <div>
-                    <h4 class="font-semibold text-sm uppercase tracking-wider mb-4" style="color:var(--gold)">Quick Links</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#products" class="hover:text-white transition">Products</a></li>
-                        <li><a href="#factory" class="hover:text-white transition">Our Factory</a></li>
-                        <li><a href="#process" class="hover:text-white transition">How It Works</a></li>
-                        <li><a href="#inquiry" class="hover:text-white transition">Get a Quote</a></li>
-                    </ul>
-                </div>
-                <!-- Contact -->
-                <div>
-                    <h4 class="font-semibold text-sm uppercase tracking-wider mb-4" style="color:var(--gold)">Contact</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li>📧 info@yfonhomecustom.com</li>
-                        <li>💬 WhatsApp: +86 XXX XXXX XXXX</li>
-                        <li>📍 Zhengzhou, China</li>
-                        <li>🕐 Response within 1 hour</li>
-                    </ul>
-                </div>
+            <div class="text-2xl font-bold mb-8">YFON <span class="rainbow-text">HOME</span></div>
+            <div class="flex flex-wrap justify-center gap-8 text-sm text-gray-500 mb-10">
+                <a href="rugs.html" class="hover:text-white">Rugs</a><a href="pillows.html" class="hover:text-white">Pillows</a><a href="blankets.html" class="hover:text-white">Blankets</a><a href="pins.html" class="hover:text-white">Pins</a><a href="https://yfonhome.m.en.alibaba.com" class="text-yellow-500">Alibaba Store</a>
             </div>
-            <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
-                <span>&copy; 2026 YFON HOME (Zhengzhou Yfon Home Co., Ltd.) All Rights Reserved.</span>
-                <span>www.yfonhomecustom.com</span>
-            </div>
+            <p class="text-xs text-gray-700 uppercase tracking-widest">&copy; 2026 YFON HOME · www.yfonhomecustom.com</p>
         </div>
     </footer>
 
+    <!-- Floating CTA -->
+    <a href="#inquiry" class="fixed bottom-10 right-10 z-50 pulse-btn rounded-full px-8 py-5 text-black font-bold text-sm shadow-2xl flex items-center gap-2" style="background:var(--gold)">GET FREE QUOTE</a>
 
-    <!-- ══════════════════════════════════════�?         JS �?Scroll animation
-    ════════════════════════════════════════ -->
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.12 });
+        }, { threshold: 0.1 });
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     </script>
-
 </body>
 </html>
-
-
