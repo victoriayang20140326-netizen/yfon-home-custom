@@ -29,7 +29,7 @@
     <header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-gold flex items-center gap-2 hover:opacity-80 transition font-bold uppercase tracking-tighter">
-                <span class="text-xl">â†?/span> All Products
+                <span class="text-xl">&ndash;/span>&larr; All Products
             </a>
             <div class="hidden md:flex gap-8 text-xs uppercase tracking-widest font-semibold">
                 <a href="rugs.html" class="hover:text-gold transition">Rugs</a>
@@ -46,14 +46,14 @@
     <!-- Hero -->
     <section class="relative h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://sc02.alicdn.com/kf/Hfe286ff7e4ce4336acd16e87844b9aa53.jpg" alt="Gifts & Crafts Hero" class="w-full h-full object-cover">
+            <img src="https://sc02.alicdn.com/kf/Hfe286ff7e4ce4336acd16e87844b9aa53.jpg" alt="Gifts & Crafts Hero" class="w-full h-full object-contain" style="background:#000;">
             <div class="absolute inset-0 bg-black/60"></div>
         </div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-2xl fade-up">
                 <h1 class="text-5xl md:text-8xl font-serif italic mb-6 leading-tight">Gifts & Crafts</h1>
                 <p class="text-xl text-gray-300 mb-10 leading-relaxed">Custom event tents, branded pop-up displays, promotional textiles and one-of-a-kind gifting solutions. Make your brand impossible to miss.</p>
-                <a href="#inquiry" class="inline-block bg-gold text-black px-12 py-5 font-bold uppercase tracking-widest hover:bg-white transition shadow-2xl">START YOUR BRAND PROJECT â†?/a>
+                <a href="#inquiry" class="inline-block bg-gold text-black px-12 py-5 font-bold uppercase tracking-widest hover:bg-white transition shadow-2xl">START YOUR BRAND PROJECT &ndash;/a>
             </div>
         </div>
     </section>
@@ -75,7 +75,7 @@
                 <!-- Card 1 -->
                 <div class="fade-up">
                     <div class="aspect-square mb-8 overflow-hidden bg-white/5 rounded-sm">
-                        <img src="https://sc02.alicdn.com/kf/Hfe286ff7e4ce4336acd16e87844b9aa53.jpg" alt="Custom Event Tents" class="w-full h-full object-cover hover:scale-105 transition duration-1000">
+                        <img src="https://sc02.alicdn.com/kf/Hfe286ff7e4ce4336acd16e87844b9aa53.jpg" alt="Custom Event Tents" class="w-full h-full object-contain hover:scale-105 transition duration-1000" style="background:#000;">
                     </div>
                     <h3 class="text-3xl font-serif italic text-gold mb-4">Custom Event Tents</h3>
                     <p class="text-gray-400 leading-relaxed">Full-color branded canopy tents for trade shows, pop-ups and outdoor events. MOQ 1 pc.</p>
@@ -83,7 +83,7 @@
                 <!-- Card 2 -->
                 <div class="fade-up" style="transition-delay: 200ms;">
                     <div class="aspect-square mb-8 overflow-hidden bg-white/5 rounded-sm">
-                        <img src="https://sc02.alicdn.com/kf/H906b8f1a633342a9ba78260ad38336c67.jpg" alt="Branded Table Cloths" class="w-full h-full object-cover hover:scale-105 transition duration-1000">
+                        <img src="https://sc02.alicdn.com/kf/H906b8f1a633342a9ba78260ad38336c67.jpg" alt="Branded Table Cloths" class="w-full h-full object-contain hover:scale-105 transition duration-1000" style="background:#000;">
                     </div>
                     <h3 class="text-3xl font-serif italic text-gold mb-4">Branded Table Cloths</h3>
                     <p class="text-gray-400 leading-relaxed">Stretch and fitted table covers with full-wrap printing. Professional event presentation.</p>
@@ -91,7 +91,7 @@
                 <!-- Card 3 -->
                 <div class="fade-up" style="transition-delay: 400ms;">
                     <div class="aspect-square mb-8 overflow-hidden bg-white/5 rounded-sm">
-                        <img src="https://sc02.alicdn.com/kf/A8612e17c6bcf49988c5b5e1518f364323.png" alt="Promotional Gifts" class="w-full h-full object-cover hover:scale-105 transition duration-1000">
+                        <img src="https://sc02.alicdn.com/kf/A8612e17c6bcf49988c5b5e1518f364323.png" alt="Promotional Gifts" class="w-full h-full object-contain hover:scale-105 transition duration-1000" style="background:#000;">
                     </div>
                     <h3 class="text-3xl font-serif italic text-gold mb-4">Promotional Gifts</h3>
                     <p class="text-gray-400 leading-relaxed">Custom merchandise sets: pins, towels, pillows and more bundled as brand gift packs.</p>
@@ -139,7 +139,7 @@
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-5xl font-serif italic mb-6 text-center">Inquire About Custom Gifts</h2>
                 <p class="text-center text-gray-500 mb-16 uppercase tracking-widest text-sm font-semibold">Start your custom event project today</p>
-                <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <form action="https://formspree.io/f/xbdvdjdy" method="POST" enctype="multipart/form-data" class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div>
                         <label class="block text-[10px] font-black uppercase tracking-[0.2em] mb-3 text-gray-400">Full Name</label>
                         <input type="text" name="name" placeholder="John Doe" required class="w-full border-b-2 border-gray-100 py-4 focus:border-gold outline-none transition text-lg">
@@ -169,7 +169,12 @@
                         <label class="block text-[10px] font-black uppercase tracking-[0.2em] mb-3 text-gray-400">Estimated Quantity</label>
                         <input type="text" name="quantity" placeholder="e.g. 1, 10, 50" class="w-full border-b-2 border-gray-100 py-4 focus:border-gold outline-none transition text-lg">
                     </div>
-                    <div class="md:col-span-2">
+                    
+            <div>
+                <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Upload Your Design (AI, PDF, JPG, PNG)</label>
+                <input type="file" name="attachment" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl">
+            </div>
+            <div class="md:col-span-2">
                         <label class="block text-[10px] font-black uppercase tracking-[0.2em] mb-3 text-gray-400">Project Details</label>
                         <textarea name="message" rows="4" placeholder="Describe your event needs, sizing, and deadline..." class="w-full border-b-2 border-gray-100 py-4 focus:border-gold outline-none transition text-lg resize-none"></textarea>
                     </div>
