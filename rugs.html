@@ -12,18 +12,14 @@
         body { font-family: 'Inter', sans-serif; background-color: #fff; color: var(--dark); margin: 0; }
         .font-serif { font-family: 'Playfair Display', serif; }
         .rainbow-text { background: linear-gradient(90deg, #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        
         .cat-card { transition: all 0.35s ease; border: 1px solid rgba(0,0,0,0.05); background: #fcfcfc; }
         .cat-card:hover { transform: translateY(-8px); border-color: var(--gold); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
-        .cat-card img { transition: transform 0.5s ease; object-fit: contain; width: 100%; height: 100%; }
+        .cat-card img { transition: transform 0.5s ease; object-fit: contain; width: 100%; height: 100%; background: #f8f8f8; }
         .cat-card:hover img { transform: scale(1.05); }
-        
         .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
-        
         @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.5); } 70% { box-shadow: 0 0 0 12px rgba(201,168,76,0); } }
         .pulse-btn { animation: pulse-gold 2.2s infinite; }
-        
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
         .faq-answer.open { max-height: 500px; }
     </style>
@@ -33,8 +29,8 @@
     <!-- HEADER -->
     <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold tracking-tight text-black">YFON <span class="rainbow-text">HOME</span></a>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+            <a href="index.html" class="text-2xl font-bold text-black">YFON <span class="rainbow-text">HOME</span></a>
+            <nav class="hidden md:flex items-center gap-6 text-base font-medium text-gray-600">
                 <a href="index.html" class="hover:text-black transition">Home</a>
                 <a href="rugs.html" class="text-black font-bold border-b-2 border-[#c9a84c]">Rugs</a>
                 <a href="pillows.html" class="hover:text-black transition">Pillows</a>
@@ -45,16 +41,16 @@
         </div>
     </header>
 
-    <!-- HERO / BREADCRUMB -->
+    <!-- HERO -->
     <section class="pt-32 pb-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
-            <nav class="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-400 mb-4">
+            <nav class="flex items-center gap-2 text-sm uppercase tracking-widest text-gray-400 mb-4">
                 <a href="index.html" class="hover:text-black transition">Home</a>
                 <span>&bull;</span>
                 <span class="text-gray-900">Custom Rugs</span>
             </nav>
             <h1 class="font-serif text-5xl md:text-7xl text-black mb-4">Custom Rugs & <span class="text-[#c9a84c]">Carpets</span></h1>
-            <p class="text-gray-500 text-lg max-w-2xl leading-relaxed">Elevate your brand or home with our premium custom-made rugs. From hand-tufted art pieces to durable logo mats, we bring your floor to life with precision and style.</p>
+            <p class="text-gray-500 text-lg max-w-2xl">Elevate your brand or home with our premium custom-made rugs. From hand-tufted art pieces to durable logo mats, we bring your floor to life with precision and style.</p>
         </div>
     </section>
 
@@ -64,8 +60,8 @@
             
             <!-- Tufted Rug -->
             <a href="tufted-rug.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square bg-gray-100 overflow-hidden">
-                    <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Tufted-Rug-1.jpg.webp" alt="Custom Tufted Rug">
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Custom Tufted Rug">
                 </div>
                 <div class="p-8">
                     <h3 class="text-xl font-bold mb-2">Tufted Rug</h3>
@@ -75,64 +71,64 @@
             </a>
 
             <!-- Printed Rug -->
-            <div class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square bg-gray-100 overflow-hidden">
-                    <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/06/%E6%9C%9C%E6%A0%AA%E6%A0%87%E9%A2%98-2.jpg.webp" alt="Custom Printed Rug">
+            <a href="printed-rug.html" class="cat-card rounded-2xl overflow-hidden block group">
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/H341b5e6eb124414087440e2d31aa8b66n.jpg" alt="Custom Printed Rug">
                 </div>
                 <div class="p-8">
                     <h3 class="text-xl font-bold mb-2">Printed Rug</h3>
                     <p class="text-gray-500 text-sm mb-4 leading-relaxed">Full-color digital sublimation print with photo-quality reproduction. Perfect for detailed artwork.</p>
-                    <span class="text-sm font-bold" style="color:var(--gold)">MOQ: 5 pcs</span>
+                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
                 </div>
-            </div>
+            </a>
 
             <!-- Rubber Mat -->
-            <div class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square bg-gray-100 overflow-hidden">
-                    <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-1.jpg.webp" alt="Custom Rubber Mat">
+            <a href="rubber-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/Hfa2f6bc5da1c43fe9fcbc1f475694279V.jpg" alt="Custom Rubber Mat">
                 </div>
                 <div class="p-8">
                     <h3 class="text-xl font-bold mb-2">Rubber Mat</h3>
                     <p class="text-gray-500 text-sm mb-4 leading-relaxed">Heavy-duty nitrile rubber-backed mats with custom logo printing. Anti-slip and professional.</p>
-                    <span class="text-sm font-bold" style="color:var(--gold)">MOQ: 10 pcs</span>
+                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
                 </div>
-            </div>
+            </a>
 
             <!-- Coir Mat -->
-            <div class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square bg-gray-100 overflow-hidden">
-                    <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Coir-Mat-3.jpg.webp" alt="Custom Coir Mat">
+            <a href="coir-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/H3970d044fef54e3cb13de40c397f7336y.jpg" alt="Custom Coir Mat">
                 </div>
                 <div class="p-8">
                     <h3 class="text-xl font-bold mb-2">Coir Mat</h3>
                     <p class="text-gray-500 text-sm mb-4 leading-relaxed">Natural coconut fiber entrance mats. Highly durable and eco-friendly for branded welcomes.</p>
-                    <span class="text-sm font-bold" style="color:var(--gold)">MOQ: 20 pcs</span>
+                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
                 </div>
-            </div>
+            </a>
 
             <!-- Bath Mat -->
-            <div class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square bg-gray-100 overflow-hidden">
-                    <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Microfiber-Mat-1.jpg.webp" alt="Custom Bath Mat">
+            <a href="bath-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/H6ea3e613bd4947078d0c2ca3f2204ab7Q.jpg" alt="Custom Bath Mat">
                 </div>
                 <div class="p-8">
                     <h3 class="text-xl font-bold mb-2">Bath Mat</h3>
                     <p class="text-gray-500 text-sm mb-4 leading-relaxed">Super-absorbent microfiber mats with soft plush feel. Customizable with vibrant prints.</p>
-                    <span class="text-sm font-bold" style="color:var(--gold)">MOQ: 10 pcs</span>
+                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
                 </div>
-            </div>
+            </a>
 
             <!-- PVC Coil Mat -->
-            <div class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square bg-gray-100 overflow-hidden">
-                    <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/PVC-Coil-Mat-1.jpg.webp" alt="Custom PVC Coil Mat">
+            <a href="pvc-coil-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/H0dd552b48874450c87016e8b6c24ee311.jpg" alt="Custom PVC Coil Mat">
                 </div>
                 <div class="p-8">
                     <h3 class="text-xl font-bold mb-2">PVC Coil Mat</h3>
                     <p class="text-gray-500 text-sm mb-4 leading-relaxed">Waterproof and easy-to-clean floor mats. Ideal for outdoor entries and high-traffic areas.</p>
-                    <span class="text-sm font-bold" style="color:var(--gold)">MOQ: 20 pcs</span>
+                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
                 </div>
-            </div>
+            </a>
 
         </div>
     </section>
@@ -144,7 +140,7 @@
                 <h2 class="font-serif text-4xl md:text-5xl mb-4">Start Your Custom <span class="text-[#c9a84c]">Rug Project</span></h2>
                 <p class="text-gray-500">Send us your logo or design for a free mockup and pricing details.</p>
             </div>
-            <form action="https://formspree.io/f/xbdvdjdy" method="POST" enctype="multipart/form-data" class="space-y-6 fade-up">
+            <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-6 fade-up">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">Full Name *</label>
@@ -173,15 +169,12 @@
                     </div>
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">Upload Your Design (AI, PDF, JPG, PNG)</label>
-                    <input type="file" name="attachment" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl text-sm text-gray-500">
-                </div>
-                <div>
                     <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">Project Details</label>
                     <textarea name="message" rows="4" placeholder="Describe your preferred size, colors, or any special requirements..." class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none resize-none"></textarea>
                 </div>
-                <div class="pt-4">
-                    <button type="submit" class="w-full py-5 rounded-full text-white font-bold text-lg hover:opacity-90 transition shadow-lg" style="background:var(--gold)">SEND INQUIRY</button>
+                <div class="pt-4 text-center">
+                    <p class="text-xs text-gray-500 mb-2 italic">Tip: To get a mockup faster, you can also send your design directly via WhatsApp.</p>
+                    <button type="submit" class="w-full py-5 rounded-full text-white font-bold text-xl hover:opacity-90 transition shadow-lg" style="background:var(--gold)">SEND INQUIRY</button>
                 </div>
             </form>
         </div>
