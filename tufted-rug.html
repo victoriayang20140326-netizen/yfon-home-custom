@@ -3,339 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Tufted Rug | YFON HOME | Manufacturer & Wholesale Supplier</title>
-    <meta name="description" content="Custom tufted rugs in any shape, size and design. Hand-tufted and machine-tufted. MOQ from 1 pc. Get a free digital mockup within 1 hour.">
+    <title>Custom Tufted Rug | YFON HOME | Manufacturer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #c9a84c; }
         body { font-family: 'Inter', sans-serif; background: #fff; color: #1a1a1a; margin: 0; }
         .font-serif { font-family: 'Playfair Display', serif; }
-        .rainbow-text { background: linear-gradient(90deg,#ef4444,#f97316,#eab308,#22c55e,#3b82f6,#8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        header { position: fixed; top: 0; width: 100%; z-index: 200; background: rgba(10,10,10,.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,.08); }
-        .nav-item:hover .mega-menu { display: block; }
-        .mega-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid #eee; box-shadow: 0 8px 30px rgba(0,0,0,.12); z-index: 100; min-width: 220px; border-radius: 8px; padding: 8px 0; }
-        .gallery-item { overflow: hidden; border-radius: 12px; cursor: pointer; background: #f8f8f8; }
-        .gallery-item img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: contain; }
-        .gallery-item:hover img { transform: scale(1.06); }
+        .rainbow-text { background: linear-gradient(90deg,#ef4444,#f97316,#eab308,#22c55e,#3b82f6,#8b5cf6); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+        header { position:fixed; top:0; width:100%; z-index:200; background:rgba(10,10,10,.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,.08); }
+        .nav-item:hover .mega-menu { display:block; }
+        .mega-menu { display:none; position:absolute; top:100%; left:0; background:#fff; border:1px solid #eee; box-shadow:0 8px 30px rgba(0,0,0,.12); z-index:100; min-width:220px; border-radius:8px; padding:8px 0; }
         .thumb-btn.active { border-color: var(--gold); }
-        .spec-row:nth-child(even) { background: #f9f9f9; }
-        .feature-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; background: #fff8e6; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-        .faq-answer.open { max-height: 400px; }
-        .faq-btn svg { transition: transform 0.3s ease; }
-        .faq-btn.open svg { transform: rotate(180deg); }
-        .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        .fade-up.visible { opacity: 1; transform: translateY(0); }
-        @keyframes pulse-gold { 0%,100%{box-shadow: 0 0 0 0 rgba(201,168,76,.5)} 70%{box-shadow: 0 0 0 14px rgba(201,168,76,0)} }
-        .pulse-cta { animation: pulse-gold 2.2s infinite; }
-        .sticky-cta { position: sticky; top: 96px; }
+        .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
+        .faq-answer.open { max-height:400px; }
+        .fade-up { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease,transform 0.6s ease; }
+        .fade-up.visible { opacity:1; transform:translateY(0); }
+        @keyframes pulse-gold { 0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.5)} 70%{box-shadow:0 0 0 14px rgba(201,168,76,0)} }
+        .pulse-cta { animation:pulse-gold 2.2s infinite; }
+        .sticky-cta { position:sticky; top:96px; }
     </style>
 </head>
 <body>
-
-<!-- HEADER -->
 <header>
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="index.html" class="text-3xl font-bold text-white tracking-tight">YFON <span class="rainbow-text">HOME</span></a>
-        <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
-            <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 transition">Home</a>
+        <a href="index.html" class="text-2xl font-bold text-white tracking-tight">YFON <span class="rainbow-text">HOME</span></a>
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+            <a href="index.html" class="text-gray-300 hover:text-white transition">Home</a>
             <div class="nav-item relative">
-                <button class="px-3 py-2 flex items-center gap-1 font-semibold" style="color:var(--gold)">
-                    Products 
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div class="mega-menu">
-                    <a href="rugs.html" class="block px-5 py-2 text-sm font-semibold" style="color:var(--gold)">Custom Rugs & Carpets</a>
-                    <div class="px-5 py-1 text-xs text-gray-400 border-b mb-1">Tufted | Printed | Rubber | Coir | Bath | PVC</div>
-                    <a href="pillows.html" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50">Custom Pillows</a>
-                    <a href="blankets.html" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50">Custom Blankets</a>
-                    <a href="towels.html" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50">Beach Towels</a>
-                    <a href="pins.html" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50">Enamel Pins</a>
-                    <a href="gifts.html" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50">Gifts & Crafts</a>
-                </div>
+                <button class="px-3 py-2 flex items-center gap-1 font-semibold text-[#c9a84c]">Products</button>
+                <div class="mega-menu"><a href="rugs.html" class="block px-5 py-2 text-sm">Custom Rugs</a><a href="pillows.html" class="block px-5 py-2 text-sm">Custom Pillows</a></div>
             </div>
-            <a href="index.html#factory" class="text-gray-300 hover:text-white px-3 py-2 transition">About Us</a>
-            <a href="#contact" class="ml-4 px-6 py-2 rounded-full text-black font-bold hover:opacity-90 transition pulse-cta" style="background:var(--gold)">Get a Quote</a>
+            <a href="#contact" class="ml-4 px-6 py-2 rounded-full text-black font-bold transition pulse-cta" style="background:var(--gold)">Get a Quote</a>
         </nav>
     </div>
 </header>
-
-<!-- BREADCRUMB -->
 <div class="pt-20 bg-gray-50 border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-6 py-4">
         <nav class="flex items-center gap-2 text-xs text-gray-500">
-            <a href="index.html" class="hover:text-gray-800">Home</a><span>/</span>
-            <a href="rugs.html" class="hover:text-gray-800">Custom Rugs</a><span>/</span>
-            <span class="text-gray-900 font-semibold">Tufted Rug</span>
+            <a href="index.html">Home</a><span class="mx-1">/</span><a href="rugs.html">Custom Rugs</a><span class="mx-1">/</span><span class="text-gray-900 font-semibold">Tufted Rug</span>
         </nav>
     </div>
 </div>
-
-<!-- MAIN CONTENT -->
 <section class="py-12 max-w-7xl mx-auto px-6">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-        <!-- LEFT: product gallery (2/3 width) -->
         <div class="lg:col-span-2">
-            <!-- Main image -->
-            <div class="gallery-item w-full mb-4" style="height:480px;">
-                <img id="mainImg" 
-                    src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" 
-                    alt="Custom Tufted Rug" class="w-full h-full object-contain rounded-2xl" style="background:#f8f8f8;">
+            <div class="w-full mb-4 rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:480px;">
+                <img id="mainImg" src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" class="w-full h-full object-contain">
             </div>
-
-            <!-- Thumbnails -->
-            <div class="grid grid-cols-5 gap-3 mb-10">
-                <button class="thumb-btn active border-2 rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg')">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" class="w-full h-full object-contain" style="background:#f8f8f8;">
-                </button>
-                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H8d9db031f0f44188be12591104ff27abJ.jpg')">
-                    <img src="https://sc02.alicdn.com/kf/H8d9db031f0f44188be12591104ff27abJ.jpg" class="w-full h-full object-contain" style="background:#f8f8f8;">
-                </button>
-                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Ab2a44b104e0b4748ac31dc991b20dfa8y.png')">
-                    <img src="https://sc02.alicdn.com/kf/Ab2a44b104e0b4748ac31dc991b20dfa8y.png" class="w-full h-full object-contain" style="background:#f8f8f8;">
-                </button>
-                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H5f5ece528d0b46ea8f2d2d0a435dff81A.jpg')">
-                    <img src="https://sc02.alicdn.com/kf/H5f5ece528d0b46ea8f2d2d0a435dff81A.jpg" class="w-full h-full object-contain" style="background:#f8f8f8;">
-                </button>
-                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H2d1f83f40cce4059b4d70b9abcafe49j.jpg')">
-                    <img src="https://sc02.alicdn.com/kf/H2d1f83f40cce4059b4d70b9abcafe49j.jpg" class="w-full h-full object-contain" style="background:#f8f8f8;">
-                </button>
+            <div class="grid grid-cols-4 gap-3 mb-10">
+                <button class="thumb-btn active border-2 rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg')"><img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" class="w-full h-full object-contain bg-[#f8f8f8]"></button>
+                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H8d9db031f0f44188be12591104ff27abJ.jpg')"><img src="https://sc02.alicdn.com/kf/H8d9db031f0f44188be12591104ff27abJ.jpg" class="w-full h-full object-contain bg-[#f8f8f8]"></button>
+                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Ab2a44b104e0b4748ac31dc991b20dfa8y.png')"><img src="https://sc02.alicdn.com/kf/Ab2a44b104e0b4748ac31dc991b20dfa8y.png" class="w-full h-full object-contain bg-[#f8f8f8]"></button>
+                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H5f5ece528d0b46ea8f2d2d0a435dff81A.jpg')"><img src="https://sc02.alicdn.com/kf/H5f5ece528d0b46ea8f2d2d0a435dff81A.jpg" class="w-full h-full object-contain bg-[#f8f8f8]"></button>
             </div>
-
-            <!-- SPEC TABLE -->
             <div class="mb-12 fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-5">Product Specifications</h2>
-                <div class="border border-gray-200 rounded-2xl overflow-hidden">
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-sm font-semibold text-gray-500 bg-gray-50">Material</div><div class="px-6 py-4 text-sm">Acrylic / Wool / Nylon / Polyester</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-sm font-semibold text-gray-500 bg-gray-50">Size</div><div class="px-6 py-4 text-sm">Fully custom - any dimension</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-sm font-semibold text-gray-500 bg-gray-50">Pile Weight</div><div class="px-6 py-4 text-sm">4.5 lbs/sqm - 6.5 lbs/sqm</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-sm font-semibold text-gray-500 bg-gray-50">Pile Pattern</div><div class="px-6 py-4 text-sm">Cut Pile / Loop Pile / Cut & Loop</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-sm font-semibold text-gray-500 bg-gray-50">Thickness</div><div class="px-6 py-4 text-sm">10 mm - 15 mm</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-sm font-semibold text-gray-500 bg-gray-50">Backing</div><div class="px-6 py-4 text-sm">Cotton / Non-slip latex</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-sm font-semibold text-gray-500 bg-gray-50">Shape</div><div class="px-6 py-4 text-sm">Rectangle, Round, Irregular die-cut, Any custom shape</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-sm font-semibold text-gray-500 bg-gray-50">MOQ</div><div class="px-6 py-4 text-sm">1 piece (sample) / 10 pcs (bulk)</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-sm font-semibold text-gray-500 bg-gray-50">Sample Lead Time</div><div class="px-6 py-4 text-sm">10 - 15 business days</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-sm font-semibold text-gray-500 bg-gray-50">Bulk Lead Time</div><div class="px-6 py-4 text-sm">20 - 35 days after sample approval</div></div>
+                <h2 class="font-serif text-3xl mb-5">Product Specifications</h2>
+                <div class="border rounded-2xl overflow-hidden text-sm">
+                    <div class="grid grid-cols-2 border-b"><div class="px-6 py-4 font-semibold bg-gray-50 text-gray-500">Material</div><div class="px-6 py-4">Acrylic / Wool / Nylon</div></div>
+                    <div class="grid grid-cols-2 border-b"><div class="px-6 py-4 font-semibold bg-gray-50 text-gray-500">Size</div><div class="px-6 py-4">Fully custom</div></div>
+                    <div class="grid grid-cols-2"><div class="px-6 py-4 font-semibold bg-gray-50 text-gray-500">MOQ</div><div class="px-6 py-4">1 piece</div></div>
                 </div>
             </div>
-
-            <!-- WHAT IS TUFTED RUG -->
             <div class="mb-12 fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-4">What is a Custom Tufted Rug?</h2>
-                <p class="text-gray-600 text-base leading-relaxed mb-4">In hotels, retail stores, or home interiors, plush tufted carpets are a common sight. Through the tufting process, yarn is vertically embedded into a backing fabric to create a dense pile surface. Their soft texture and diverse design possibilities make them a favorite for custom decor.</p>
-                <p class="text-gray-600 text-base leading-relaxed mb-4">Custom tufted carpets represent an upgrade from standard versions: the former are mass-produced items with fixed dimensions and universal patterns, while the latter can be tailored to specific needs in terms of size, color, and shape.</p>
-                <p class="text-gray-600 text-base leading-relaxed">Tufting achieves the perfect balance between <strong>"high-efficiency production"</strong> and <strong>"design flexibility"</strong> - producing intricate patterns up to 5-10x faster than hand-knotting, while delivering a premium, thick feel.</p>
-            </div>
-
-            <!-- CUSTOMIZATION DIMENSIONS -->
-            <div class="mb-12 fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-6">Core Customization Dimensions</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div class="flex items-start gap-4 p-5 rounded-2xl bg-gray-50">
-                        <div class="feature-icon">Size</div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">Size & Shape</h3>
-                            <p class="text-xs text-gray-500">Precisely match any spatial dimensions - hotel corridors, curved rooms, irregular layouts, or brand logo outlines.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4 p-5 rounded-2xl bg-gray-50">
-                        <div class="feature-icon">Design</div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">Color & Pattern</h3>
-                            <p class="text-xs text-gray-500">Unlimited color matching - brand VI colors, gradient effects, cartoon illustrations, geometric patterns and more.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4 p-5 rounded-2xl bg-gray-50">
-                        <div class="feature-icon">Brand</div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">Brand Integration</h3>
-                            <p class="text-xs text-gray-500">Embed logos, slogans and brand values. Turn your rug into a silent brand ambassador in lobbies and retail spaces.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4 p-5 rounded-2xl bg-gray-50">
-                        <div class="feature-icon">Tech</div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">Function & Material</h3>
-                            <p class="text-xs text-gray-500">Anti-slip, flame-retardant, stain-resistant, waterproof - customize performance for your specific use scenario.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- KEY ADVANTAGES -->
-            <div class="mb-12 fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-6">Why Choose Custom Tufted Rugs?</h2>
-                <div class="space-y-4">
-                    <div class="flex items-start gap-3">
-                        <span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm font-bold mt-0.5" style="background:var(--gold)">1</span>
-                        <div><strong class="text-gray-800">Unique Design Exclusivity</strong> - <span class="text-gray-500">Tailored precisely to brand visual identities or home decor styles. Zero risk of design duplication.</span></div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm font-bold mt-0.5" style="background:var(--gold)">2</span>
-                        <div><strong class="text-gray-800">Fast Turnaround</strong> - <span class="text-gray-500">Typically 10-15 business days for samples, far faster than hand-knotted alternatives requiring months.</span></div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm font-bold mt-0.5" style="background:var(--gold)">3</span>
-                        <div><strong class="text-gray-800">Superior Pattern Expression</strong> - <span class="text-gray-500">Gradient colors, 3D textures, fine typography - rendered with clarity beyond standard machine-woven rugs.</span></div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm font-bold mt-0.5" style="background:var(--gold)">4</span>
-                        <div><strong class="text-gray-800">Cost-Effective for Bulk</strong> - <span class="text-gray-500">Lower than hand-knotted carpets. Bulk orders receive substantial discounts - ideal for chain hotels and retail brands.</span></div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm font-bold mt-0.5" style="background:var(--gold)">5</span>
-                        <div><strong class="text-gray-800">Comfortable & Durable</strong> - <span class="text-gray-500">Soft underfoot feel, excellent sound absorption. Nylon variants last 5+ years in high-traffic commercial settings.</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PRODUCT GALLERY -->
-            <div class="mb-12 fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-6">Product Gallery</h2>
+                <h2 class="font-serif text-3xl mb-6">Product Case Scene Show</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Tufted Rug 1"></div>
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/H8d9db031f0f44188be12591104ff27abJ.jpg" alt="Tufted Rug 2"></div>
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/Ab2a44b104e0b4748ac31dc991b20dfa8y.png" alt="Tufted Rug 3"></div>
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/H5f5ece528d0b46ea8f2d2d0a435dff81A.jpg" alt="Tufted Rug 4"></div>
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/H2d1f83f40cce4059b4d70b9abcafe49j.jpg" alt="Tufted Rug 5"></div>
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/H0f50e01663194f2396a0df1e135c895fZ.jpg" alt="Tufted Rug 6"></div>
-                </div>
-            </div>
-
-            <!-- FAQ -->
-            <div class="mb-12 fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-6">Frequently Asked Questions</h2>
-                <div class="space-y-3">
-                    <div class="border border-gray-200 rounded-xl">
-                        <button class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 text-sm" onclick="toggleFAQ(this)">
-                            How can I start a custom tufted rug order?
-                            <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-4 text-xs text-gray-500 leading-relaxed">Send us your design file (AI, PDF, PNG at 300dpi+) with your desired size, shape and quantity. Our team will review it and respond within 1 hour with a digital mockup and quote.</div>
-                    </div>
-                    <div class="border border-gray-200 rounded-xl">
-                        <button class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 text-sm" onclick="toggleFAQ(this)">
-                            What is the minimum order quantity?
-                            <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-4 text-xs text-gray-500 leading-relaxed">MOQ is 1 piece for samples. For bulk hand-tufted production, MOQ starts from 10 pcs. We welcome both small test orders and large bulk runs.</div>
-                    </div>
-                    <div class="border border-gray-200 rounded-xl">
-                        <button class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 text-sm" onclick="toggleFAQ(this)">
-                            Can I get any irregular or die-cut shape?
-                            <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-4 text-xs text-gray-500 leading-relaxed">Yes - absolutely any shape. Character silhouettes, brand logos, abstract outlines, text shapes. Send us your vector outline and we will produce it with laser-precision die-cutting.</div>
-                    </div>
-                    <div class="border border-gray-200 rounded-xl">
-                        <button class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 text-sm" onclick="toggleFAQ(this)">
-                            How long does production take?
-                            <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-4 text-xs text-gray-500 leading-relaxed">Physical samples take 10-15 business days. Bulk production is typically 20-35 days after sample approval. Rush orders can be arranged - let us know your deadline.</div>
-                    </div>
+                    <div class="h-52 rounded-xl overflow-hidden bg-[#f8f8f8]"><img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" class="w-full h-full object-contain"></div>
+                    <div class="h-52 rounded-xl overflow-hidden bg-[#f8f8f8]"><img src="https://sc02.alicdn.com/kf/H8d9db031f0f44188be12591104ff27abJ.jpg" class="w-full h-full object-contain"></div>
+                    <div class="h-52 rounded-xl overflow-hidden bg-[#f8f8f8]"><img src="https://sc02.alicdn.com/kf/Ab2a44b104e0b4748ac31dc991b20dfa8y.png" class="w-full h-full object-contain"></div>
                 </div>
             </div>
         </div>
-
-        <!-- RIGHT: sticky CTA sidebar -->
         <div class="lg:col-span-1">
             <div class="sticky-cta" id="contact">
-                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-lg">
-                    <!-- Header -->
-                    <div class="p-6 text-white" style="background:#0a0a0a">
-                        <h2 class="font-serif text-2xl mb-1">Get a Free Quote</h2>
-                        <p class="text-gray-400 text-base">Reply within <strong class="text-white">1 hour</strong> with digital mockup</p>
-                    </div>
-
-                    <!-- Form -->
+                <div class="border rounded-2xl overflow-hidden shadow-lg">
+                    <div class="p-6 text-white" style="background:#0a0a0a"><h2 class="font-serif text-2xl">Get a Free Quote</h2></div>
                     <div class="p-6 bg-white">
                         <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-4">
-                            <input type="hidden" name="product" value="Custom Tufted Rug">
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Full Name *</label>
-                                <input name="name" type="text" required placeholder="Your name" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Company Name</label>
-                                <input name="company" type="text" placeholder="Your company" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Email *</label>
-                                <input name="email" type="email" required placeholder="you@brand.com" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">WhatsApp</label>
-                                <input name="whatsapp" type="tel" placeholder="+1 234 567 890" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Quantity</label>
-                                <input name="quantity" type="text" placeholder="e.g. 20 pcs, 50 sq.m" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Description</label>
-                                <textarea name="message" rows="3" placeholder="Size, shape, design idea..." class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none text-sm resize-none"></textarea>
-                            </div>
-                            
-                            <p class="text-[10px] text-gray-500 mb-2 italic">Tip: To get a mockup faster, you can also send your design directly via WhatsApp.</p>
-                            <button type="submit" class="w-full py-4 rounded-xl text-black font-bold text-sm hover:opacity-90 transition pulse-cta" style="background:var(--gold)">
-                                SEND INQUIRY &rarr;
-                            </button>
-                            <a href="https://wa.me/8613613866590" target="_blank" class="w-full py-3 rounded-xl text-white font-bold text-sm text-center transition block" style="background:#25D366">
-                                WhatsApp Us Directly
-                            </a>
+                            <input name="name" type="text" required placeholder="Name" class="w-full px-4 py-3 bg-gray-50 border rounded-xl outline-none">
+                            <input name="email" type="email" required placeholder="Email" class="w-full px-4 py-3 bg-gray-50 border rounded-xl outline-none">
+                            <textarea name="message" rows="3" placeholder="Project details..." class="w-full px-4 py-3 bg-gray-50 border rounded-xl outline-none"></textarea>
+                            <p class="text-xs text-gray-400 italic">Tip: Send design via WhatsApp for faster mockup.</p>
+                            <button type="submit" class="w-full py-4 rounded-xl text-black font-bold" style="background:var(--gold)">SEND INQUIRY</button>
                         </form>
-
-                        <!-- Trust signals -->
-                        <div class="mt-5 pt-5 border-t border-gray-100 space-y-2">
-                            <div class="flex items-center gap-2 text-[10px] text-gray-500"><span style="color:var(--gold)">-</span> Free digital mockup within 1 hour</div>
-                            <div class="flex items-center gap-2 text-[10px] text-gray-500"><span style="color:var(--gold)">-</span> MOQ from 1 piece</div>
-                            <div class="flex items-center gap-2 text-[10px] text-gray-500"><span style="color:var(--gold)">-</span> 98.92% response rate</div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
-
-<!-- FOOTER -->
-<footer style="background:#050505" class="border-t border-white/10 py-10 mt-8">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-gray-500">
-        <a href="index.html" class="text-white font-bold text-2xl">YFON <span class="rainbow-text">HOME</span></a>
-        <div class="flex flex-wrap justify-center gap-5">
-            <a href="index.html" class="hover:text-white transition">Home</a>
-            <a href="rugs.html" class="hover:text-white transition" style="color:var(--gold)">Custom Rugs</a>
-            <a href="pillows.html" class="hover:text-white transition">Pillows</a>
-            <a href="blankets.html" class="hover:text-white transition">Blankets</a>
-            <a href="towels.html" class="hover:text-white transition">Towels</a>
-            <a href="pins.html" class="hover:text-white transition">Pins</a>
-            <a href="gifts.html" class="hover:text-white transition">Gifts</a>
-        </div>
-        <span>&copy; 2026 YFON HOME - www.yfonhomecustom.com</span>
-    </div>
-</footer>
-
 <script>
-    function switchImg(btn, src) {
-        document.getElementById('mainImg').src = src;
-        document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelectorAll('.thumb-btn').forEach(b => b.style.borderColor = '');
-        btn.style.borderColor = 'var(--gold)';
-    }
-    function toggleFAQ(btn) {
-        const answer = btn.nextElementSibling;
-        const isOpen = answer.classList.contains('open');
-        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
-        document.querySelectorAll('.faq-btn').forEach(b => b.classList.remove('open'));
-        if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
-    }
-    const obs = new IntersectionObserver(e => { e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }) }, {threshold:0.1});
-    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+    function switchImg(btn,src){document.getElementById('mainImg').src=src;document.querySelectorAll('.thumb-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');}
+    const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible');}),{threshold:0.1});
+    document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
