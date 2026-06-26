@@ -3,28 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Soft Enamel Pins | YFON HOME | Manufacturer & Wholesale Supplier</title>
-    <meta name="description" content="Custom soft enamel pins with textured feel and recessed colors. Wide variety of plating options. Durable and high-detail lapel pins for brands, schools, and associations. MOQ from 100 pcs. Get a free digital mockup within 1 hour.">
+    <title>Custom Soft Enamel Pins | YFON HOME | Manufacturer & Wholesale</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #c9a84c; }
-        body { font-family: 'Inter', sans-serif; background: #fff; color: #1a1a1a; margin: 0; font-size: 18px; }
+        body { font-family: 'Inter', sans-serif; background: #fff; color: #1a1a1a; margin: 0; }
         .font-serif { font-family: 'Playfair Display', serif; }
         .rainbow-text { background: linear-gradient(90deg,#ef4444,#f97316,#eab308,#22c55e,#3b82f6,#8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        header { position: fixed; top: 0; width: 100%; z-index: 200; background: rgba(10,10,10,.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,.08); }
-        .nav-item:hover .mega-menu { display: block; }
-        .mega-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid #eee; box-shadow: 0 8px 30px rgba(0,0,0,.12); z-index: 100; min-width: 220px; border-radius: 8px; padding: 8px 0; }
-        .gallery-item { overflow: hidden; border-radius: 12px; cursor: pointer; background: #f8f8f8; }
+        header { position: fixed; top: 0; width: 100%; z-index: 200; background: rgba(255,255,255,.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,.05); }
+        .gallery-item { overflow: hidden; border-radius: 12px; background: #f8f8f8; }
         .gallery-item img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: contain; }
         .gallery-item:hover img { transform: scale(1.06); }
-        .thumb-btn.active { border-color: var(--gold); }
         .spec-row:nth-child(even) { background: #f9f9f9; }
-        .feature-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; background: #fff8e6; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-        .faq-answer.open { max-height: 400px; }
-        .faq-btn svg { transition: transform 0.3s ease; }
-        .faq-btn.open svg { transform: rotate(180deg); }
         .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
         @keyframes pulse-gold { 0%,100%{box-shadow: 0 0 0 0 rgba(201,168,76,.5)} 70%{box-shadow: 0 0 0 14px rgba(201,168,76,0)} }
@@ -37,37 +28,26 @@
 <!-- HEADER -->
 <header>
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="index.html" class="text-3xl font-bold text-white tracking-tight">YFON <span class="rainbow-text">HOME</span></a>
-        <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
-            <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 transition">Home</a>
-            <div class="nav-item relative">
-                <button class="px-3 py-2 flex items-center gap-1 font-semibold" style="color:var(--gold)">
-                    Products 
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div class="mega-menu">
-                    <a href="rugs.html" class="block px-5 py-2 text-sm font-semibold" style="color:var(--gold)">Custom Rugs & Carpets</a>
-                    <div class="px-5 py-1 text-xs text-gray-400 border-b mb-1">Tufted | Printed | Rubber | Coir | Bath | PVC</div>
-                    <a href="pillows.html" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50">Custom Pillows</a>
-                    <a href="blankets.html" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50">Custom Blankets</a>
-                    
-                    <a href="pins.html" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50">Enamel Pins</a>
-                    <a href="gifts.html" class="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50">Gifts & Crafts</a>
-                </div>
-            </div>
-            <a href="index.html#factory" class="text-gray-300 hover:text-white px-3 py-2 transition">About Us</a>
-            <a href="#contact" class="ml-4 px-6 py-2 rounded-full text-black font-bold hover:opacity-90 transition pulse-cta" style="background:var(--gold)">Get a Quote</a>
+        <a href="index.html" class="text-2xl font-bold text-black tracking-tight">YFON <span class="rainbow-text">HOME</span></a>
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
+            <a href="index.html" class="text-gray-600 hover:text-black transition">Home</a>
+            <a href="rugs.html" class="text-gray-600 hover:text-black transition">Rugs</a>
+            <a href="pillows.html" class="text-gray-600 hover:text-black transition">Pillows</a>
+            <a href="blankets.html" class="text-gray-600 hover:text-black transition">Blankets</a>
+            <a href="pins.html" class="text-black font-bold border-b-2 border-[#c9a84c]">Pins</a>
+            <a href="gifts.html" class="text-gray-600 hover:text-black transition">Gifts</a>
+            <a href="#contact" class="px-6 py-2 rounded-full text-white font-bold hover:opacity-90 transition" style="background:var(--gold)">Get a Quote</a>
         </nav>
     </div>
 </header>
 
 <!-- BREADCRUMB -->
-<div class="pt-20 bg-gray-50 border-b border-gray-200">
+<div class="pt-24 bg-gray-50 border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-6 py-4">
-        <nav class="flex items-center gap-2 text-xs text-gray-500">
+        <nav class="flex items-center gap-2 text-xs text-gray-400">
             <a href="index.html" class="hover:text-gray-800">Home</a><span class="mx-1">/</span>
-            <a href="pins.html" class="hover:text-gray-800">Enamel Pins</a><span class="mx-1">/</span>
-            <span class="text-gray-900 font-semibold">Soft Enamel Pins</span>
+            <a href="pins.html" class="hover:text-gray-800">Custom Pins</a><span class="mx-1">/</span>
+            <span class="text-gray-900 font-semibold uppercase tracking-widest">Soft Enamel Pins</span>
         </nav>
     </div>
 </div>
@@ -76,176 +56,70 @@
 <section class="py-12 max-w-7xl mx-auto px-6">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-        <!-- LEFT: product gallery (2/3 width) -->
+        <!-- LEFT: product info (2/3) -->
         <div class="lg:col-span-2">
-            <!-- Main image -->
-            <div class="gallery-item w-full mb-4" style="height:480px;">
-                <img id="mainImg" 
-                    src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" 
-                    alt="Custom Soft Enamel Pins" class="w-full h-full object-contain rounded-2xl" style="background:#f8f8f8;">
+            <div class="gallery-item w-full mb-8 aspect-[4/3]">
+                <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Custom Soft Enamel Pins">
             </div>
 
-            <!-- Thumbnails -->
-            <div class="grid grid-cols-5 gap-3 mb-10">
-                <button class="thumb-btn active border-2 rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg')">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" class="w-full h-full object-contain" style="background:#f8f8f8;">
-                </button>
-                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg')">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" class="w-full h-full object-contain" style="background:#f8f8f8;">
-                </button>
-                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg')">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" class="w-full h-full object-contain" style="background:#f8f8f8;">
-                </button>
-                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg')">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" class="w-full h-full object-contain" style="background:#f8f8f8;">
-                </button>
-                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden h-20" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg')">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" class="w-full h-full object-contain" style="background:#f8f8f8;">
-                </button>
-            </div>
-
-            <!-- SPEC TABLE -->
             <div class="mb-12 fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-5">Product Specifications</h2>
-                <div class="border border-gray-200 rounded-2xl overflow-hidden">
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50">Product Name</div><div class="px-6 py-4 text-sm">Custom Metal Soft Enamel Pin</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50">Material</div><div class="px-6 py-4 text-sm">Zinc Alloy / Brass / Aluminum</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50">Plating</div><div class="px-6 py-4 text-sm">Gold, Silver, Nickel, Black Nickel, Antique</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50">Color</div><div class="px-6 py-4 text-sm">Customized Colors (Pantone matched)</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50">Size</div><div class="px-6 py-4 text-sm">Custom Sizes (e.g. 1", 1.5", 2")</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50">Thickness</div><div class="px-6 py-4 text-sm">Customized Thickness (usually 1.2-1.5mm)</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50">MOQ</div><div class="px-6 py-4 text-sm">100 pieces</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50">Sample Lead Time</div><div class="px-6 py-4 text-sm">5 - 7 business days</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50">Bulk Lead Time</div><div class="px-6 py-4 text-sm">15 - 25 days after artwork approval</div></div>
+                <h1 class="font-serif text-3xl md:text-5xl text-gray-900 mb-4">Custom Soft Enamel Pins</h1>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">The most popular choice for custom pins. Soft enamel pins feature a unique textured feel with recessed colors. They are cost-effective and great for vibrant, complex designs with many colors.</p>
+                
+                <h2 class="font-serif text-3xl text-gray-900 mb-6 mt-12">Product Specifications</h2>
+                <div class="border border-gray-100 rounded-2xl overflow-hidden">
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50 uppercase tracking-widest">Base Metal</div><div class="px-6 py-4 text-sm">Iron / Zinc Alloy / Brass</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50 uppercase tracking-widest">Plating</div><div class="px-6 py-4 text-sm">Gold, Silver, Black Nickel, Antique Copper, etc.</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50 uppercase tracking-widest">Technique</div><div class="px-6 py-4 text-sm">Struck Metal + Enamel Filling</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50 uppercase tracking-widest">MOQ</div><div class="px-6 py-4 text-sm">100 pieces</div></div>
                 </div>
             </div>
 
-            <!-- DESCRIPTION -->
-            <div class="mb-12 fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-4">What is a Custom Soft Enamel Pin?</h2>
-                <p class="text-gray-600 text-base leading-relaxed mb-4">They are also known as Embossed Pins. The soft enamel lapel pins have the same full-color selections as that of hard enamel pins. But the difference is that their metal lines are a bit more raised, and the enamel colors are recessed areas, giving the die-struck pins an interesting appearance of layering.</p>
-                <p class="text-gray-600 text-base leading-relaxed mb-4">Best Uses: The custom soft enamel pins can be used to identify and promote schools, corporations, military units, and associations. They are the most popular choice for their textured feel and vibrant look.</p>
-            </div>
-
-            <!-- KEY ADVANTAGES -->
             <div class="mb-12 fade-up">
                 <h2 class="font-serif text-3xl text-gray-900 mb-6">Why Choose Our Soft Enamel Pins?</h2>
-                <div class="space-y-4">
-                    <div class="flex items-start gap-3">
-                        <span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm font-bold mt-0.5" style="background:var(--gold)">1</span>
-                        <div><strong class="text-gray-800">Texture & Dimension</strong> - <span class="text-gray-500">Raised metal lines and recessed colors for a classic look.</span></div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm font-bold mt-0.5" style="background:var(--gold)">2</span>
-                        <div><strong class="text-gray-800">Wide Plating Variety</strong> - <span class="text-gray-500">Choose from gold, silver, nickel, and many specialty finishes.</span></div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm font-bold mt-0.5" style="background:var(--gold)">3</span>
-                        <div><strong class="text-gray-800">High Detail & Color</strong> - <span class="text-gray-500">Perfect for complex designs with many colors.</span></div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-sm font-bold mt-0.5" style="background:var(--gold)">4</span>
-                        <div><strong class="text-gray-800">Cost-Effective</strong> - <span class="text-gray-500">Excellent balance of quality and affordability for bulk orders.</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PRODUCT GALLERY -->
-            <div class="mb-12 fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-6">Product Gallery</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Pin 1"></div>
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Pin 2"></div>
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Pin 3"></div>
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Pin 4"></div>
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Pin 5"></div>
-                    <div class="gallery-item h-64"><img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Pin 6"></div>
-                </div>
-            </div>
-
-            <!-- FAQ -->
-            <div class="mb-12 fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-6">Frequently Asked Questions</h2>
-                <div class="space-y-3">
-                    <div class="border border-gray-200 rounded-xl">
-                        <button class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 text-sm" onclick="toggleFAQ(this)">
-                            How can I start a custom pin order?
-                            <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-4 text-xs text-gray-500 leading-relaxed">Send us your design file (AI, PDF, PNG at 300dpi+) with your desired size and quantity. Our team will review it and respond within 1 hour with a digital mockup and quote.</div>
-                    </div>
-                    <div class="border border-gray-200 rounded-xl">
-                        <button class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 text-sm" onclick="toggleFAQ(this)">
-                            What is the minimum order quantity?
-                            <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-4 text-xs text-gray-500 leading-relaxed">MOQ is 100 pieces for custom enamel pins. This ensures the best unit pricing for die-striking and plating processes.</div>
-                    </div>
-                    <div class="border border-gray-200 rounded-xl">
-                        <button class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-gray-800 text-sm" onclick="toggleFAQ(this)">
-                            How long does production take?
-                            <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </button>
-                        <div class="faq-answer px-6 pb-4 text-xs text-gray-500 leading-relaxed">Physical samples take 5-7 business days. Bulk production is typically 15-25 days after artwork approval.</div>
-                    </div>
-                </div>
+                <ul class="space-y-4 text-sm text-gray-600">
+                    <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-[#c9a84c] mt-1.5 shrink-0"></span> Iconic textured 3D look and feel that collectors love.</li>
+                    <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-[#c9a84c] mt-1.5 shrink-0"></span> Excellent value for money, especially for larger production runs.</li>
+                    <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-[#c9a84c] mt-1.5 shrink-0"></span> Unlimited color combinations to match your specific artwork.</li>
+                </ul>
             </div>
         </div>
 
-        <!-- RIGHT: sticky CTA sidebar -->
+        <!-- RIGHT: sticky form (1/3) -->
         <div class="lg:col-span-1">
             <div class="sticky-cta" id="contact">
-                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-lg">
-                    <!-- Header -->
-                    <div class="p-6 text-white" style="background:#0a0a0a">
-                        <h2 class="font-serif text-2xl mb-1">Get a Free Quote</h2>
-                        <p class="text-gray-400 text-sm">Reply within <strong class="text-white">1 hour</strong> with digital mockup</p>
+                <div class="border border-gray-100 rounded-3xl overflow-hidden shadow-2xl shadow-gray-200/50">
+                    <div class="p-8 text-white" style="background:#1a1a1a">
+                        <h2 class="font-serif text-3xl mb-2">Get a Free Quote</h2>
+                        <p class="text-gray-400 text-xs uppercase tracking-widest">Reply within 1 hour</p>
                     </div>
-
-                    <!-- Form -->
-                    <div class="p-6 bg-white">
-                        <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-4">
-                            <input type="hidden" name="product" value="Custom Soft Enamel Pin">
+                    <div class="p-8 bg-white">
+                        <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-5">
+                            <input type="hidden" name="product" value="Custom Soft Enamel Pins">
                             <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Full Name *</label>
-                                <input name="name" type="text" required placeholder="Your name" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
+                                <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">Full Name *</label>
+                                <input name="name" type="text" required placeholder="Your name" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Company Name</label>
-                                <input name="company" type="text" placeholder="Your company" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
+                                <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">Email Address *</label>
+                                <input name="email" type="email" required placeholder="you@brand.com" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Email *</label>
-                                <input name="email" type="email" required placeholder="you@brand.com" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
+                                <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">WhatsApp Number</label>
+                                <input name="whatsapp" type="tel" placeholder="+86 ..." class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">WhatsApp</label>
-                                <input name="whatsapp" type="tel" placeholder="+1 234 567 890" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
+                                <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">Quantity</label>
+                                <input name="quantity" type="text" placeholder="e.g. 100 pcs" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Quantity</label>
-                                <input name="quantity" type="text" placeholder="e.g. 200 pcs" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
+                                <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">Project Details</label>
+                                <textarea name="message" rows="3" placeholder="Size, plating choice, design idea..." class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm resize-none"></textarea>
                             </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Description</label>
-                                <textarea name="message" rows="3" placeholder="Size, plating color, design idea..." class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl outline-none text-sm resize-none"></textarea>
-                            </div>
-                            
-                            <p class="text-[10px] text-gray-500 mb-2 italic">Tip: To get a mockup faster, you can also send your design directly via WhatsApp.</p>
-                            <button type="submit" class="w-full py-4 rounded-xl text-black font-bold text-sm hover:opacity-90 transition pulse-cta" style="background:var(--gold)">
+                            <button type="submit" class="w-full py-5 rounded-xl text-white font-bold text-sm hover:opacity-90 transition shadow-lg pulse-cta" style="background:var(--gold)">
                                 SEND INQUIRY &rarr;
                             </button>
-                            <a href="https://wa.me/8613613866590" target="_blank" class="w-full py-3 rounded-xl text-white font-bold text-sm text-center transition block" style="background:#25D366">
-                                WhatsApp Us Directly
-                            </a>
                         </form>
-
-                        <!-- Trust signals -->
-                        <div class="mt-5 pt-5 border-t border-gray-100 space-y-2">
-                            <div class="flex items-center gap-2 text-[10px] text-gray-500"><span style="color:var(--gold)">-</span> Free digital mockup within 1 hour</div>
-                            <div class="flex items-center gap-2 text-[10px] text-gray-500"><span style="color:var(--gold)">-</span> Jewelry-grade craftsmanship</div>
-                            <div class="flex items-center gap-2 text-[10px] text-gray-500"><span style="color:var(--gold)">-</span> 98.92% response rate</div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -255,39 +129,23 @@
 </section>
 
 <!-- FOOTER -->
-<footer style="background:#050505" class="border-t border-white/10 py-10 mt-8">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-gray-500">
-        <a href="index.html" class="text-white font-bold text-2xl">YFON <span class="rainbow-text">HOME</span></a>
-        <div class="flex flex-wrap justify-center gap-5">
-            <a href="index.html" class="hover:text-white transition">Home</a>
-            <a href="rugs.html" class="hover:text-white transition">Custom Rugs</a>
-            <a href="pillows.html" class="hover:text-white transition" style="color:var(--gold)">Pillows</a>
+<footer style="background:#050505" class="py-16 border-t border-white/5 text-center">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-3xl font-bold text-white mb-8">YFON <span class="rainbow-text">HOME</span></div>
+        <div class="flex flex-wrap justify-center gap-8 text-xs text-gray-500 mb-10">
+            <a href="rugs.html" class="hover:text-white transition">Rugs</a>
+            <a href="pillows.html" class="hover:text-white transition">Pillows</a>
             <a href="blankets.html" class="hover:text-white transition">Blankets</a>
-            
             <a href="pins.html" class="hover:text-white transition">Pins</a>
             <a href="gifts.html" class="hover:text-white transition">Gifts</a>
         </div>
-        <span>&copy; 2026 YFON HOME - www.yfonhomecustom.com</span>
+        <p class="text-xs text-gray-600 uppercase tracking-widest">&copy; 2026 YFON HOME. All Rights Reserved.</p>
     </div>
 </footer>
 
 <script>
-    function switchImg(btn, src) {
-        document.getElementById('mainImg').src = src;
-        document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelectorAll('.thumb-btn').forEach(b => b.style.borderColor = '');
-        btn.style.borderColor = 'var(--gold)';
-    }
-    function toggleFAQ(btn) {
-        const answer = btn.nextElementSibling;
-        const isOpen = answer.classList.contains('open');
-        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
-        document.querySelectorAll('.faq-btn').forEach(b => b.classList.remove('open'));
-        if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
-    }
-    const obs = new IntersectionObserver(e => { e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }) }, {threshold:0.1});
-    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+    const observer = new IntersectionObserver(e => { e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }) }, {threshold:0.1});
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
