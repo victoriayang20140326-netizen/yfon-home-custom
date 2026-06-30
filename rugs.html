@@ -20,125 +20,118 @@
         .fade-up.visible { opacity: 1; transform: translateY(0); }
         @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.5); } 70% { box-shadow: 0 0 0 12px rgba(201,168,76,0); } }
         .pulse-btn { animation: pulse-gold 2.2s infinite; }
+        .gallery-item { overflow: hidden; border-radius: 12px; background: #f8f8f8; }
+        .gallery-item img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: contain; }
+        .spec-row:nth-child(even) { background: #f9f9f9; }
+        .sticky-cta { position: sticky; top: 96px; }
     </style>
 </head>
 <body>
-
-    <!-- HEADER -->
     <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold text-black">YFON <span class="rainbow-text">HOME</span></a>
             <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
                 <a href="index.html" class="hover:text-black transition">Home</a>
-                <a href="rugs.html" class="text-black font-bold border-b-2 border-[#c9a84c]">Rugs</a>
-                <a href="pillows.html" class="hover:text-black transition">Pillows</a>
-                <a href="blankets.html" class="hover:text-black transition">Blankets</a>
-                <a href="pins.html" class="hover:text-black transition">Pins</a>
-                <a href="gifts.html" class="hover:text-black transition">Gifts</a>
+                <a href="rugs.html" class="hover:text-black transition text-black font-bold border-b-2 border-[#c9a84c]">Rugs</a>
+                <a href="pillows.html" class="hover:text-black transition ">Pillows</a>
+                <a href="blankets.html" class="hover:text-black transition ">Blankets</a>
+                <a href="pins.html" class="hover:text-black transition ">Pins</a>
+                <a href="gifts.html" class="hover:text-black transition ">Gifts</a>
                 <a href="#contact" class="px-5 py-2 rounded-full text-white font-bold" style="background:var(--gold)">Get a Quote</a>
             </nav>
         </div>
     </header>
 
-    <!-- HERO -->
     <section class="pt-32 pb-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
             <nav class="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-400 mb-4">
                 <a href="index.html" class="hover:text-black transition">Home</a>
                 <span class="mx-1">/</span>
-                <span class="text-gray-900">Custom Rugs</span>
+                <span class="text-gray-900">Custom Rugs & Carpets</span>
             </nav>
-            <h1 class="font-serif text-5xl md:text-7xl text-black mb-4">Custom Rugs & <span class="text-[#c9a84c]">Carpets</span></h1>
-            <p class="text-gray-500 text-sm max-w-2xl">Elevate your brand or home with our premium custom-made rugs. From hand-tufted art pieces to durable logo mats, we bring your vision to life with precision and style.</p>
+            <h1 class="font-serif text-5xl md:text-7xl text-black mb-4">Custom Rugs & Carpets</h1>
+            <p class="text-gray-500 text-sm max-w-2xl">Any shape, any logo, any size. Hand-tufted or Jacquard production. MOQ from 1 sq.m.</p>
         </div>
     </section>
 
-    <!-- SUBCATEGORY GRID -->
     <section class="py-20 max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Tufted Rug -->
-            <a href="tufted-rug.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Custom Tufted Rug">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Tufted Rug</h3>
-                    <p class="text-gray-500 text-xs mb-4 leading-relaxed">Premium hand-tufted rugs in any shape, logo or design. Deep pile and luxurious feel. MOQ from 1 pc.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-
-            <!-- Printed Rug -->
+    
             <a href="printed-rug.html" class="cat-card rounded-2xl overflow-hidden block group">
                 <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/H341b5e6eb124414087440e2d31aa8b66n.jpg" alt="Custom Printed Rug">
+                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Printed Rug">
                 </div>
                 <div class="p-8">
                     <h3 class="text-xl font-bold mb-2">Printed Rug</h3>
-                    <p class="text-gray-500 text-xs mb-4 leading-relaxed">Full-color digital sublimation print with photo-quality reproduction. Perfect for detailed artwork.</p>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Vibrant full-color rugs with complex patterns.</p>
                     <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
                 </div>
             </a>
-
-            <!-- Rubber Mat -->
-            <a href="rubber-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
+        
+            <a href="tufted-rug.html" class="cat-card rounded-2xl overflow-hidden block group">
                 <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hfa2f6bc5da1c43fe9fcbc1f475694279V.jpg" alt="Custom Rubber Mat">
+                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Tufted Rug">
                 </div>
                 <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Rubber Mat</h3>
-                    <p class="text-gray-500 text-xs mb-4 leading-relaxed">Heavy-duty nitrile rubber-backed mats with custom logo printing. Anti-slip and professional.</p>
+                    <h3 class="text-xl font-bold mb-2">Tufted Rug</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Hand-tufted premium rugs with rich texture.</p>
                     <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
                 </div>
             </a>
-
-            <!-- Coir Mat -->
-            <a href="coir-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/H3970d044fef54e3cb13de40c397f7336y.jpg" alt="Custom Coir Mat">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Coir Mat</h3>
-                    <p class="text-gray-500 text-xs mb-4 leading-relaxed">Natural coconut fiber entrance mats. Highly durable and eco-friendly for branded welcomes.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-
-            <!-- Bath Mat -->
+        
             <a href="bath-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
                 <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/H6ea3e613bd4947078d0c2ca3f2204ab7Q.jpg" alt="Custom Bath Mat">
+                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Bath Mat">
                 </div>
                 <div class="p-8">
                     <h3 class="text-xl font-bold mb-2">Bath Mat</h3>
-                    <p class="text-gray-500 text-xs mb-4 leading-relaxed">Super-absorbent microfiber mats with soft plush feel. Customizable with vibrant prints.</p>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Soft absorbent mats for bathrooms and spas.</p>
                     <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
                 </div>
             </a>
-
-            <!-- PVC Coil Mat -->
+        
+            <a href="coir-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Coir Mat">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold mb-2">Coir Mat</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Natural fiber mats for entryways.</p>
+                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
+                </div>
+            </a>
+        
             <a href="pvc-coil-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
                 <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/H0dd552b48874450c87016e8b6c24ee311.jpg" alt="Custom PVC Coil Mat">
+                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="PVC Coil Mat">
                 </div>
                 <div class="p-8">
                     <h3 class="text-xl font-bold mb-2">PVC Coil Mat</h3>
-                    <p class="text-gray-500 text-xs mb-4 leading-relaxed">Waterproof and easy-to-clean floor mats. Ideal for outdoor entries and high-traffic areas.</p>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Durable outdoor mats for high-traffic areas.</p>
                     <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
                 </div>
             </a>
-
+        
+            <a href="rubber-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Rubber Mat">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold mb-2">Rubber Mat</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Anti-slip rubber mats for industrial use.</p>
+                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
+                </div>
+            </a>
+        
         </div>
     </section>
-
-    <!-- INQUIRY SECTION -->
     <section id="contact" class="py-24 bg-gray-50 text-black">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-16 fade-up">
-                <h2 class="font-serif text-4xl md:text-5xl mb-4">Start Your Custom <span class="text-[#c9a84c]">Rug Project</span></h2>
+                <h2 class="font-serif text-4xl md:text-5xl mb-4">Start Your Project</h2>
                 <p class="text-gray-500 text-sm uppercase tracking-widest">Get a free mockup and pricing within 1 hour</p>
             </div>
+            
             <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-6 fade-up">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -157,22 +150,22 @@
                     </div>
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Estimated Quantity</label>
-                        <input name="quantity" type="text" placeholder="e.g. 10 pcs" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#c9a84c] transition text-sm">
+                        <input name="quantity" type="text" placeholder="e.g. 50 pcs" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#c9a84c] transition text-sm">
                     </div>
                 </div>
                 <div>
                     <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Project Details</label>
-                    <textarea name="message" rows="4" placeholder="Describe your preferred size, colors, or any special requirements..." class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none resize-none text-sm"></textarea>
+                    <textarea name="message" rows="4" placeholder="Describe your preferred size, material, or design details..." class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none resize-none text-sm"></textarea>
                 </div>
                 <div class="pt-4 text-center">
                     <button type="submit" class="w-full py-5 rounded-full text-white font-bold text-lg hover:opacity-90 transition shadow-lg" style="background:var(--gold)">SEND INQUIRY</button>
-                    <p class="text-xs text-gray-400 mt-4 italic">Tip: You can also send your design directly via WhatsApp for a faster response.</p>
+                    <p class="text-xs text-gray-400 mt-4 italic">To get a quote faster, please send your design directly via WhatsApp.</p>
                 </div>
             </form>
+
         </div>
     </section>
-
-    <!-- FOOTER -->
+    
     <footer style="background:#050505" class="py-16 border-t border-white/5 text-center">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-3xl font-bold text-white mb-8">YFON <span class="rainbow-text">HOME</span></div>
@@ -186,10 +179,7 @@
             <p class="text-sm text-gray-600 uppercase tracking-widest">&copy; 2026 YFON HOME. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <!-- Floating CTA -->
     <a href="#contact" class="fixed bottom-8 right-8 z-50 pulse-btn rounded-full px-8 py-4 text-white font-bold text-sm shadow-2xl flex items-center gap-2" style="background:var(--gold)">GET QUOTE</a>
-
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });

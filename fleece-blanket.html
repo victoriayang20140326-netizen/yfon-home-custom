@@ -3,149 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Fleece Blanket | YFON HOME | Manufacturer & Wholesale</title>
+    <title>Fleece Blanket | YFON HOME | Manufacturer & Wholesale</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #c9a84c; }
-        body { font-family: 'Inter', sans-serif; background: #fff; color: #1a1a1a; margin: 0; }
+        :root { --gold: #c9a84c; --dark: #1a1a1a; }
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #fff; color: var(--dark); margin: 0; }
         .font-serif { font-family: 'Playfair Display', serif; }
-        .rainbow-text { background: linear-gradient(90deg,#ef4444,#f97316,#eab308,#22c55e,#3b82f6,#8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        header { position: fixed; top: 0; width: 100%; z-index: 200; background: rgba(255,255,255,.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,.05); }
+        .rainbow-text { background: linear-gradient(90deg, #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .cat-card { transition: all 0.35s ease; border: 1px solid rgba(0,0,0,0.05); background: #fcfcfc; }
+        .cat-card:hover { transform: translateY(-8px); border-color: var(--gold); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+        .cat-card img { transition: transform 0.5s ease; object-fit: contain; width: 100%; height: 100%; background: #f8f8f8; }
+        .cat-card:hover img { transform: scale(1.05); }
+        .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.5); } 70% { box-shadow: 0 0 0 12px rgba(201,168,76,0); } }
+        .pulse-btn { animation: pulse-gold 2.2s infinite; }
         .gallery-item { overflow: hidden; border-radius: 12px; background: #f8f8f8; }
         .gallery-item img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: contain; }
-        .gallery-item:hover img { transform: scale(1.06); }
         .spec-row:nth-child(even) { background: #f9f9f9; }
-        .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        .fade-up.visible { opacity: 1; transform: translateY(0); }
-        @keyframes pulse-gold { 0%,100%{box-shadow: 0 0 0 0 rgba(201,168,76,.5)} 70%{box-shadow: 0 0 0 14px rgba(201,168,76,0)} }
-        .pulse-cta { animation: pulse-gold 2.2s infinite; }
         .sticky-cta { position: sticky; top: 96px; }
     </style>
 </head>
 <body>
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-black">YFON <span class="rainbow-text">HOME</span></a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+                <a href="index.html" class="hover:text-black transition">Home</a>
+                <a href="rugs.html" class="hover:text-black transition ">Rugs</a>
+                <a href="pillows.html" class="hover:text-black transition ">Pillows</a>
+                <a href="blankets.html" class="hover:text-black transition text-black font-bold border-b-2 border-[#c9a84c]">Blankets</a>
+                <a href="pins.html" class="hover:text-black transition ">Pins</a>
+                <a href="gifts.html" class="hover:text-black transition ">Gifts</a>
+                <a href="#contact" class="px-5 py-2 rounded-full text-white font-bold" style="background:var(--gold)">Get a Quote</a>
+            </nav>
+        </div>
+    </header>
 
-<!-- HEADER -->
-<header>
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="index.html" class="text-2xl font-bold text-black tracking-tight">YFON <span class="rainbow-text">HOME</span></a>
-        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
-            <a href="index.html" class="text-gray-600 hover:text-black transition">Home</a>
-            <a href="rugs.html" class="text-gray-600 hover:text-black transition">Rugs</a>
-            <a href="pillows.html" class="text-gray-600 hover:text-black transition">Pillows</a>
-            <a href="blankets.html" class="text-black font-bold border-b-2 border-[#c9a84c]">Blankets</a>
-            <a href="pins.html" class="text-gray-600 hover:text-black transition">Pins</a>
-            <a href="gifts.html" class="text-gray-600 hover:text-black transition">Gifts</a>
-            <a href="#contact" class="px-6 py-2 rounded-full text-white font-bold hover:opacity-90 transition" style="background:var(--gold)">Get a Quote</a>
-        </nav>
+    <div class="pt-24 bg-gray-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <nav class="flex items-center gap-2 text-xs text-gray-400">
+                <a href="index.html" class="hover:text-gray-800">Home</a><span class="mx-1">/</span>
+                <a href="blankets.html" class="hover:text-gray-800">Custom Blankets</a><span class="mx-1">/</span>
+                <span class="text-gray-900 font-semibold uppercase tracking-widest">Fleece Blanket</span>
+            </nav>
+        </div>
     </div>
-</header>
 
-<!-- BREADCRUMB -->
-<div class="pt-24 bg-gray-50 border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-6 py-4">
-        <nav class="flex items-center gap-2 text-xs text-gray-400">
-            <a href="index.html" class="hover:text-gray-800">Home</a><span class="mx-1">/</span>
-            <a href="blankets.html" class="hover:text-gray-800">Custom Blankets</a><span class="mx-1">/</span>
-            <span class="text-gray-900 font-semibold uppercase tracking-widest">Fleece Blanket</span>
-        </nav>
-    </div>
-</div>
-
-<!-- MAIN CONTENT -->
-<section class="py-12 max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
-        <!-- LEFT: product info (2/3) -->
-        <div class="lg:col-span-2">
-            <div class="gallery-item w-full mb-8 aspect-[4/3]">
-                <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Custom Fleece Blanket">
-            </div>
-
-            <div class="mb-12 fade-up">
-                <h1 class="font-serif text-3xl md:text-5xl text-gray-900 mb-4">Custom Fleece Blanket</h1>
-                <p class="text-gray-500 text-sm leading-relaxed mb-6">Ultra-soft flannel fleece blankets. Lightweight yet incredibly warm, these blankets are the perfect canvas for your brand logo or artistic designs. Ideal for corporate gifts and winter promotions.</p>
-                
-                <h2 class="font-serif text-3xl text-gray-900 mb-6 mt-12">Product Specifications</h2>
-                <div class="border border-gray-100 rounded-2xl overflow-hidden">
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50 uppercase tracking-widest">Material</div><div class="px-6 py-4 text-sm">100% Polyester Flannel Fleece</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50 uppercase tracking-widest">Weight</div><div class="px-6 py-4 text-sm">240gsm - 300gsm</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50 uppercase tracking-widest">Printing</div><div class="px-6 py-4 text-sm">Digital Print / Silk Screen</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50 uppercase tracking-widest">MOQ</div><div class="px-6 py-4 text-sm">5 pieces</div></div>
+    <section class="py-12 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-2">
+                <div class="gallery-item w-full mb-8 aspect-[4/3]">
+                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Fleece Blanket">
+                </div>
+                <div class="mb-12 fade-up">
+                    <h1 class="font-serif text-3xl md:text-5xl text-gray-900 mb-4">Fleece Blanket</h1>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Ultra-soft flannel fleece blankets.</p>
+                    <h2 class="font-serif text-3xl text-gray-900 mb-6 mt-12">Product Specifications</h2>
+                    <div class="border border-gray-100 rounded-2xl overflow-hidden">
+    
+                        <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50 uppercase tracking-widest">Material</div><div class="px-6 py-4 text-sm">Flannel / Jacquard Woven</div></div>
+        
+                        <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50 uppercase tracking-widest">Size</div><div class="px-6 py-4 text-sm">Customizable</div></div>
+        
+                        <div class="spec-row grid grid-cols-2"><div class="px-6 py-4 text-xs font-semibold text-gray-500 bg-gray-50 uppercase tracking-widest">MOQ</div><div class="px-6 py-4 text-sm">5-50 pcs</div></div>
+        
+                    </div>
                 </div>
             </div>
-
-            <div class="mb-12 fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-6">Why Choose Our Fleece Blankets?</h2>
-                <ul class="space-y-4 text-sm text-gray-600">
-                    <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-[#c9a84c] mt-1.5 shrink-0"></span> Exceptional softness and warmth without the weight.</li>
-                    <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-[#c9a84c] mt-1.5 shrink-0"></span> Durable construction that stands up to frequent washing.</li>
-                    <li class="flex items-start gap-3"><span class="w-2 h-2 rounded-full bg-[#c9a84c] mt-1.5 shrink-0"></span> High perceived value makes it a perfect premium gift.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- RIGHT: sticky form (1/3) -->
-        <div class="lg:col-span-1">
-            <div class="sticky-cta" id="contact">
-                <div class="border border-gray-100 rounded-3xl overflow-hidden shadow-2xl shadow-gray-200/50">
-                    <div class="p-8 text-white" style="background:#1a1a1a">
-                        <h2 class="font-serif text-3xl mb-2">Get a Free Quote</h2>
-                        <p class="text-gray-400 text-xs uppercase tracking-widest">Reply within 1 hour</p>
+            <div class="lg:col-span-1">
+                <div class="sticky-cta" id="contact">
+                    <div class="border border-gray-100 rounded-3xl overflow-hidden shadow-2xl shadow-gray-200/50">
+                        <div class="p-8 text-white" style="background:#1a1a1a">
+                            <h2 class="font-serif text-3xl mb-2">Get a Quote</h2>
+                            <p class="text-gray-400 text-xs uppercase tracking-widest">Reply within 1 hour</p>
+                        </div>
+                        <div class="p-8 bg-white">
+                            
+            <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-6 fade-up">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Full Name *</label>
+                        <input name="name" type="text" required placeholder="Your name" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
                     </div>
-                    <div class="p-8 bg-white">
-                        <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-5">
-                            <input type="hidden" name="product" value="Custom Fleece Blanket">
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">Full Name *</label>
-                                <input name="name" type="text" required placeholder="Your name" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">Email Address *</label>
-                                <input name="email" type="email" required placeholder="you@brand.com" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">WhatsApp Number</label>
-                                <input name="whatsapp" type="tel" placeholder="+86 ..." class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">Quantity</label>
-                                <input name="quantity" type="text" placeholder="e.g. 100 pcs" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-400">Project Details</label>
-                                <textarea name="message" rows="3" placeholder="Size, color, design idea..." class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm resize-none"></textarea>
-                            </div>
-                            <button type="submit" class="w-full py-5 rounded-xl text-white font-bold text-sm hover:opacity-90 transition shadow-lg pulse-cta" style="background:var(--gold)">
-                                SEND INQUIRY &rarr;
-                            </button>
-                        </form>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Email Address *</label>
+                        <input name="email" type="email" required placeholder="you@brand.com" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">WhatsApp Number</label>
+                        <input name="whatsapp" type="tel" placeholder="+86 ..." class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Estimated Quantity</label>
+                        <input name="quantity" type="text" placeholder="e.g. 50 pcs" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#c9a84c] transition text-sm">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Project Details</label>
+                    <textarea name="message" rows="4" placeholder="Describe your preferred size, material, or design details..." class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none resize-none text-sm"></textarea>
+                </div>
+                <div class="pt-4 text-center">
+                    <button type="submit" class="w-full py-5 rounded-full text-white font-bold text-lg hover:opacity-90 transition shadow-lg" style="background:var(--gold)">SEND INQUIRY</button>
+                    <p class="text-xs text-gray-400 mt-4 italic">To get a quote faster, please send your design directly via WhatsApp.</p>
+                </div>
+            </form>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer style="background:#050505" class="py-16 border-t border-white/5 text-center">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="text-3xl font-bold text-white mb-8">YFON <span class="rainbow-text">HOME</span></div>
-        <div class="flex flex-wrap justify-center gap-8 text-xs text-gray-500 mb-10">
-            <a href="rugs.html" class="hover:text-white transition">Rugs</a>
-            <a href="pillows.html" class="hover:text-white transition">Pillows</a>
-            <a href="blankets.html" class="hover:text-white transition">Blankets</a>
-            <a href="pins.html" class="hover:text-white transition">Pins</a>
-            <a href="gifts.html" class="hover:text-white transition">Gifts</a>
+    </section>
+    
+    <footer style="background:#050505" class="py-16 border-t border-white/5 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-3xl font-bold text-white mb-8">YFON <span class="rainbow-text">HOME</span></div>
+            <div class="flex flex-wrap justify-center gap-8 text-xs text-gray-500 mb-10">
+                <a href="rugs.html" class="hover:text-white transition">Rugs</a>
+                <a href="pillows.html" class="hover:text-white transition">Pillows</a>
+                <a href="blankets.html" class="hover:text-white transition">Blankets</a>
+                <a href="pins.html" class="hover:text-white transition">Pins</a>
+                <a href="gifts.html" class="hover:text-white transition">Gifts</a>
+            </div>
+            <p class="text-sm text-gray-600 uppercase tracking-widest">&copy; 2026 YFON HOME. All Rights Reserved.</p>
         </div>
-        <p class="text-xs text-gray-600 uppercase tracking-widest">&copy; 2026 YFON HOME. All Rights Reserved.</p>
-    </div>
-</footer>
-
-<script>
-    const observer = new IntersectionObserver(e => { e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }) }, {threshold:0.1});
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-</script>
+    </footer>
+    <a href="#contact" class="fixed bottom-8 right-8 z-50 pulse-btn rounded-full px-8 py-4 text-white font-bold text-sm shadow-2xl flex items-center gap-2" style="background:var(--gold)">GET QUOTE</a>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
