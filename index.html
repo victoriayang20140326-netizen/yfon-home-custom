@@ -13,9 +13,9 @@
         .font-serif { font-family: 'Playfair Display', serif; }
         .rainbow-text { background: linear-gradient(90deg, #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .ticker-inner { display: flex; width: max-content; animation: ticker 28s linear infinite; }
+        .ticker-inner { display: flex; width: max-content; animation: ticker 30s linear infinite; }
         @keyframes galleryScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .gallery-track { display: flex; width: max-content; animation: galleryScroll 45s linear infinite; gap: 15px; }
+        .gallery-track { display: flex; width: max-content; animation: galleryScroll 50s linear infinite; gap: 15px; }
         .gallery-track:hover { animation-play-state: paused; }
         .product-card { transition: all 0.35s ease; border: 1px solid rgba(255,255,255,0.08); background: #111; }
         .product-card:hover { transform: translateY(-8px); border-color: var(--gold); }
@@ -44,11 +44,11 @@
         </div>
     </header>
 
-    <!-- 1. HERO (700px) -->
-    <section class="relative h-screen min-h-[700px] flex items-center overflow-hidden">
-        <img src="https://sc02.alicdn.com/kf/Ab3d7b2331a3d48619c4ea248b9e999feb.png" alt="Hero" class="absolute inset-0 w-full h-full object-contain bg-black opacity-60">
+    <!-- 1. HERO -->
+    <section class="relative h-screen min-h-[700px] flex items-center overflow-hidden text-left">
+        <img src="https://sc02.alicdn.com/kf/Ab3d7b2331a3d48619c4ea248b9e999feb.png" alt="Hero Rug" class="absolute inset-0 w-full h-full object-contain bg-black opacity-65">
         <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(10,10,10,0.95) 35%, rgba(10,10,10,0) 100%);"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full text-left">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
             <div class="max-w-2xl">
                 <p class="text-sm tracking-[0.3em] uppercase mb-4 font-semibold text-[#c9a84c]">Custom Manufacturing Expert · Since 2014</p>
                 <h1 class="font-serif text-5xl md:text-8xl leading-none mb-6">Transform Your<br>Vision into <span class="rainbow-text italic">Art</span></h1>
@@ -61,12 +61,12 @@
         </div>
     </section>
 
-    <!-- 1.5 CUSTOMIZATION BANNER (640px) -->
+    <!-- 1.5 CUSTOMIZATION BANNER -->
     <div class="w-full overflow-hidden bg-black" style="height:640px;">
-        <img src="https://sc02.alicdn.com/kf/Hef8f99857bd54dcd97b515c31edfeffcm.jpg" alt="All About Customization" style="width:100%; height:100%; object-fit:contain; display:block;">
+        <img src="https://sc02.alicdn.com/kf/Hef8f99857bd54dcd97b515c31edfeffcm.jpg" alt="Customization Is Our Essence" style="width:100%; height:100%; object-fit:contain; display:block;">
     </div>
 
-    <!-- 2. FACTORY SCROLL GALLERY -->
+    <!-- 2. FACTORY SCROLL -->
     <div class="py-16 border-y border-white/10 bg-[#0a0a0a]">
         <div class="text-center mb-10"><p class="text-sm tracking-[0.4em] uppercase font-bold text-[#c9a84c]">· Real Factory · Real Quality · Real Capacity ·</p></div>
         <div class="overflow-hidden px-4 mb-10">
@@ -77,18 +77,20 @@
                 <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/Hd38cae2562b64c35ad2d983af34d6724h.jpg" class="w-full h-full object-cover"></div>
                 <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/Hdae222b596a6470099ee14200f716903S.jpg" class="w-full h-full object-cover"></div>
                 <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H0f50e01663194f2396a0df1e135c895fZ.jpg" class="w-full h-full object-cover"></div>
-                <!-- Loop -->
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H906b8f1a633342a9ba78260ad38336c67.jpg" class="w-full h-full object-cover"></div>
+                <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H2d1f83f40cce4059b4d70b9abdcafe49j.jpg" class="w-full h-full object-cover"></div>
+                <!-- Duplicate for seamless loop -->
                 <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H21bb756f9349441c8518ce9c9cf05be1p.jpg" class="w-full h-full object-cover"></div>
                 <div class="shrink-0 w-80 h-60 rounded-xl overflow-hidden border border-white/10"><img src="https://sc02.alicdn.com/kf/H60c4d2695cff41a384000e4b1df0bbb1m.jpg" class="w-full h-full object-cover"></div>
             </div>
         </div>
         <div class="ticker-inner text-xs font-semibold tracking-widest text-white/50 uppercase">
-            <span class="px-10">· 10+ YEARS EXPERIENCE</span><span class="px-10" style="color:var(--gold)">· 2000+ HAPPY CLIENTS</span><span class="px-10">· MOQ FROM 1 PIECE</span><span class="px-10" style="color:var(--gold)">· 98.92% RESPONSE RATE</span>
-            <span class="px-10">· 10+ YEARS EXPERIENCE</span><span class="px-10" style="color:var(--gold)">· 2000+ HAPPY CLIENTS</span><span class="px-10">· MOQ FROM 1 PIECE</span><span class="px-10" style="color:var(--gold)">· 98.92% RESPONSE RATE</span>
+            <span class="px-10">· 10+ YEARS EXPERIENCE</span><span class="px-10" style="color:var(--gold)">· 2000+ HAPPY CLIENTS</span><span class="px-10">· MOQ FROM 1 PIECE</span><span class="px-10" style="color:var(--gold)">· 98.92% RESPONSE RATE</span><span class="px-10">· PARTNER OF LEADING US BRANDS</span>
+            <span class="px-10">· 10+ YEARS EXPERIENCE</span><span class="px-10" style="color:var(--gold)">· 2000+ HAPPY CLIENTS</span><span class="px-10">· MOQ FROM 1 PIECE</span><span class="px-10" style="color:var(--gold)">· 98.92% RESPONSE RATE</span><span class="px-10">· PARTNER OF LEADING US BRANDS</span>
         </div>
     </div>
 
-    <!-- 3. PRODUCT SHOWCASE -->
+    <!-- 3. PRODUCT MATRIX -->
     <section id="products" class="py-28 max-w-7xl mx-auto px-6">
         <div class="text-center mb-16 fade-up">
             <p class="text-sm tracking-[0.3em] uppercase mb-3 text-[#c9a84c]">What We Create</p>
@@ -99,26 +101,25 @@
             <!-- Row 1: Rugs (WIDE) -->
             <a href="rugs.html" class="product-card rounded-2xl overflow-hidden sm:col-span-2 fade-up block">
                 <div class="overflow-hidden bg-black" style="height:480px;"><img src="https://sc02.alicdn.com/kf/Ab2a44b104e0b4748ac31dc991b20dfa8y.png" class="w-full h-full object-contain"></div>
-                <div class="p-8"><div class="flex justify-between items-center mb-2"><h3 class="text-2xl font-bold">Custom Rugs & Carpets</h3><span class="text-xs px-4 py-1 rounded-full border border-yellow-500 text-yellow-500 font-bold uppercase">#1 Best Seller</span></div><p class="text-gray-500 text-sm">Any shape, any logo, any size. Hand-tufted or Jacquard production. MOQ from 1 sq.m.</p></div>
+                <div class="p-8"><div class="flex justify-between items-center mb-2"><h3 class="text-2xl font-bold">Custom Rugs & Carpets</h3><span class="text-xs px-4 py-1 rounded-full border border-yellow-500 text-yellow-500 font-bold uppercase tracking-wider">#1 Best Seller</span></div><p class="text-gray-500 text-sm">Any shape, any logo, any size. Hand-tufted or Jacquard production. MOQ from 1 sq.m.</p></div>
             </a>
             <!-- Row 2 -->
             <a href="rugs.html" class="product-card rounded-2xl overflow-hidden fade-up block">
                 <div class="h-80 bg-black"><img src="https://sc02.alicdn.com/kf/H5f5ece528d0b46ea8f2d2d0a435dff81A.jpg" class="w-full h-full object-contain"></div>
-                <div class="p-6"><h3 class="text-xl font-bold mb-1 text-white">Brand Logo Rugs</h3><p class="text-gray-500 text-sm">Statement rugs for showrooms, studios and retail spaces. 100% Logo accuracy.</p></div>
+                <div class="p-6"><h3 class="text-xl font-bold mb-1 text-white">Brand Logo Rugs</h3><p class="text-gray-500 text-xs">Statement rugs for showrooms, studios and retail spaces. 100% Logo accuracy.</p></div>
             </a>
-            <!-- Card 3: Custom Pillows (FIXED IMAGE) -->
             <a href="pillows.html" class="product-card rounded-2xl overflow-hidden fade-up block">
                 <div class="h-80 bg-black"><img src="https://sc02.alicdn.com/kf/Hda4d1d760a6d46d9b3a9fc02ff45e2b19.jpg" class="w-full h-full object-contain"></div>
-                <div class="p-6"><h3 class="text-xl font-bold mb-1 text-white">Custom Pillows</h3><p class="text-gray-500 text-sm">Irregular shape plush pillows with sublimation print. Soft and fully unique. MOQ 1 pc.</p></div>
+                <div class="p-6"><h3 class="text-xl font-bold mb-1 text-white">Custom Pillows</h3><p class="text-gray-500 text-xs">Irregular shape plush pillows with high-res sublimation. Soft and fully unique. MOQ 1 pc.</p></div>
             </a>
             <!-- Row 3 -->
             <a href="blankets.html" class="product-card rounded-2xl overflow-hidden fade-up block">
                 <div class="h-80 bg-black"><img src="https://sc02.alicdn.com/kf/A12607853391f4d4299cc60dd9ac7fa50q.png" class="w-full h-full object-contain"></div>
-                <div class="p-6"><h3 class="text-xl font-bold mb-1 text-white">Blankets & Tapestry</h3><p class="text-gray-500 text-sm">Jacquard woven throws and fleece blankets with custom designs. Perfect brand merchandise.</p></div>
+                <div class="p-6"><h3 class="text-xl font-bold mb-1 text-white">Blankets & Tapestry</h3><p class="text-gray-500 text-xs">Jacquard woven cotton throws and fleece blankets with custom designs. Perfect brand merchandise.</p></div>
             </a>
             <a href="pins.html" class="product-card rounded-2xl overflow-hidden fade-up block">
                 <div class="h-80 bg-black"><img src="https://sc02.alicdn.com/kf/A8612e17c6bcf49988c5b5e1518f364323.png" class="w-full h-full object-contain"></div>
-                <div class="p-6"><h3 class="text-xl font-bold mb-1 text-white">Enamel Pins</h3><p class="text-gray-500 text-sm">Hard and soft enamel brooches. Jewelry-grade finish for artists and brands worldwide.</p></div>
+                <div class="p-6"><h3 class="text-xl font-bold mb-1 text-white">Enamel Pins</h3><p class="text-gray-500 text-xs">Hard and soft enamel brooches. Jewelry-grade finish for artists and brands worldwide.</p></div>
             </a>
             <!-- Row 4: Gifts (WIDE to balance) -->
             <a href="gifts.html" class="product-card rounded-2xl overflow-hidden sm:col-span-2 fade-up block">
@@ -128,52 +129,52 @@
         </div>
     </section>
 
-    <!-- 3.5 CUSTOMERS (600px) -->
-    <section class="py-20 max-w-7xl mx-auto px-6 fade-up">
-        <h2 class="font-serif text-4xl text-white mb-6">Our Valued Customers</h2>
-        <div class="rounded-3xl overflow-hidden border border-white/10 bg-black" style="height:600px;"><img src="https://sc02.alicdn.com/kf/H97fe577180a34ec49a954ced058c263cB.jpg" alt="Customers" class="w-full h-full object-contain"></div>
+    <!-- 3.5 OUR VALUED CUSTOMERS -->
+    <section class="py-20 max-w-7xl mx-auto px-6 fade-up text-center">
+        <h2 class="font-serif text-4xl text-white mb-8">Our Valued Customers</h2>
+        <div class="rounded-3xl overflow-hidden border border-white/10 bg-black" style="height:600px;"><img src="https://sc02.alicdn.com/kf/H97fe577180a34ec49a954ced058c263cB.jpg" class="w-full h-full object-contain"></div>
     </section>
 
     <!-- 4. WHY PARTNER -->
     <section id="factory" class="py-28 bg-[#0f0f0f]">
         <div class="max-w-7xl mx-auto px-6 text-left">
             <div class="fade-up mb-16 max-w-3xl"><p class="text-sm tracking-[0.3em] uppercase mb-3 text-[#c9a84c]">Beyond A Factory</p><h2 class="font-serif text-5xl md:text-6xl leading-tight">We Are Your <span class="rainbow-text">Brand Partner</span></h2><p class="text-gray-400 text-sm md:text-base leading-relaxed mt-4">We bridge the gap between imagination and reality with open communication and industry-leading flexibility.</p></div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 fade-up text-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up text-center">
                 <div class="p-8 bg-white/5 rounded-2xl border border-white/5"><div class="w-14 h-14 rounded-full mx-auto flex items-center justify-center text-black font-bold text-xl mb-6" style="background:var(--gold)">1</div><h5 class="font-bold text-lg mb-3 text-white">Full-Service</h5><p class="text-gray-500 text-xs">From concept to delivery.</p></div>
                 <div class="p-8 bg-white/5 rounded-2xl border border-white/5"><div class="w-14 h-14 rounded-full mx-auto flex items-center justify-center text-black font-bold text-xl mb-6" style="background:var(--gold)">2</div><h5 class="font-bold text-lg mb-3 text-white">No Compromise</h5><p class="text-gray-500 text-xs">Any shape or color.</p></div>
                 <div class="p-8 bg-white/5 rounded-2xl border border-white/5"><div class="w-14 h-14 rounded-full mx-auto flex items-center justify-center text-black font-bold text-xl mb-6" style="background:var(--gold)">3</div><h5 class="font-bold text-lg mb-3 text-white">Flexible MOQ</h5><p class="text-gray-500 text-xs">Starts from just 1 pc.</p></div>
-                <div class="p-8 bg-white/5 rounded-2xl border border-white/5"><div class="w-14 h-14 rounded-full mx-auto flex items-center justify-center text-black font-bold text-xl mb-6" style="background:var(--gold)">4</div><h5 class="font-bold text-lg mb-3 text-white">1h Reply</h5><p class="text-gray-500 text-xs">98.92% response rate.</p></div>
+                <div class="p-8 bg-white/5 rounded-2xl border border-white/5"><div class="w-14 h-14 rounded-full mx-auto flex items-center justify-center text-black font-bold text-xl mb-6" style="background:var(--gold)">4</div><h5 class="font-bold text-lg mb-3 text-white">1h Reply</h5><p class="text-gray-500 text-xs">98.92% instant response.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- 5. PROCESS -->
+    <!-- 5. 4-STEP PROCESS -->
     <section id="process" class="py-28 max-w-7xl mx-auto px-6 text-center">
         <h2 class="font-serif text-4xl md:text-5xl mb-12">Simple and Transparent Process</h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 fade-up">
-            <div><div class="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-3xl mb-5 border-2 bg-[#111]" style="border-color:var(--gold)">1</div><h3 class="font-bold text-lg mb-2">Concept</h3><p class="text-gray-500 text-xs">Share your design idea.</p></div>
-            <div><div class="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-3xl mb-5 border-2 bg-[#111]" style="border-color:var(--gold)">2</div><h3 class="font-bold text-lg mb-2">Sample</h3><p class="text-gray-500 text-xs">Physical sample in 15 days.</p></div>
-            <div><div class="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-3xl mb-5 border-2 bg-[#111]" style="border-color:var(--gold)">3</div><h3 class="font-bold text-lg mb-2">Production</h3><p class="text-gray-500 text-xs">Rigorous QC manufacturing.</p></div>
-            <div><div class="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-3xl mb-5 border-2 bg-[#111]" style="border-color:var(--gold)">4</div><h3 class="font-bold text-lg mb-2">Delivery</h3><p class="text-gray-500 text-xs">Insured global shipping.</p></div>
+            <div><div class="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-3xl mb-5 border-2 bg-[#111]" style="border-color:var(--gold)">1</div><h3 class="font-bold text-lg mb-2">Concept</h3><p class="text-gray-500 text-xs text-center">Share your design idea.</p></div>
+            <div><div class="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-3xl mb-5 border-2 bg-[#111]" style="border-color:var(--gold)">2</div><h3 class="font-bold text-lg mb-2">Sample</h3><p class="text-gray-500 text-xs text-center">Physical sample in 15 days.</p></div>
+            <div><div class="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-3xl mb-5 border-2 bg-[#111]" style="border-color:var(--gold)">3</div><h3 class="font-bold text-lg mb-2">Production</h3><p class="text-gray-500 text-xs text-center">Rigorous QC manufacturing.</p></div>
+            <div><div class="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-3xl mb-5 border-2 bg-[#111]" style="border-color:var(--gold)">4</div><h3 class="font-bold text-lg mb-2">Delivery</h3><p class="text-gray-500 text-xs text-center">Insured global shipping.</p></div>
         </div>
     </section>
 
     <!-- 6. INQUIRY FORM -->
     <section id="inquiry" class="py-32 bg-white text-black">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16"><h2 class="font-serif text-5xl md:text-6xl mb-4 text-black">Ready to Bring Your<br><span class="rainbow-text">Vision to Life</span></h2><p class="text-gray-500 text-lg">Send us your artwork for a free digital mockup and competitive quote.</p></div>
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-5xl md:text-6xl mb-4 text-black text-center">Ready to Bring Your<br><span class="rainbow-text">Vision to Life</span></h2><p class="text-gray-500 text-lg mb-12 text-center">Send us your artwork for a free digital mockup and competitive quote.</p>
             <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-6 text-left">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div><label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Full Name *</label><input name="name" type="text" required placeholder="Your name" class="w-full px-6 py-5 bg-gray-50 border border-gray-200 rounded-2xl outline-none focus:border-yellow-500 transition"></div>
+                    <div><label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Full Name *</label><input name="name" type="text" required placeholder="Your name" class="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-yellow-500 transition"></div>
                     <div><label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Company / Brand *</label><input name="company" type="text" required placeholder="e.g. Studio XYZ" class="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-yellow-500 transition"></div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div><label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Email Address *</label><input name="email" type="email" required placeholder="you@brand.com" class="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-500 transition"></div>
-                    <div><label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">WhatsApp Number</label><input name="whatsapp" type="tel" placeholder="+86 136 1386 6590" class="w-full px-6 py-5 bg-gray-50 border border-gray-200 rounded-2xl outline-none focus:border-yellow-500 transition"></div>
+                    <div><label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">WhatsApp Number</label><input name="whatsapp" type="tel" placeholder="+86 136 1386 6590" class="w-full px-6 py-5 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:border-yellow-500 transition"></div>
                 </div>
                 <div><label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Tell Us About Your Project</label><textarea name="message" rows="4" placeholder="Describe your design, size, shape..." class="w-full px-6 py-5 bg-gray-50 border border-gray-200 rounded-2xl outline-none resize-none"></textarea></div>
-                <div class="flex flex-col sm:flex-row items-center gap-4 pt-4"><button type="submit" class="w-full sm:w-auto px-16 py-6 rounded-full text-black font-bold text-xl hover:opacity-90 transition shadow-xl" style="background:var(--gold)">GET A FREE QUOTE</button><a href="https://wa.me/8613613866590" target="_blank" class="w-full sm:w-auto px-10 py-6 rounded-full text-white font-bold text-xl text-center transition" style="background:#25D366">WhatsApp Us Directly</a></div>
-                <p class="text-xs text-gray-400 text-center italic mt-2">To get a quote faster, please send your design directly via WhatsApp.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"><button type="submit" class="w-full sm:w-auto px-16 py-6 rounded-full text-black font-bold text-xl hover:opacity-90 transition shadow-xl" style="background:var(--gold)">GET A FREE QUOTE</button><a href="https://wa.me/8613613866590" target="_blank" class="w-full sm:w-auto px-10 py-6 rounded-full text-white font-bold text-xl text-center transition" style="background:#25D366">WhatsApp Us Directly</a></div>
+                <p class="text-xs text-gray-400 text-center italic mt-4 text-center">To get a quote faster, please send your design directly via WhatsApp.</p>
             </form>
         </div>
     </section>
@@ -182,8 +183,8 @@
     <footer style="background:#050505" class="py-16 border-t border-white/5 text-center">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-3xl font-bold mb-8">YFON <span class="rainbow-text">HOME</span></div>
-            <div class="flex flex-wrap justify-center gap-8 text-xs text-gray-500 mb-10"><a href="rugs.html">Rugs</a><a href="pillows.html">Pillows</a><a href="blankets.html">Blankets</a><a href="pins.html">Pins</a><a href="gifts.html">Gifts</a></div>
-            <p class="text-xs text-gray-700 uppercase tracking-widest">&copy; 2026 YFON HOME . www.yfonhomecustom.com</p>
+            <div class="flex flex-wrap justify-center gap-8 text-xs text-gray-500 mb-10 text-center"><a href="rugs.html">Rugs</a><a href="pillows.html">Pillows</a><a href="blankets.html">Blankets</a><a href="pins.html">Pins</a><a href="gifts.html">Gifts</a></div>
+            <p class="text-xs text-gray-700 uppercase tracking-widest text-center">&copy; 2026 YFON HOME . Zhengzhou Yfon Home Co., Ltd. &middot; www.yfonhomecustom.com</p>
         </div>
     </footer>
 
