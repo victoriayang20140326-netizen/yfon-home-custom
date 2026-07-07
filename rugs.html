@@ -117,12 +117,26 @@
         <h2 class="font-serif text-5xl md:text-6xl text-gray-900 mb-5">Workshop</h2>
         <p class="text-gray-500 text-base max-w-3xl mx-auto">Our state-of-the-art manufacturing facility combines precision-engineered machinery, highly skilled workers, and rigorously standardized workflows to consistently produce premium custom products.</p>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 fade-up">
-        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/1-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H0f50e01663194f2396a0df1e135c895fZ.jpg'"></div>
-        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/2-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H2d1f83f40cce4059b4d70b9abdcafe49j.jpg'"></div>
-        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/3-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H910871d3dedc4d749972881a1672da88h.jpg'"></div>
-        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/4-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H9b92654641d048809315489c31c35322E.jpg'"></div>
-        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/5-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/Hba6f99baccb54b21a44744f94d9b4606T.jpg'"></div>
+    <!-- 1大+4小 不对称网格布局 -->
+    <div class="grid grid-cols-3 gap-6 fade-up" style="grid-template-rows: auto auto;">
+        <!-- 左侧：1张大图，跨2行 -->
+        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="grid-row: span 2; min-height:460px;">
+            <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/1-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H0f50e01663194f2396a0df1e135c895fZ.jpg'">
+        </div>
+        <!-- 右侧第1行：2张小图 -->
+        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;">
+            <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/2-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H2d1f83f40cce4059b4d70b9abdcafe49j.jpg'">
+        </div>
+        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;">
+            <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/3-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H910871d3dedc4d749972881a1672da88h.jpg'">
+        </div>
+        <!-- 右侧第2行：2张小图 -->
+        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;">
+            <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/4-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H9b92654641d048809315489c31c35322E.jpg'">
+        </div>
+        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;">
+            <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/5-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/Hba6f99baccb54b21a44744f94d9b4606T.jpg'">
+        </div>
     </div>
 </section>
 
