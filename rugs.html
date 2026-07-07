@@ -3,188 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Rugs & Carpets | YFON HOME | Manufacturer & Wholesale</title>
+    <title>Custom Rug & Carpet | YFON HOME Manufacturer</title>
+    <meta name="description" content="YFON HOME is a leading custom rug & carpet wholesale supplier. Tufted rugs, printed rugs, rubber mats, coir mats and more. Flexible MOQ. Get a free quote.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #c9a84c; --dark: #1a1a1a; }
-        * { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: #fff; color: var(--dark); margin: 0; }
+        :root { --gold: #c9a84c; }
+        body { font-family: 'Inter', sans-serif; background: #fff; color: #1a1a1a; margin: 0; }
         .font-serif { font-family: 'Playfair Display', serif; }
-        .rainbow-text { background: linear-gradient(90deg, #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .cat-card { transition: all 0.35s ease; border: 1px solid rgba(0,0,0,0.05); background: #fcfcfc; }
-        .cat-card:hover { transform: translateY(-8px); border-color: var(--gold); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
-        .cat-card img { transition: transform 0.5s ease; object-fit: contain; width: 100%; height: 100%; background: #f8f8f8; }
-        .cat-card:hover img { transform: scale(1.05); }
+        .rainbow-text { background: linear-gradient(90deg,#ef4444,#f97316,#eab308,#22c55e,#3b82f6,#8b5cf6); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+        header { position:fixed; top:0; width:100%; z-index:200; background:rgba(10,10,10,.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,.08); }
+        .cat-card { transition: all 0.3s ease; border: 1px solid #e5e7eb; border-radius: 16px; overflow: hidden; cursor: pointer; }
+        .cat-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+        .cat-card img { width: 100%; height: 200px; object-fit: contain; background: #f8f8f8; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-answer.open { max-height: 400px; }
         .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
-        @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.5); } 70% { box-shadow: 0 0 0 12px rgba(201,168,76,0); } }
-        .pulse-btn { animation: pulse-gold 2.2s infinite; }
-        .gallery-item { overflow: hidden; border-radius: 12px; background: #f8f8f8; }
-        .gallery-item img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: contain; }
-        .spec-row:nth-child(even) { background: #f9f9f9; }
-        .sticky-cta { position: sticky; top: 96px; }
+        @keyframes pulse-gold { 0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.5)} 70%{box-shadow:0 0 0 14px rgba(201,168,76,0)} }
+        .pulse-cta { animation: pulse-gold 2.2s infinite; }
     </style>
 </head>
 <body>
-    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-black">YFON <span class="rainbow-text">HOME</span></a>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
-                <a href="index.html" class="hover:text-black transition">Home</a>
-                <a href="rugs.html" class="hover:text-black transition text-black font-bold border-b-2 border-[#c9a84c]">Rugs</a>
-                <a href="pillows.html" class="hover:text-black transition ">Pillows</a>
-                <a href="blankets.html" class="hover:text-black transition ">Blankets</a>
-                <a href="pins.html" class="hover:text-black transition ">Pins</a>
-                <a href="gifts.html" class="hover:text-black transition ">Gifts</a>
-                <a href="#contact" class="px-5 py-2 rounded-full text-white font-bold" style="background:var(--gold)">Get a Quote</a>
-            </nav>
-        </div>
-    </header>
 
-    <section class="pt-32 pb-12 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <nav class="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-400 mb-4">
-                <a href="index.html" class="hover:text-black transition">Home</a>
-                <span class="mx-1">/</span>
-                <span class="text-gray-900">Custom Rugs & Carpets</span>
-            </nav>
-            <h1 class="font-serif text-5xl md:text-7xl text-black mb-4">Custom Rugs & Carpets</h1>
-            <p class="text-gray-500 text-sm max-w-2xl">Any shape, any logo, any size. Hand-tufted or Jacquard production. MOQ from 1 sq.m.</p>
-        </div>
-    </section>
+<header>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="index.html" class="text-2xl font-bold text-white tracking-tight">YFON <span class="rainbow-text">HOME</span></a>
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-300">
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="rugs.html" class="text-[#c9a84c] font-bold">Rugs</a>
+            <a href="pillows.html" class="hover:text-white">Pillows</a>
+            <a href="blankets.html" class="hover:text-white">Blankets</a>
+            <a href="pins.html" class="hover:text-white">Pins</a>
+            <a href="#inquiry" class="ml-2 px-6 py-2 rounded-full text-black font-bold pulse-cta" style="background:var(--gold)">Get a Quote</a>
+        </nav>
+    </div>
+</header>
 
-    <section class="py-20 max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    
-            <a href="printed-rug.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Printed Rug">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Printed Rug</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Vibrant full-color rugs with complex patterns.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-            <a href="tufted-rug.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Tufted Rug">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Tufted Rug</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Hand-tufted premium rugs with rich texture.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-            <a href="bath-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Bath Mat">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Bath Mat</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Soft absorbent mats for bathrooms and spas.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-            <a href="coir-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Coir Mat">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Coir Mat</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Natural fiber mats for entryways.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-            <a href="pvc-coil-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="PVC Coil Mat">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">PVC Coil Mat</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Durable outdoor mats for high-traffic areas.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-            <a href="rubber-mat.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Rubber Mat">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Rubber Mat</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Anti-slip rubber mats for industrial use.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-        </div>
-    </section>
-    <section id="contact" class="py-24 bg-gray-50 text-black">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16 fade-up">
-                <h2 class="font-serif text-4xl md:text-5xl mb-4">Start Your Project</h2>
-                <p class="text-gray-500 text-sm uppercase tracking-widest">Get a free mockup and pricing within 1 hour</p>
+<!-- Breadcrumb -->
+<div class="pt-20 bg-gray-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+        <nav class="flex items-center gap-2 text-sm text-gray-400">
+            <a href="index.html" class="hover:text-gray-700 transition">Home</a>
+            <span>/</span>
+            <span class="text-gray-900 font-semibold">Custom Rug & Carpet</span>
+        </nav>
+    </div>
+</div>
+
+<!-- Sub-category Cards -->
+<section class="py-16 max-w-7xl mx-auto px-6">
+    <h1 class="font-serif text-4xl md:text-5xl text-gray-900 mb-3">Custom Rug &amp; Carpet</h1>
+    <p class="text-gray-500 text-base mb-12 max-w-2xl">Premium custom rugs and carpets for brands, designers and wholesale clients worldwide. Flexible MOQ, fast production, global shipping.</p>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <a href="tufted-rug.html" class="cat-card bg-white">
+            <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Tufted-Rug-1.jpg.webp" alt="Tufted Rug" onerror="this.src='https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg'">
+            <div class="p-4 text-center"><p class="font-semibold text-sm text-gray-800">Tufted Rug</p><p class="text-xs text-[#c9a84c] mt-1 font-medium">Learn More</p></div>
+        </a>
+        <a href="printed-rug.html" class="cat-card bg-white">
+            <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/06/%E6%9C%AA%E6%A0%87%E9%A2%98-2.jpg.webp" alt="Printed Rug" onerror="this.src='https://sc02.alicdn.com/kf/H341b5e6eb124414087440e2d31aa8b66n.jpg'">
+            <div class="p-4 text-center"><p class="font-semibold text-sm text-gray-800">Printed Rug</p><p class="text-xs text-[#c9a84c] mt-1 font-medium">Learn More</p></div>
+        </a>
+        <a href="rubber-mat.html" class="cat-card bg-white">
+            <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-1.jpg.webp" alt="Rubber Mat" onerror="this.src='https://sc02.alicdn.com/kf/Hfa2f6bc5da1c43fe9fcbc1f475694279V.jpg'">
+            <div class="p-4 text-center"><p class="font-semibold text-sm text-gray-800">Rubber Mat</p><p class="text-xs text-[#c9a84c] mt-1 font-medium">Learn More</p></div>
+        </a>
+        <a href="coir-mat.html" class="cat-card bg-white">
+            <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Coir-Mat-3.jpg.webp" alt="Coir Mat" onerror="this.src='https://sc02.alicdn.com/kf/H3970d044fef54e3cb13de40c397f7336y.jpg'">
+            <div class="p-4 text-center"><p class="font-semibold text-sm text-gray-800">Coir Mat</p><p class="text-xs text-[#c9a84c] mt-1 font-medium">Learn More</p></div>
+        </a>
+        <a href="bath-mat.html" class="cat-card bg-white">
+            <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Microfiber-Mat-1.jpg.webp" alt="Bath Mat" onerror="this.src='https://sc02.alicdn.com/kf/H6ea3e613bd4947078d0c2ca3f2204ab7Q.jpg'">
+            <div class="p-4 text-center"><p class="font-semibold text-sm text-gray-800">Bath Mat</p><p class="text-xs text-[#c9a84c] mt-1 font-medium">Learn More</p></div>
+        </a>
+        <a href="pvc-coil-mat.html" class="cat-card bg-white">
+            <img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/PVC-Coil-Mat-1.jpg.webp" alt="PVC Coil Mat" onerror="this.src='https://sc02.alicdn.com/kf/H0dd552b48874450c87016e8b6c24ee311.jpg'">
+            <div class="p-4 text-center"><p class="font-semibold text-sm text-gray-800">PVC Coil Mat</p><p class="text-xs text-[#c9a84c] mt-1 font-medium">Learn More</p></div>
+        </a>
+    </div>
+</section>
+
+<!-- Product Briefing + Stats -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center fade-up">
+            <div>
+                <p class="text-xs tracking-[0.3em] uppercase font-semibold mb-3 text-[#c9a84c]">Product Briefing</p>
+                <h2 class="font-serif text-3xl md:text-4xl text-gray-900 mb-5">Custom Rug & Carpet Wholesale Supplier</h2>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">As a leading custom rug supplier, YFON HOME combines professional craftsmanship with large-scale production to deliver exceptional rugs for wholesale and brand clients. Our extensive experience allows us to handle bulk orders efficiently while maintaining consistent quality and attention to detail.</p>
+                <p class="text-gray-600 text-sm leading-relaxed">Our custom rugs are fully customizable in size, pattern, and material, providing brands with unique solutions for retail or promotional purposes. Partner with us for reliable, scalable rug sourcing and enjoy personalized support from concept to delivery.</p>
             </div>
-            
-            <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-6 fade-up">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Full Name *</label>
-                        <input name="name" type="text" required placeholder="Your name" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Email Address *</label>
-                        <input name="email" type="email" required placeholder="you@brand.com" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                    </div>
+            <div class="grid grid-cols-3 gap-6 text-center">
+                <div class="p-6 bg-white rounded-2xl shadow-sm">
+                    <p class="font-serif text-4xl font-bold text-[#c9a84c]">120+</p>
+                    <p class="text-sm text-gray-500 mt-2">Export Countries</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">WhatsApp Number</label>
-                        <input name="whatsapp" type="tel" placeholder="+86 ..." class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Estimated Quantity</label>
-                        <input name="quantity" type="text" placeholder="e.g. 50 pcs" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#c9a84c] transition text-sm">
-                    </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm">
+                    <p class="font-serif text-4xl font-bold text-[#c9a84c]">600+</p>
+                    <p class="text-sm text-gray-500 mt-2">Happy Clients</p>
                 </div>
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Project Details</label>
-                    <textarea name="message" rows="4" placeholder="Describe your preferred size, material, or design details..." class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none resize-none text-sm"></textarea>
+                <div class="p-6 bg-white rounded-2xl shadow-sm">
+                    <p class="font-serif text-4xl font-bold text-[#c9a84c]">50+</p>
+                    <p class="text-sm text-gray-500 mt-2">Employees</p>
                 </div>
-                <div class="pt-4 text-center">
-                    <button type="submit" class="w-full py-5 rounded-full text-white font-bold text-lg hover:opacity-90 transition shadow-lg" style="background:var(--gold)">SEND INQUIRY</button>
-                    <p class="text-xs text-gray-400 mt-4 italic">To get a quote faster, please send your design directly via WhatsApp.</p>
-                </div>
-            </form>
-
-        </div>
-    </section>
-    
-    <footer style="background:#050505" class="py-16 border-t border-white/5 text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-3xl font-bold text-white mb-8">YFON <span class="rainbow-text">HOME</span></div>
-            <div class="flex flex-wrap justify-center gap-8 text-xs text-gray-500 mb-10">
-                <a href="rugs.html" class="hover:text-white transition">Rugs</a>
-                <a href="pillows.html" class="hover:text-white transition">Pillows</a>
-                <a href="blankets.html" class="hover:text-white transition">Blankets</a>
-                <a href="pins.html" class="hover:text-white transition">Pins</a>
-                <a href="gifts.html" class="hover:text-white transition">Gifts</a>
             </div>
-            <p class="text-sm text-gray-600 uppercase tracking-widest">&copy; 2026 YFON HOME. All Rights Reserved.</p>
         </div>
-    </footer>
-    <a href="#contact" class="fixed bottom-8 right-8 z-50 pulse-btn rounded-full px-8 py-4 text-white font-bold text-sm shadow-2xl flex items-center gap-2" style="background:var(--gold)">GET QUOTE</a>
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-    </script>
+    </div>
+</section>
+
+<!-- Workshop -->
+<section class="py-16 max-w-7xl mx-auto px-6">
+    <div class="text-center mb-10 fade-up">
+        <h2 class="font-serif text-3xl md:text-4xl text-gray-900 mb-3">Workshop</h2>
+        <p class="text-gray-500 text-sm max-w-2xl mx-auto">Our state-of-the-art manufacturing facility combines precision-engineered machinery, highly skilled workers, and rigorously standardized workflows to consistently produce premium custom products.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 fade-up">
+        <div class="rounded-xl overflow-hidden h-44 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/1-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H0f50e01663194f2396a0df1e135c895fZ.jpg'"></div>
+        <div class="rounded-xl overflow-hidden h-44 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/2-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H2d1f83f40cce4059b4d70b9abdcafe49j.jpg'"></div>
+        <div class="rounded-xl overflow-hidden h-44 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/3-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H910871d3dedc4d749972881a1672da88h.jpg'"></div>
+        <div class="rounded-xl overflow-hidden h-44 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/4-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/H9b92654641d048809315489c31c35322E.jpg'"></div>
+        <div class="rounded-xl overflow-hidden h-44 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/5-1.jpg.webp" class="w-full h-full object-cover" onerror="this.src='https://sc02.alicdn.com/kf/Hba6f99baccb54b21a44744f94d9b4606T.jpg'"></div>
+    </div>
+</section>
+
+<!-- Product Case Scene Show -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10 fade-up"><h2 class="font-serif text-3xl md:text-4xl text-gray-900">Product Case Scene Show</h2></div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 fade-up">
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/1-5.jpg.webp" class="w-full h-full object-contain" onerror="this.src='https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg'"></div>
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/2-5.jpg.webp" class="w-full h-full object-contain" onerror="this.src='https://sc02.alicdn.com/kf/H8d9db031f0f44188be12591104ff27abJ.jpg'"></div>
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/3-4.jpg.webp" class="w-full h-full object-contain" onerror="this.src='https://sc02.alicdn.com/kf/Ab2a44b104e0b4748ac31dc991b20dfa8y.png'"></div>
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/4-5.jpg.webp" class="w-full h-full object-contain" onerror="this.src='https://sc02.alicdn.com/kf/H5f5ece528d0b46ea8f2d2d0a435dff81A.jpg'"></div>
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/5-4.jpg.webp" class="w-full h-full object-contain" onerror="this.src='https://sc02.alicdn.com/kf/H21bb756f9349441c8518ce9c9cf05be1p.jpg'"></div>
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/6-1.jpg.webp" class="w-full h-full object-contain" onerror="this.src='https://sc02.alicdn.com/kf/H60c4d2695cff41a384000e4b1df0bbb1m.jpg'"></div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-16 max-w-3xl mx-auto px-6">
+    <div class="text-center mb-10 fade-up"><h2 class="font-serif text-3xl md:text-4xl text-gray-900">FAQ</h2></div>
+    <div class="space-y-3 fade-up">
+        <div class="border border-gray-100 rounded-xl bg-white">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">How can I buy a custom rug?<span class="text-gray-400">+</span></button>
+            <div class="faq-answer px-6 pb-4 text-sm text-gray-500 leading-relaxed">Please send us your own design first and let us know what size you want. We will give you a quote for the rug and shipping, or suggestions on modifications.</div>
+        </div>
+        <div class="border border-gray-100 rounded-xl bg-white">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">What is the MOQ?<span class="text-gray-400">+</span></button>
+            <div class="faq-answer px-6 pb-4 text-sm text-gray-500 leading-relaxed">The MOQ is 1 pc. Whether you want just one piece to check quality or a bulk order, we can accommodate.</div>
+        </div>
+        <div class="border border-gray-100 rounded-xl bg-white">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">How long does production take?<span class="text-gray-400">+</span></button>
+            <div class="faq-answer px-6 pb-4 text-sm text-gray-500 leading-relaxed">Usually 20-30 days for production plus 7-10 days shipping. Rush orders can be arranged — please let us know your deadline.</div>
+        </div>
+        <div class="border border-gray-100 rounded-xl bg-white">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">How can I pay?<span class="text-gray-400">+</span></button>
+            <div class="faq-answer px-6 pb-4 text-sm text-gray-500 leading-relaxed">We accept credit card, T/T, PayPal, Apple Pay, Google Pay and Alibaba Trade Assurance.</div>
+        </div>
+    </div>
+</section>
+
+<!-- Inquiry Form -->
+<section id="inquiry" class="py-20" style="background:#0a0a0a">
+    <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12 fade-up">
+            <h2 class="font-serif text-4xl text-white mb-3">Bulk Custom Rug Supplier You Can Trust</h2>
+            <p class="text-gray-400 text-sm">Request your wholesale quote today. We respond within 6 hours!</p>
+        </div>
+        <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="bg-white rounded-2xl p-8 space-y-5 fade-up">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Full Name *</label><input name="name" type="text" required placeholder="Your name" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Email *</label><input name="email" type="email" required placeholder="you@brand.com" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">WhatsApp Number</label><input name="whatsapp" type="tel" placeholder="+86 136 1386 6590" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Product Type</label>
+                    <select name="product" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm">
+                        <option>Tufted Rug</option><option>Printed Rug</option><option>Rubber Mat</option><option>Coir Mat</option><option>Bath Mat</option><option>PVC Coil Mat</option>
+                    </select>
+                </div>
+            </div>
+            <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Project Details</label><textarea name="message" rows="4" placeholder="Describe your size, shape, design idea or share a reference link..." class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none resize-none text-sm"></textarea></div>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button type="submit" class="flex-1 py-5 rounded-xl text-black font-bold text-base hover:opacity-90 transition" style="background:var(--gold)">SEND INQUIRY</button>
+                <a href="https://wa.me/8613613866590" target="_blank" class="flex-1 py-5 rounded-xl text-white font-bold text-base text-center transition" style="background:#25D366">WhatsApp Us</a>
+            </div>
+            <p class="text-xs text-gray-400 italic text-center">To get a mockup faster, send your design directly via WhatsApp.</p>
+        </form>
+    </div>
+</section>
+
+<footer style="background:#050505" class="py-10 text-center text-xs text-gray-600">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-xl font-bold text-white mb-4">YFON <span class="rainbow-text">HOME</span></div>
+        <div class="flex flex-wrap justify-center gap-5 mb-5">
+            <a href="index.html" class="hover:text-white">Home</a><a href="rugs.html" class="text-[#c9a84c]">Rugs</a><a href="pillows.html" class="hover:text-white">Pillows</a><a href="blankets.html" class="hover:text-white">Blankets</a><a href="pins.html" class="hover:text-white">Pins</a>
+        </div>
+        <p>&copy; 2026 YFON HOME . www.yfonhomecustom.com</p>
+    </div>
+</footer>
+
+<a href="#inquiry" class="fixed bottom-8 right-8 z-50 pulse-cta rounded-full px-6 py-4 text-black font-bold text-sm shadow-2xl" style="background:var(--gold)">GET QUOTE</a>
+
+<script>
+    const obs = new IntersectionObserver(e => e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }), {threshold:0.1});
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
