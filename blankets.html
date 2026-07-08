@@ -17,10 +17,12 @@
         .fade-up.visible { opacity: 1; transform: translateY(0); }
         @keyframes pulse-gold { 0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.5)} 70%{box-shadow:0 0 0 14px rgba(201,168,76,0)} }
         .pulse-cta { animation: pulse-gold 2.2s infinite; }
-        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .card-hover { transition: all 0.3s ease; border: 1px solid #e5e7eb; border-radius: 16px; overflow: hidden; cursor: pointer; }
+        .card-hover:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
         @keyframes showcaseScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .showcase-track:hover { animation-play-state: paused; cursor: grab; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-answer.open { max-height: 400px; }
     </style>
 </head>
 <body>
@@ -61,55 +63,55 @@
     </div>
 </section>
 
-<!-- Product Category Grid (4 types) -->
+<!-- Product Category Grid (2x2) -->
 <section class="max-w-7xl mx-auto px-6 pb-16">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
 
         <!-- Printed Blanket -->
-        <a href="printed-blanket.html" class="card-hover group block rounded-2xl overflow-hidden border border-gray-100 bg-white">
+        <a href="printed-blanket.html" class="card-hover group block rounded-2xl overflow-hidden bg-white">
             <div class="overflow-hidden bg-[#f8f8f8]" style="height:280px;">
-                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Printed-Blanket-1.jpg" alt="Custom Printed Blanket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="https://sc02.alicdn.com/kf/H657ae788b166417486006d4cf88b4530n.jpg" alt="Custom Printed Blanket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-5">
-                <h3 class="font-serif text-lg text-gray-900 mb-2">Printed Blanket</h3>
-                <p class="text-gray-500 text-xs leading-relaxed mb-4">Full-color sublimation print on 100% polyester. Any design, vibrant colors, machine-washable. Ideal for branded merchandise and gifts.</p>
-                <span class="inline-flex items-center gap-1 text-xs font-semibold" style="color:var(--gold)">View Details &rarr;</span>
+            <div class="p-6">
+                <h3 class="font-serif text-xl text-gray-900 mb-2">Printed Blanket</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-4">Full-color sublimation print on 100% polyester. Any design, vibrant colors, machine-washable. Ideal for branded merchandise and gifts.</p>
+                <span class="inline-flex items-center gap-1 text-sm font-semibold" style="color:var(--gold)">View Details &rarr;</span>
             </div>
         </a>
 
         <!-- Fleece Blanket -->
-        <a href="fleece-blanket.html" class="card-hover group block rounded-2xl overflow-hidden border border-gray-100 bg-white">
+        <a href="fleece-blanket.html" class="card-hover group block rounded-2xl overflow-hidden bg-white">
             <div class="overflow-hidden bg-[#f8f8f8]" style="height:280px;">
-                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Printed-Blanket-2.jpg" alt="Custom Fleece Blanket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="https://sc02.alicdn.com/kf/H27c7269b1df641b39511bb4007e23171Z.jpg" alt="Custom Fleece Blanket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-5">
-                <h3 class="font-serif text-lg text-gray-900 mb-2">Fleece Blanket</h3>
-                <p class="text-gray-500 text-xs leading-relaxed mb-4">Premium cozy fleece, thick and high-density. Free from shedding and fading. All-season comfort for retail, hotels and promotions.</p>
-                <span class="inline-flex items-center gap-1 text-xs font-semibold" style="color:var(--gold)">View Details &rarr;</span>
+            <div class="p-6">
+                <h3 class="font-serif text-xl text-gray-900 mb-2">Fleece Blanket</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-4">Premium cozy fleece, thick and high-density. Free from shedding and fading. All-season comfort for retail, hotels and promotions.</p>
+                <span class="inline-flex items-center gap-1 text-sm font-semibold" style="color:var(--gold)">View Details &rarr;</span>
             </div>
         </a>
 
         <!-- Woven Blanket -->
-        <a href="woven-blanket.html" class="card-hover group block rounded-2xl overflow-hidden border border-gray-100 bg-white">
+        <a href="woven-blanket.html" class="card-hover group block rounded-2xl overflow-hidden bg-white">
             <div class="overflow-hidden bg-[#f8f8f8]" style="height:280px;">
                 <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Woven-Blanket-6.jpg" alt="Custom Woven Blanket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-5">
-                <h3 class="font-serif text-lg text-gray-900 mb-2">Woven Blanket</h3>
-                <p class="text-gray-500 text-xs leading-relaxed mb-4">Jacquard weave technique, 35% cotton &amp; 65% polyester. Double &amp; single side, 100% cotton tassels. Heirloom quality for premium brands.</p>
-                <span class="inline-flex items-center gap-1 text-xs font-semibold" style="color:var(--gold)">View Details &rarr;</span>
+            <div class="p-6">
+                <h3 class="font-serif text-xl text-gray-900 mb-2">Woven Blanket</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-4">Jacquard weave technique, 35% cotton &amp; 65% polyester. Double &amp; single side, 100% cotton tassels. Heirloom quality for premium brands.</p>
+                <span class="inline-flex items-center gap-1 text-sm font-semibold" style="color:var(--gold)">View Details &rarr;</span>
             </div>
         </a>
 
         <!-- Beach Towel -->
-        <a href="beach-towel.html" class="card-hover group block rounded-2xl overflow-hidden border border-gray-100 bg-white">
+        <a href="beach-towel.html" class="card-hover group block rounded-2xl overflow-hidden bg-white">
             <div class="overflow-hidden bg-[#f8f8f8]" style="height:280px;">
                 <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Beach-Towel-9.jpg" alt="Custom Beach Towel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-5">
-                <h3 class="font-serif text-lg text-gray-900 mb-2">Beach Towel</h3>
-                <p class="text-gray-500 text-xs leading-relaxed mb-4">Microfiber, quick-dry, ultra-absorbent. Custom print in any design. Perfect for beach brands, resort hotels and outdoor promotions.</p>
-                <span class="inline-flex items-center gap-1 text-xs font-semibold" style="color:var(--gold)">View Details &rarr;</span>
+            <div class="p-6">
+                <h3 class="font-serif text-xl text-gray-900 mb-2">Beach Towel</h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-4">Microfiber, quick-dry, ultra-absorbent. Custom print in any design. Perfect for beach brands, resort hotels and outdoor promotions.</p>
+                <span class="inline-flex items-center gap-1 text-sm font-semibold" style="color:var(--gold)">View Details &rarr;</span>
             </div>
         </a>
     </div>
@@ -120,29 +122,27 @@
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div class="fade-up">
-                <h2 class="font-serif text-3xl text-gray-900 mb-5">Custom Blanket Wholesale Supplier</h2>
+                <p class="text-xs tracking-[0.3em] uppercase font-semibold mb-3" style="color:var(--gold)">Product Briefing</p>
+                <h2 class="font-serif text-3xl md:text-4xl text-gray-900 mb-5">Custom Blanket Wholesale Supplier</h2>
                 <p class="text-gray-600 text-sm leading-relaxed mb-4">As a leading custom blanket manufacturer and wholesale supplier, YFON HOME specializes in creating high-quality, fully customizable blankets for brands and bulk buyers worldwide. Since 2016, we have served over 600 clients across 120+ countries, delivering products that meet international quality standards and unique brand requirements.</p>
-                <p class="text-gray-600 text-sm leading-relaxed mb-6">Our custom blankets are available in a variety of materials, sizes, and designs, ensuring each order perfectly reflects your brand identity. We offer flexible bulk order options, fast production timelines, and reliable global shipping.</p>
-                <div class="grid grid-cols-3 gap-4 text-center">
-                    <div class="bg-white rounded-xl p-4 border border-gray-100">
-                        <div class="font-serif text-2xl text-gray-900 mb-1">120+</div>
-                        <div class="text-xs text-gray-500">Export Countries</div>
+                <p class="text-gray-600 text-sm leading-relaxed mb-8">Our custom blankets are available in a variety of materials, sizes, and designs, ensuring each order perfectly reflects your brand identity. We offer flexible bulk order options, fast production timelines, and reliable global shipping.</p>
+                <div class="grid grid-cols-3 gap-6 text-center">
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <div class="font-serif text-4xl font-bold mb-1" style="color:var(--gold)">120+</div>
+                        <div class="text-sm text-gray-500">Export Countries</div>
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100">
-                        <div class="font-serif text-2xl text-gray-900 mb-1">600+</div>
-                        <div class="text-xs text-gray-500">Clients Served</div>
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <div class="font-serif text-4xl font-bold mb-1" style="color:var(--gold)">600+</div>
+                        <div class="text-sm text-gray-500">Clients Served</div>
                     </div>
-                    <div class="bg-white rounded-xl p-4 border border-gray-100">
-                        <div class="font-serif text-2xl text-gray-900 mb-1">10+</div>
-                        <div class="text-xs text-gray-500">Years Experience</div>
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <div class="font-serif text-4xl font-bold mb-1" style="color:var(--gold)">10+</div>
+                        <div class="text-sm text-gray-500">Years Experience</div>
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-3 fade-up">
-                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Custom-Blanket-01.jpg" class="rounded-2xl w-full object-cover" style="height:200px;" alt="Blanket Workshop">
-                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/2-2.jpg" class="rounded-2xl w-full object-cover" style="height:200px;" alt="Blanket Production">
-                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/4-2.jpg" class="rounded-2xl w-full object-cover" style="height:200px;" alt="Quality Control">
-                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/5-2.jpg" class="rounded-2xl w-full object-cover" style="height:200px;" alt="Finished Products">
+            <div class="fade-up rounded-2xl overflow-hidden" style="height:440px;">
+                <img src="https://sc02.alicdn.com/kf/Hb1bf729f1946437e85deaac9188bd11dF.jpg" class="w-full h-full object-cover" alt="Custom Woven Blanket">
             </div>
         </div>
     </div>
@@ -174,34 +174,109 @@
     </div>
 </section>
 
-<!-- Inquiry Section -->
-<section id="inquiry" class="py-16 bg-gray-50">
-    <div class="max-w-2xl mx-auto px-6">
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div class="p-6 text-white" style="background:#0a0a0a">
-                <h2 class="font-serif text-2xl mb-1">Get a Free Quote</h2>
-                <p class="text-xs text-gray-400">We respond within 6 hours</p>
-            </div>
-            <div class="p-8">
-                <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-4">
-                    <input type="hidden" name="product" value="Custom Blanket / Towel">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Full Name *</label><input name="name" type="text" required placeholder="Your name" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
-                        <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Email *</label><input name="email" type="email" required placeholder="you@brand.com" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
-                    </div>
-                    <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Product Type</label>
-                        <select name="type" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm">
-                            <option>Printed Blanket</option><option>Fleece Blanket</option><option>Woven Blanket</option><option>Beach Towel</option><option>Not Sure - Advise Me</option>
-                        </select>
-                    </div>
-                    <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Quantity</label><input name="quantity" type="text" placeholder="e.g. 100 pcs" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
-                    <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Project Details</label><textarea name="message" rows="3" placeholder="Size, design idea, material preference..." class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm resize-none"></textarea></div>
-                    <button type="submit" class="w-full py-4 rounded-xl text-black font-bold text-sm hover:opacity-90 transition pulse-cta" style="background:var(--gold)">SEND INQUIRY</button>
-                    <a href="https://wa.me/8613613866590" target="_blank" class="w-full py-3 rounded-xl text-white font-bold text-sm text-center transition block" style="background:#25D366">WhatsApp Us Directly</a>
-                    <p class="text-xs text-gray-400 italic text-center">Send design via WhatsApp for faster mockup.</p>
-                </form>
-            </div>
+<!-- Workshop -->
+<section class="py-24 max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14 fade-up">
+        <h2 class="font-serif text-5xl md:text-6xl text-gray-900 mb-5">Workshop</h2>
+        <p class="text-gray-500 text-base max-w-3xl mx-auto">Our state-of-the-art manufacturing facility combines precision-engineered machinery, highly skilled workers, and rigorously standardized workflows to consistently produce premium custom products.</p>
+    </div>
+    <!-- 1大+4小 不对称网格布局 -->
+    <div class="grid grid-cols-3 gap-6 fade-up" style="grid-template-rows: auto auto;">
+        <!-- 左侧：1张大图，跨2行 -->
+        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="grid-row: span 2; min-height:460px;">
+            <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Custom-Blanket-01.jpg" class="w-full h-full object-cover" alt="Blanket Workshop">
         </div>
+        <!-- 右侧第1行：2张小图 -->
+        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;">
+            <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/2-2.jpg" class="w-full h-full object-cover" alt="Blanket Production">
+        </div>
+        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;">
+            <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/3.png" class="w-full h-full object-cover" alt="Blanket Crafting">
+        </div>
+        <!-- 右侧第2行：2张小图 -->
+        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;">
+            <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/4-2.jpg" class="w-full h-full object-cover" alt="Quality Control">
+        </div>
+        <div class="rounded-2xl overflow-hidden bg-[#f8f8f8]" style="height:220px;">
+            <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/5-2.jpg" class="w-full h-full object-cover" alt="Finished Products">
+        </div>
+    </div>
+</section>
+
+<!-- Product Case Scene Show -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10 fade-up">
+            <h2 class="font-serif text-3xl md:text-4xl text-gray-900">Product Case Scene Show</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 fade-up">
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/1-3.jpg" class="w-full h-full object-cover" alt="Blanket Scene"></div>
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/2-3.jpg" class="w-full h-full object-cover" alt="Blanket Scene"></div>
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/3-2.jpg" class="w-full h-full object-cover" alt="Blanket Scene"></div>
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/4-3.jpg" class="w-full h-full object-cover" alt="Blanket Scene"></div>
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/5.png" class="w-full h-full object-cover" alt="Blanket Scene"></div>
+            <div class="rounded-xl overflow-hidden h-60 bg-[#f8f8f8]"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/6.png" class="w-full h-full object-cover" alt="Blanket Scene"></div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-16 max-w-3xl mx-auto px-6">
+    <div class="text-center mb-10 fade-up">
+        <h2 class="font-serif text-3xl md:text-4xl text-gray-900">FAQ</h2>
+    </div>
+    <div class="space-y-3 fade-up">
+        <div class="border border-gray-100 rounded-xl bg-white">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">How can I buy a custom blanket?<span class="text-gray-400">+</span></button>
+            <div class="faq-answer px-6 pb-4 text-sm text-gray-500 leading-relaxed">Please send us your own design first and let us know what size you want. We will give you a quote for the blanket and shipping, or suggestions on design modifications.</div>
+        </div>
+        <div class="border border-gray-100 rounded-xl bg-white">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">What are custom blankets?<span class="text-gray-400">+</span></button>
+            <div class="faq-answer px-6 pb-4 text-sm text-gray-500 leading-relaxed">Custom blankets are personalized products designed and manufactured according to specific customer requirements. They break free from standard styles by incorporating logos, designs, text, colors, and custom dimensions — creating uniquely meaningful products for brands, retailers, and gift companies.</div>
+        </div>
+        <div class="border border-gray-100 rounded-xl bg-white">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">What is the MOQ?<span class="text-gray-400">+</span></button>
+            <div class="faq-answer px-6 pb-4 text-sm text-gray-500 leading-relaxed">MOQ is 1 piece for printed and fleece blankets. Woven blankets start from 50 pcs due to loom setup. Whether you need a single sample or a bulk order, we can accommodate.</div>
+        </div>
+        <div class="border border-gray-100 rounded-xl bg-white">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">What is the production &amp; shipping time?<span class="text-gray-400">+</span></button>
+            <div class="faq-answer px-6 pb-4 text-sm text-gray-500 leading-relaxed">Production time is usually 10-20 days depending on order quantity. Shipping takes about 10-15 days by UPS or FedEx.</div>
+        </div>
+        <div class="border border-gray-100 rounded-xl bg-white">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">How can I pay?<span class="text-gray-400">+</span></button>
+            <div class="faq-answer px-6 pb-4 text-sm text-gray-500 leading-relaxed">We accept Visa, Mastercard, T/T, PayPal, Apple Pay, Google Pay, and Alibaba Trade Assurance.</div>
+        </div>
+    </div>
+</section>
+
+<!-- Inquiry Section -->
+<section id="inquiry" class="py-20" style="background:#0a0a0a">
+    <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12 fade-up">
+            <h2 class="font-serif text-4xl text-white mb-3">Custom Blanket Supplier You Can Trust</h2>
+            <p class="text-gray-400 text-sm">Request your wholesale quote today. We respond within 6 hours!</p>
+        </div>
+        <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="bg-white rounded-2xl p-8 space-y-5 fade-up">
+            <input type="hidden" name="product" value="Custom Blanket / Towel">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Full Name *</label><input name="name" type="text" required placeholder="Your name" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Email *</label><input name="email" type="email" required placeholder="you@brand.com" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">WhatsApp Number</label><input name="whatsapp" type="tel" placeholder="+86 136 1386 6590" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Product Type</label>
+                    <select name="type" class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm">
+                        <option>Printed Blanket</option><option>Fleece Blanket</option><option>Woven Blanket</option><option>Beach Towel</option><option>Not Sure - Advise Me</option>
+                    </select>
+                </div>
+            </div>
+            <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Project Details</label><textarea name="message" rows="4" placeholder="Describe your size, design idea, material preference or share a reference link..." class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-xl outline-none resize-none text-sm"></textarea></div>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button type="submit" class="flex-1 py-5 rounded-xl text-black font-bold text-base hover:opacity-90 transition pulse-cta" style="background:var(--gold)">SEND INQUIRY</button>
+                <a href="https://wa.me/8613613866590" target="_blank" class="flex-1 py-5 rounded-xl text-white font-bold text-base text-center transition" style="background:#25D366">WhatsApp Us</a>
+            </div>
+            <p class="text-xs text-gray-400 italic text-center">To get a mockup faster, send your design directly via WhatsApp.</p>
+        </form>
     </div>
 </section>
 
