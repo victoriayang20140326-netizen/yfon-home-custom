@@ -3,155 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Blankets | YFON HOME | Manufacturer & Wholesale</title>
+    <title>Custom Blanket & Towel | YFON HOME | Manufacturer & Wholesale</title>
+    <meta name="description" content="Custom blankets and towels manufacturer. Printed Blanket, Fleece Blanket, Woven Blanket, Beach Towel. MOQ 1pc, 10+ years experience, 120+ countries.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #c9a84c; --dark: #1a1a1a; }
-        * { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: #fff; color: var(--dark); margin: 0; }
+        :root { --gold: #c9a84c; }
+        body { font-family: 'Inter', sans-serif; background: #fff; color: #1a1a1a; margin: 0; }
         .font-serif { font-family: 'Playfair Display', serif; }
-        .rainbow-text { background: linear-gradient(90deg, #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .cat-card { transition: all 0.35s ease; border: 1px solid rgba(0,0,0,0.05); background: #fcfcfc; }
-        .cat-card:hover { transform: translateY(-8px); border-color: var(--gold); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
-        .cat-card img { transition: transform 0.5s ease; object-fit: contain; width: 100%; height: 100%; background: #f8f8f8; }
-        .cat-card:hover img { transform: scale(1.05); }
+        .rainbow-text { background: linear-gradient(90deg,#ef4444,#f97316,#eab308,#22c55e,#3b82f6,#8b5cf6); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+        header { position:fixed; top:0; width:100%; z-index:200; background:rgba(10,10,10,.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,.08); }
         .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
-        @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.5); } 70% { box-shadow: 0 0 0 12px rgba(201,168,76,0); } }
-        .pulse-btn { animation: pulse-gold 2.2s infinite; }
-        .gallery-item { overflow: hidden; border-radius: 12px; background: #f8f8f8; }
-        .gallery-item img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: contain; }
-        .spec-row:nth-child(even) { background: #f9f9f9; }
-        .sticky-cta { position: sticky; top: 96px; }
+        @keyframes pulse-gold { 0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.5)} 70%{box-shadow:0 0 0 14px rgba(201,168,76,0)} }
+        .pulse-cta { animation: pulse-gold 2.2s infinite; }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        @keyframes showcaseScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .showcase-track:hover { animation-play-state: paused; cursor: grab; }
     </style>
 </head>
 <body>
-    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-black">YFON <span class="rainbow-text">HOME</span></a>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
-                <a href="index.html" class="hover:text-black transition">Home</a>
-                <a href="rugs.html" class="hover:text-black transition ">Rugs</a>
-                <a href="pillows.html" class="hover:text-black transition ">Pillows</a>
-                <a href="blankets.html" class="hover:text-black transition text-black font-bold border-b-2 border-[#c9a84c]">Blankets</a>
-                <a href="pins.html" class="hover:text-black transition ">Pins</a>
-                <a href="gifts.html" class="hover:text-black transition ">Gifts</a>
-                <a href="#contact" class="px-5 py-2 rounded-full text-white font-bold" style="background:var(--gold)">Get a Quote</a>
-            </nav>
-        </div>
-    </header>
 
-    <section class="pt-32 pb-12 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <nav class="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-400 mb-4">
-                <a href="index.html" class="hover:text-black transition">Home</a>
-                <span class="mx-1">/</span>
-                <span class="text-gray-900">Custom Blankets</span>
-            </nav>
-            <h1 class="font-serif text-5xl md:text-7xl text-black mb-4">Custom Blankets</h1>
-            <p class="text-gray-500 text-sm max-w-2xl">Wrap your brand in comfort. Premium printed, fleece, and jacquard woven blankets.</p>
-        </div>
-    </section>
+<header>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="index.html" class="text-2xl font-bold text-white tracking-tight">YFON <span class="rainbow-text">HOME</span></a>
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-300">
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="rugs.html" class="hover:text-white">Custom Rugs</a>
+            <a href="pillows.html" class="hover:text-white">Pillows</a>
+            <a href="blankets.html" class="text-[#c9a84c]">Blankets</a>
+            <a href="pins.html" class="hover:text-white">Pins</a>
+            <a href="#inquiry" class="ml-2 px-6 py-2 rounded-full text-black font-bold pulse-cta" style="background:var(--gold)">Get a Quote</a>
+        </nav>
+    </div>
+</header>
 
-    <section class="py-20 max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    
-            <a href="printed-blanket.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Printed Blanket">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Printed Blanket</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Full-color edge-to-edge printing.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-            <a href="fleece-blanket.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Fleece Blanket">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Fleece Blanket</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Ultra-soft flannel fleece blankets.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-            <a href="woven-blanket.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hb5febad75fc9463893ea9afa8ada16df3.jpg" alt="Woven Blanket">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Woven Blanket</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Classic jacquard woven throws with fringe.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-        </div>
-    </section>
-    <section id="contact" class="py-24 bg-gray-50 text-black">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16 fade-up">
-                <h2 class="font-serif text-4xl md:text-5xl mb-4">Start Your Project</h2>
-                <p class="text-gray-500 text-sm uppercase tracking-widest">Get a free mockup and pricing within 1 hour</p>
+<!-- Breadcrumb -->
+<div class="pt-20 bg-gray-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+        <nav class="flex items-center gap-2 text-sm text-gray-400">
+            <a href="index.html" class="hover:text-gray-700">Home</a><span>/</span>
+            <span class="text-gray-900 font-semibold">Custom Blanket &amp; Towel</span>
+        </nav>
+    </div>
+</div>
+
+<!-- Hero Banner -->
+<section class="py-16 max-w-7xl mx-auto px-6 text-center fade-up">
+    <h1 class="font-serif text-4xl lg:text-5xl text-gray-900 mb-4">Custom Blanket &amp; Towel</h1>
+    <p class="text-gray-500 text-base max-w-2xl mx-auto leading-relaxed">From cozy fleece throws to artisan woven blankets and vibrant beach towels — YFON HOME manufactures fully customized textile products for brands, retailers, and gift companies worldwide.</p>
+    <div class="flex flex-wrap justify-center gap-6 mt-8 text-sm text-gray-500">
+        <div class="flex items-center gap-2"><span style="color:var(--gold)">&#10003;</span> MOQ 1 piece</div>
+        <div class="flex items-center gap-2"><span style="color:var(--gold)">&#10003;</span> 10+ years manufacturing</div>
+        <div class="flex items-center gap-2"><span style="color:var(--gold)">&#10003;</span> 120+ countries served</div>
+        <div class="flex items-center gap-2"><span style="color:var(--gold)">&#10003;</span> Free mockup in 6 hours</div>
+    </div>
+</section>
+
+<!-- Product Category Grid (4 types) -->
+<section class="max-w-7xl mx-auto px-6 pb-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Printed Blanket -->
+        <a href="printed-blanket.html" class="card-hover group block rounded-2xl overflow-hidden border border-gray-100 bg-white">
+            <div class="overflow-hidden bg-[#f8f8f8]" style="height:280px;">
+                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Printed-Blanket-1.jpg" alt="Custom Printed Blanket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            
-            <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-6 fade-up">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Full Name *</label>
-                        <input name="name" type="text" required placeholder="Your name" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Email Address *</label>
-                        <input name="email" type="email" required placeholder="you@brand.com" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">WhatsApp Number</label>
-                        <input name="whatsapp" type="tel" placeholder="+86 ..." class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Estimated Quantity</label>
-                        <input name="quantity" type="text" placeholder="e.g. 50 pcs" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#c9a84c] transition text-sm">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Project Details</label>
-                    <textarea name="message" rows="4" placeholder="Describe your preferred size, material, or design details..." class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none resize-none text-sm"></textarea>
-                </div>
-                <div class="pt-4 text-center">
-                    <button type="submit" class="w-full py-5 rounded-full text-white font-bold text-lg hover:opacity-90 transition shadow-lg" style="background:var(--gold)">SEND INQUIRY</button>
-                    <p class="text-xs text-gray-400 mt-4 italic">To get a quote faster, please send your design directly via WhatsApp.</p>
-                </div>
-            </form>
-
-        </div>
-    </section>
-    
-    <footer style="background:#050505" class="py-16 border-t border-white/5 text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-3xl font-bold text-white mb-8">YFON <span class="rainbow-text">HOME</span></div>
-            <div class="flex flex-wrap justify-center gap-8 text-xs text-gray-500 mb-10">
-                <a href="rugs.html" class="hover:text-white transition">Rugs</a>
-                <a href="pillows.html" class="hover:text-white transition">Pillows</a>
-                <a href="blankets.html" class="hover:text-white transition">Blankets</a>
-                <a href="pins.html" class="hover:text-white transition">Pins</a>
-                <a href="gifts.html" class="hover:text-white transition">Gifts</a>
+            <div class="p-5">
+                <h3 class="font-serif text-lg text-gray-900 mb-2">Printed Blanket</h3>
+                <p class="text-gray-500 text-xs leading-relaxed mb-4">Full-color sublimation print on 100% polyester. Any design, vibrant colors, machine-washable. Ideal for branded merchandise and gifts.</p>
+                <span class="inline-flex items-center gap-1 text-xs font-semibold" style="color:var(--gold)">View Details &rarr;</span>
             </div>
-            <p class="text-sm text-gray-600 uppercase tracking-widest">&copy; 2026 YFON HOME. All Rights Reserved.</p>
+        </a>
+
+        <!-- Fleece Blanket -->
+        <a href="fleece-blanket.html" class="card-hover group block rounded-2xl overflow-hidden border border-gray-100 bg-white">
+            <div class="overflow-hidden bg-[#f8f8f8]" style="height:280px;">
+                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Printed-Blanket-2.jpg" alt="Custom Fleece Blanket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-5">
+                <h3 class="font-serif text-lg text-gray-900 mb-2">Fleece Blanket</h3>
+                <p class="text-gray-500 text-xs leading-relaxed mb-4">Premium cozy fleece, thick and high-density. Free from shedding and fading. All-season comfort for retail, hotels and promotions.</p>
+                <span class="inline-flex items-center gap-1 text-xs font-semibold" style="color:var(--gold)">View Details &rarr;</span>
+            </div>
+        </a>
+
+        <!-- Woven Blanket -->
+        <a href="woven-blanket.html" class="card-hover group block rounded-2xl overflow-hidden border border-gray-100 bg-white">
+            <div class="overflow-hidden bg-[#f8f8f8]" style="height:280px;">
+                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Woven-Blanket-6.jpg" alt="Custom Woven Blanket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-5">
+                <h3 class="font-serif text-lg text-gray-900 mb-2">Woven Blanket</h3>
+                <p class="text-gray-500 text-xs leading-relaxed mb-4">Jacquard weave technique, 35% cotton &amp; 65% polyester. Double &amp; single side, 100% cotton tassels. Heirloom quality for premium brands.</p>
+                <span class="inline-flex items-center gap-1 text-xs font-semibold" style="color:var(--gold)">View Details &rarr;</span>
+            </div>
+        </a>
+
+        <!-- Beach Towel -->
+        <a href="beach-towel.html" class="card-hover group block rounded-2xl overflow-hidden border border-gray-100 bg-white">
+            <div class="overflow-hidden bg-[#f8f8f8]" style="height:280px;">
+                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Beach-Towel-9.jpg" alt="Custom Beach Towel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-5">
+                <h3 class="font-serif text-lg text-gray-900 mb-2">Beach Towel</h3>
+                <p class="text-gray-500 text-xs leading-relaxed mb-4">Microfiber, quick-dry, ultra-absorbent. Custom print in any design. Perfect for beach brands, resort hotels and outdoor promotions.</p>
+                <span class="inline-flex items-center gap-1 text-xs font-semibold" style="color:var(--gold)">View Details &rarr;</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- About / Brand Copy -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            <div class="fade-up">
+                <h2 class="font-serif text-3xl text-gray-900 mb-5">Custom Blanket Wholesale Supplier</h2>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">As a leading custom blanket manufacturer and wholesale supplier, YFON HOME specializes in creating high-quality, fully customizable blankets for brands and bulk buyers worldwide. Since 2016, we have served over 600 clients across 120+ countries, delivering products that meet international quality standards and unique brand requirements.</p>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6">Our custom blankets are available in a variety of materials, sizes, and designs, ensuring each order perfectly reflects your brand identity. We offer flexible bulk order options, fast production timelines, and reliable global shipping.</p>
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-white rounded-xl p-4 border border-gray-100">
+                        <div class="font-serif text-2xl text-gray-900 mb-1">120+</div>
+                        <div class="text-xs text-gray-500">Export Countries</div>
+                    </div>
+                    <div class="bg-white rounded-xl p-4 border border-gray-100">
+                        <div class="font-serif text-2xl text-gray-900 mb-1">600+</div>
+                        <div class="text-xs text-gray-500">Clients Served</div>
+                    </div>
+                    <div class="bg-white rounded-xl p-4 border border-gray-100">
+                        <div class="font-serif text-2xl text-gray-900 mb-1">10+</div>
+                        <div class="text-xs text-gray-500">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3 fade-up">
+                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Custom-Blanket-01.jpg" class="rounded-2xl w-full object-cover" style="height:200px;" alt="Blanket Workshop">
+                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/2-2.jpg" class="rounded-2xl w-full object-cover" style="height:200px;" alt="Blanket Production">
+                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/4-2.jpg" class="rounded-2xl w-full object-cover" style="height:200px;" alt="Quality Control">
+                <img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/5-2.jpg" class="rounded-2xl w-full object-cover" style="height:200px;" alt="Finished Products">
+            </div>
         </div>
-    </footer>
-    <a href="#contact" class="fixed bottom-8 right-8 z-50 pulse-btn rounded-full px-8 py-4 text-white font-bold text-sm shadow-2xl flex items-center gap-2" style="background:var(--gold)">GET QUOTE</a>
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-    </script>
+    </div>
+</section>
+
+<!-- Product Showcase Scroll -->
+<section class="py-16 max-w-7xl mx-auto px-6 fade-up">
+    <h2 class="font-serif text-2xl text-gray-900 mb-6">Product Showcase</h2>
+    <div class="overflow-hidden rounded-2xl">
+        <div class="showcase-track flex gap-4" style="width:max-content; animation: showcaseScroll 32s linear infinite;">
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Printed-Blanket-25.jpg" class="w-full h-full object-cover" alt="Blanket"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Printed-Blanket-1.jpg" class="w-full h-full object-cover" alt="Blanket"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Woven-Blanket-6.jpg" class="w-full h-full object-cover" alt="Blanket"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Beach-Towel-9.jpg" class="w-full h-full object-cover" alt="Towel"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Beach-Towel-10.jpg" class="w-full h-full object-cover" alt="Towel"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Printed-Blanket-3.jpg" class="w-full h-full object-cover" alt="Blanket"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Woven-Blanket-3-1.jpg" class="w-full h-full object-cover" alt="Blanket"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Beach-Towel-11.jpg" class="w-full h-full object-cover" alt="Towel"></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Printed-Blanket-25.jpg" class="w-full h-full object-cover" alt="Blanket"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Printed-Blanket-1.jpg" class="w-full h-full object-cover" alt="Blanket"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Woven-Blanket-6.jpg" class="w-full h-full object-cover" alt="Blanket"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Beach-Towel-9.jpg" class="w-full h-full object-cover" alt="Towel"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Beach-Towel-10.jpg" class="w-full h-full object-cover" alt="Towel"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Printed-Blanket-3.jpg" class="w-full h-full object-cover" alt="Blanket"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Woven-Blanket-3-1.jpg" class="w-full h-full object-cover" alt="Blanket"></div>
+            <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/uploads/2025/05/Beach-Towel-11.jpg" class="w-full h-full object-cover" alt="Towel"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Inquiry Section -->
+<section id="inquiry" class="py-16 bg-gray-50">
+    <div class="max-w-2xl mx-auto px-6">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="p-6 text-white" style="background:#0a0a0a">
+                <h2 class="font-serif text-2xl mb-1">Get a Free Quote</h2>
+                <p class="text-xs text-gray-400">We respond within 6 hours</p>
+            </div>
+            <div class="p-8">
+                <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-4">
+                    <input type="hidden" name="product" value="Custom Blanket / Towel">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Full Name *</label><input name="name" type="text" required placeholder="Your name" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                        <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Email *</label><input name="email" type="email" required placeholder="you@brand.com" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                    </div>
+                    <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Product Type</label>
+                        <select name="type" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm">
+                            <option>Printed Blanket</option><option>Fleece Blanket</option><option>Woven Blanket</option><option>Beach Towel</option><option>Not Sure - Advise Me</option>
+                        </select>
+                    </div>
+                    <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Quantity</label><input name="quantity" type="text" placeholder="e.g. 100 pcs" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                    <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Project Details</label><textarea name="message" rows="3" placeholder="Size, design idea, material preference..." class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm resize-none"></textarea></div>
+                    <button type="submit" class="w-full py-4 rounded-xl text-black font-bold text-sm hover:opacity-90 transition pulse-cta" style="background:var(--gold)">SEND INQUIRY</button>
+                    <a href="https://wa.me/8613613866590" target="_blank" class="w-full py-3 rounded-xl text-white font-bold text-sm text-center transition block" style="background:#25D366">WhatsApp Us Directly</a>
+                    <p class="text-xs text-gray-400 italic text-center">Send design via WhatsApp for faster mockup.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer style="background:#050505" class="py-10 text-center text-xs text-gray-600">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-xl font-bold text-white mb-4">YFON <span class="rainbow-text">HOME</span></div>
+        <div class="flex flex-wrap justify-center gap-5 mb-5">
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="rugs.html" class="hover:text-white">Rugs</a>
+            <a href="pillows.html" class="hover:text-white">Pillows</a>
+            <a href="blankets.html" class="text-[#c9a84c]">Blankets</a>
+            <a href="pins.html" class="hover:text-white">Pins</a>
+        </div>
+        <p>&copy; 2026 YFON HOME . www.yfonhomecustom.com</p>
+    </div>
+</footer>
+
+<a href="#inquiry" class="fixed bottom-8 right-8 z-50 pulse-cta rounded-full px-6 py-4 text-black font-bold text-sm shadow-2xl hidden lg:block" style="background:var(--gold)">GET QUOTE</a>
+
+<script>
+    const obs = new IntersectionObserver(e => e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }), {threshold:0.1});
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
