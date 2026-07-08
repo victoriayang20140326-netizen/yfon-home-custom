@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Rubber Mat | YFON HOME</title>
-    <meta name="description" content="Custom rubber mats for retail stores, offices and hotels. Non-slip, weather-resistant, easy to clean and fully customizable with brand logo. YFON HOME manufacturer.">
+    <title>Custom Rubber Mat | YFON HOME | Manufacturer</title>
+    <meta name="description" content="Custom rubber mats for retail stores, offices and hotels. Non-slip, weather-resistant and fully customizable with brand logo. YFON HOME manufacturer.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -21,27 +21,53 @@
         @keyframes pulse-gold { 0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.5)} 70%{box-shadow:0 0 0 14px rgba(201,168,76,0)} }
         .pulse-cta { animation: pulse-gold 2.2s infinite; }
         .sticky-form { position: sticky; top: 88px; }
+        .spec-row:nth-child(odd) { background: #f9fafb; }
         @keyframes showcaseScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .
+        .showcase-track:hover { animation-play-state: paused; cursor: grab; }
+    </style>
+</head>
+<body>
 
-<!-- Main Content: Left product + Right sticky form -->
+<header>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="index.html" class="text-2xl font-bold text-white tracking-tight">YFON <span class="rainbow-text">HOME</span></a>
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-300">
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="rugs.html" class="text-[#c9a84c]">Custom Rugs</a>
+            <a href="pillows.html" class="hover:text-white">Pillows</a>
+            <a href="blankets.html" class="hover:text-white">Blankets</a>
+            <a href="pins.html" class="hover:text-white">Pins</a>
+            <a href="#inquiry" class="ml-2 px-6 py-2 rounded-full text-black font-bold pulse-cta" style="background:var(--gold)">Get a Quote</a>
+        </nav>
+    </div>
+</header>
+
+<div class="pt-20 bg-gray-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+        <nav class="flex items-center gap-2 text-xs text-gray-500">
+            <a href="index.html">Home</a><span class="mx-1">/</span>
+            <a href="rugs.html">Custom Rug &amp; Carpet</a><span class="mx-1">/</span>
+            <span class="text-gray-900 font-semibold">Rubber Mat</span>
+        </nav>
+    </div>
+</div>
+
 <section class="py-12 max-w-7xl mx-auto px-6">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-14">
 
         <!-- LEFT: Product Detail (2/3) -->
         <div class="lg:col-span-2">
-            <!-- Main Image + Thumbnails -->
             <div class="w-full rounded-2xl overflow-hidden bg-[#f8f8f8] mb-4" style="height:480px;">
                 <img id="mainImg" src="https://sc02.alicdn.com/kf/Hc05c518cf2e5453a8f122e8b37cbad40L.jpg" alt="Custom Rubber Mat" class="w-full h-full object-contain">
             </div>
             <div class="grid grid-cols-4 gap-3 mb-10">
-                <button class="thumb-btn active border-2 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Hc05c518cf2e5453a8f122e8b37cbad40L.jpg','')">
+                <button class="thumb-btn active border-2 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Hc05c518cf2e5453a8f122e8b37cbad40L.jpg')">
                     <img src="https://sc02.alicdn.com/kf/Hc05c518cf2e5453a8f122e8b37cbad40L.jpg" class="w-full h-full object-contain"></button>
-                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H7e7df73ed3274ccfbbcfe999c6e5123cp.jpg','')">
+                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H7e7df73ed3274ccfbbcfe999c6e5123cp.jpg')">
                     <img src="https://sc02.alicdn.com/kf/H7e7df73ed3274ccfbbcfe999c6e5123cp.jpg" class="w-full h-full object-contain"></button>
-                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H4b98c5f7a8ca4882b255c0d784580f57R.jpg','')">
+                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H4b98c5f7a8ca4882b255c0d784580f57R.jpg')">
                     <img src="https://sc02.alicdn.com/kf/H4b98c5f7a8ca4882b255c0d784580f57R.jpg" class="w-full h-full object-contain"></button>
-                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H628927bb93fd4e978a03382b99219abeR.jpg','')">
+                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H628927bb93fd4e978a03382b99219abeR.jpg')">
                     <img src="https://sc02.alicdn.com/kf/H628927bb93fd4e978a03382b99219abeR.jpg" class="w-full h-full object-contain"></button>
             </div>
 
@@ -53,7 +79,7 @@
                     <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Size</div><div class="px-6 py-3">Custom Size</div></div>
                     <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Thickness</div><div class="px-6 py-3">3mm-8mm</div></div>
                     <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Backing</div><div class="px-6 py-3">Rubber</div></div>
-                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Pattern</div><div class="px-6 py-3">Custom Logo/Design</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Pattern</div><div class="px-6 py-3">Custom Logo / Design</div></div>
                     <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Anti-slip</div><div class="px-6 py-3">Yes</div></div>
                     <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">MOQ</div><div class="px-6 py-3">1 piece</div></div>
                     <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Sample Time</div><div class="px-6 py-3">5-7 days</div></div>
@@ -63,9 +89,9 @@
 
             <!-- Description -->
             <div class="mb-12 fade-up">
-                <h2 class="font-serif text-2xl text-gray-900 mb-4">Product Description</h2>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">Custom Rubber Mats combine durability with branding. Perfect for retail stores, offices, hotels and exhibitions.</p>
-                <p class="text-gray-600 text-sm leading-relaxed mb-4">Non-slip, weather-resistant, easy to clean, and fully customizable with your brand logo, colors and size. Long-lasting performance even in high-traffic areas.</p>
+                <h2 class="font-serif text-2xl text-gray-900 mb-4">What Is A Custom Rubber Mat</h2>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">Custom Rubber Mats combine durability with branding. Perfect for retail stores, offices, hotels and exhibitions. Non-slip, weather-resistant, easy to clean, and fully customizable with your brand logo, colors and size.</p>
+                <p class="text-gray-600 text-sm leading-relaxed">Long-lasting performance even in high-traffic areas. Available in any shape, size and design. The rubber backing ensures a firm grip on all floor types, making it the ideal choice for professional environments.</p>
             </div>
 
             <!-- Key Advantages -->
@@ -84,38 +110,39 @@
                 <h2 class="font-serif text-2xl text-gray-900 mb-6">Product Showcase</h2>
                 <div class="overflow-hidden rounded-2xl">
                     <div class="showcase-track flex gap-4" style="width:max-content; animation: showcaseScroll 30s linear infinite;">
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-1.jpg.webp" class="w-full h-full object-contain"></div>
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-2.jpg.webp" class="w-full h-full object-contain"></div>
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-3.jpg.webp" class="w-full h-full object-contain"></div>
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-4.jpg.webp" class="w-full h-full object-contain"></div>
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-1.jpg.webp" class="w-full h-full object-contain"></div>
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-2.jpg.webp" class="w-full h-full object-contain"></div>
-                        <!-- Duplicate for seamless loop -->
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-1.jpg.webp" class="w-full h-full object-contain"></div>
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-2.jpg.webp" class="w-full h-full object-contain"></div>
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-3.jpg.webp" class="w-full h-full object-contain"></div>
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-4.jpg.webp" class="w-full h-full object-contain"></div>
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-1.jpg.webp" class="w-full h-full object-contain"></div>
-                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://www.miracle-custom.com/wp-content/webp-express/webp-images/uploads/2025/05/Rubber-Mat-2.jpg.webp" class="w-full h-full object-contain"></div>
+                        <!-- First set -->
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H5bb418279dbc4329ad2cd313b08bb05fV.jpg" class="w-full h-full object-contain"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/Hee90d8cb819e4c9f8b39fe3cfda638f0C.jpg" class="w-full h-full object-contain"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/Hc276475e26154d5184b26fe34f19f019k.jpg" class="w-full h-full object-contain"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H9354e5f7d1ca43ddbee111bc015d58c7p.jpg" class="w-full h-full object-contain"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H808f69c99d4d44479bd8698c841e99ccw.jpg" class="w-full h-full object-contain"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/Hb81be121bd6543d7b0ff1fca17df293fl.jpg" class="w-full h-full object-contain"></div>
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H5bb418279dbc4329ad2cd313b08bb05fV.jpg" class="w-full h-full object-contain"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/Hee90d8cb819e4c9f8b39fe3cfda638f0C.jpg" class="w-full h-full object-contain"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/Hc276475e26154d5184b26fe34f19f019k.jpg" class="w-full h-full object-contain"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H9354e5f7d1ca43ddbee111bc015d58c7p.jpg" class="w-full h-full object-contain"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H808f69c99d4d44479bd8698c841e99ccw.jpg" class="w-full h-full object-contain"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/Hb81be121bd6543d7b0ff1fca17df293fl.jpg" class="w-full h-full object-contain"></div>
                     </div>
                 </div>
             </div>
 
             <!-- FAQ -->
             <div class="mb-12 fade-up">
-                <h2 class="font-serif text-2xl text-gray-900 mb-6">Quick Q&A</h2>
+                <h2 class="font-serif text-2xl text-gray-900 mb-6">Quick Q&amp;A</h2>
                 <div class="space-y-3">
                     <div class="border border-gray-100 rounded-xl bg-white">
-                        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">MOQ? <span class="text-gray-400">+</span></button>
-                        <div class="faq-answer px-6 pb-4 text-sm text-gray-500">1 piece.</div>
+                        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">What is the MOQ?<span class="text-gray-400">+</span></button>
+                        <div class="faq-answer px-6 pb-4 text-sm text-gray-500">1 piece. Whether for quality testing or bulk orders.</div>
                     </div>
                     <div class="border border-gray-100 rounded-xl bg-white">
                         <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">Can I print my logo?<span class="text-gray-400">+</span></button>
-                        <div class="faq-answer px-6 pb-4 text-sm text-gray-500">Yes, any logo, slogan or artwork.</div>
+                        <div class="faq-answer px-6 pb-4 text-sm text-gray-500">Yes, any logo, slogan or artwork with precision printing.</div>
                     </div>
                     <div class="border border-gray-100 rounded-xl bg-white">
                         <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">How long does production take?<span class="text-gray-400">+</span></button>
-                        <div class="faq-answer px-6 pb-4 text-sm text-gray-500">Sample 5-7 days, bulk 15-20 days.</div>
+                        <div class="faq-answer px-6 pb-4 text-sm text-gray-500">Sample 5-7 days, bulk 15-20 days after approval.</div>
                     </div>
                 </div>
             </div>
@@ -140,7 +167,7 @@
                                     <option>Rubber Mat</option><option>Custom Logo Mat</option><option>Other</option>
                                 </select>
                             </div>
-                            <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Quantity</label><input name="quantity" type="text" placeholder="e.g. 50 pcs, 100 sq.m" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                            <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Quantity</label><input name="quantity" type="text" placeholder="e.g. 50 pcs" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
                             <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Project Details</label><textarea name="message" rows="3" placeholder="Size, shape, design idea..." class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm resize-none"></textarea></div>
                             <button type="submit" class="w-full py-4 rounded-xl text-black font-bold text-sm hover:opacity-90 transition pulse-cta" style="background:var(--gold)">SEND INQUIRY</button>
                             <a href="https://wa.me/8613613866590" target="_blank" class="w-full py-3 rounded-xl text-white font-bold text-sm text-center transition block" style="background:#25D366">WhatsApp Us Directly</a>
@@ -163,7 +190,11 @@
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-xl font-bold text-white mb-4">YFON <span class="rainbow-text">HOME</span></div>
         <div class="flex flex-wrap justify-center gap-5 mb-5">
-            <a href="index.html" class="hover:text-white">Home</a><a href="rugs.html" class="text-[#c9a84c]">Rugs</a><a href="pillows.html" class="hover:text-white">Pillows</a><a href="blankets.html" class="hover:text-white">Blankets</a><a href="pins.html" class="hover:text-white">Pins</a>
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="rugs.html" class="text-[#c9a84c]">Rugs</a>
+            <a href="pillows.html" class="hover:text-white">Pillows</a>
+            <a href="blankets.html" class="hover:text-white">Blankets</a>
+            <a href="pins.html" class="hover:text-white">Pins</a>
         </div>
         <p>&copy; 2026 YFON HOME . www.yfonhomecustom.com</p>
     </div>
@@ -172,10 +203,8 @@
 <a href="#inquiry" class="fixed bottom-8 right-8 z-50 pulse-cta rounded-full px-6 py-4 text-black font-bold text-sm shadow-2xl hidden lg:block" style="background:var(--gold)">GET QUOTE</a>
 
 <script>
-    function switchImg(btn, src, fallback) {
-        const img = document.getElementById('mainImg');
-        img.src = src;
-        img.onerror = function() { this.src = fallback; };
+    function switchImg(btn, src) {
+        document.getElementById('mainImg').src = src;
         document.querySelectorAll('.thumb-btn').forEach(b => { b.classList.remove('active'); b.style.borderColor = 'transparent'; });
         btn.classList.add('active');
         btn.style.borderColor = 'var(--gold)';
