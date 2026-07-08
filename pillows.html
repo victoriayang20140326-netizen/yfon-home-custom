@@ -3,155 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Pillows & Plush Toys | YFON HOME | Manufacturer & Wholesale</title>
+    <title>Custom Die-Cut Pillow | YFON HOME | Manufacturer & Wholesale</title>
+    <meta name="description" content="Custom die-cut pillows in any shape — character, logo, pet, portrait. Vibrant full-color print, PP cotton fill, hidden zipper. MOQ 1pc. YFON HOME manufacturer.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #c9a84c; --dark: #1a1a1a; }
-        * { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: #fff; color: var(--dark); margin: 0; }
+        :root { --gold: #c9a84c; }
+        body { font-family: 'Inter', sans-serif; background: #fff; color: #1a1a1a; margin: 0; }
         .font-serif { font-family: 'Playfair Display', serif; }
-        .rainbow-text { background: linear-gradient(90deg, #ef4444, #f97316, #eab308, #22c55e, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .cat-card { transition: all 0.35s ease; border: 1px solid rgba(0,0,0,0.05); background: #fcfcfc; }
-        .cat-card:hover { transform: translateY(-8px); border-color: var(--gold); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
-        .cat-card img { transition: transform 0.5s ease; object-fit: contain; width: 100%; height: 100%; background: #f8f8f8; }
-        .cat-card:hover img { transform: scale(1.05); }
+        .rainbow-text { background: linear-gradient(90deg,#ef4444,#f97316,#eab308,#22c55e,#3b82f6,#8b5cf6); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+        header { position:fixed; top:0; width:100%; z-index:200; background:rgba(10,10,10,.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,.08); }
+        .thumb-btn.active { border-color: var(--gold); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-answer.open { max-height: 400px; }
         .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
-        @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.5); } 70% { box-shadow: 0 0 0 12px rgba(201,168,76,0); } }
-        .pulse-btn { animation: pulse-gold 2.2s infinite; }
-        .gallery-item { overflow: hidden; border-radius: 12px; background: #f8f8f8; }
-        .gallery-item img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: contain; }
-        .spec-row:nth-child(even) { background: #f9f9f9; }
-        .sticky-cta { position: sticky; top: 96px; }
+        @keyframes pulse-gold { 0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.5)} 70%{box-shadow:0 0 0 14px rgba(201,168,76,0)} }
+        .pulse-cta { animation: pulse-gold 2.2s infinite; }
+        .sticky-form { position: sticky; top: 88px; }
+        @keyframes showcaseScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .showcase-track:hover { animation-play-state: paused; cursor: grab; }
+        .spec-row:nth-child(odd) { background: #f9fafb; }
     </style>
 </head>
 <body>
-    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-black">YFON <span class="rainbow-text">HOME</span></a>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
-                <a href="index.html" class="hover:text-black transition">Home</a>
-                <a href="rugs.html" class="hover:text-black transition ">Rugs</a>
-                <a href="pillows.html" class="hover:text-black transition text-black font-bold border-b-2 border-[#c9a84c]">Pillows</a>
-                <a href="blankets.html" class="hover:text-black transition ">Blankets</a>
-                <a href="pins.html" class="hover:text-black transition ">Pins</a>
-                <a href="gifts.html" class="hover:text-black transition ">Gifts</a>
-                <a href="#contact" class="px-5 py-2 rounded-full text-white font-bold" style="background:var(--gold)">Get a Quote</a>
-            </nav>
-        </div>
-    </header>
 
-    <section class="pt-32 pb-12 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <nav class="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-400 mb-4">
-                <a href="index.html" class="hover:text-black transition">Home</a>
-                <span class="mx-1">/</span>
-                <span class="text-gray-900">Custom Pillows & Plush Toys</span>
-            </nav>
-            <h1 class="font-serif text-5xl md:text-7xl text-black mb-4">Custom Pillows & Plush Toys</h1>
-            <p class="text-gray-500 text-sm max-w-2xl">Turn your designs into soft, huggable art. Custom shapes and high-res printing.</p>
-        </div>
-    </section>
+<header>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="index.html" class="text-2xl font-bold text-white tracking-tight">YFON <span class="rainbow-text">HOME</span></a>
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-300">
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="rugs.html" class="hover:text-white">Custom Rugs</a>
+            <a href="pillows.html" class="text-[#c9a84c]">Pillows</a>
+            <a href="blankets.html" class="hover:text-white">Blankets</a>
+            <a href="pins.html" class="hover:text-white">Pins</a>
+            <a href="#inquiry" class="ml-2 px-6 py-2 rounded-full text-black font-bold pulse-cta" style="background:var(--gold)">Get a Quote</a>
+        </nav>
+    </div>
+</header>
 
-    <section class="py-20 max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    
-            <a href="die-cut-pillow.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hda4d1d760a6d46d9b3a9fc02ff45e2b19.jpg" alt="Die Cut Pillow">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Die Cut Pillow</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Unique shaped pillows cut to match your design.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-            <a href="standard-pillow.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hda4d1d760a6d46d9b3a9fc02ff45e2b19.jpg" alt="Standard Pillow">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Standard Pillow</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Classic square pillows with premium filling.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-            <a href="plush-toy.html" class="cat-card rounded-2xl overflow-hidden block group">
-                <div class="aspect-square overflow-hidden">
-                    <img src="https://sc02.alicdn.com/kf/Hda4d1d760a6d46d9b3a9fc02ff45e2b19.jpg" alt="Plush Toy">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-xl font-bold mb-2">Plush Toy</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Custom 3D mascots and character plushies.</p>
-                    <span class="text-sm font-bold flex items-center gap-2" style="color:var(--gold)">Learn More &rarr;</span>
-                </div>
-            </a>
-        
-        </div>
-    </section>
-    <section id="contact" class="py-24 bg-gray-50 text-black">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16 fade-up">
-                <h2 class="font-serif text-4xl md:text-5xl mb-4">Start Your Project</h2>
-                <p class="text-gray-500 text-sm uppercase tracking-widest">Get a free mockup and pricing within 1 hour</p>
+<!-- Breadcrumb -->
+<div class="pt-20 bg-gray-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+        <nav class="flex items-center gap-2 text-sm text-gray-400">
+            <a href="index.html" class="hover:text-gray-700">Home</a><span>/</span>
+            <a href="pillows.html" class="hover:text-gray-700">Custom Pillow</a><span>/</span>
+            <span class="text-gray-900 font-semibold">Die-Cut Pillow</span>
+        </nav>
+    </div>
+</div>
+
+<!-- Main Content: Left product + Right sticky form -->
+<section class="py-12 max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-14">
+
+        <!-- LEFT: Product Detail (2/3) -->
+        <div class="lg:col-span-2">
+            <!-- Main Image + Thumbnails -->
+            <div class="w-full rounded-2xl overflow-hidden bg-[#f8f8f8] mb-4" style="height:480px;">
+                <img id="mainImg" src="https://sc02.alicdn.com/kf/H7c1d4f350a29425c9c20055e48480793d.jpg" alt="Custom Die-Cut Pillow" class="w-full h-full object-contain">
             </div>
-            
-            <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-6 fade-up">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Full Name *</label>
-                        <input name="name" type="text" required placeholder="Your name" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Email Address *</label>
-                        <input name="email" type="email" required placeholder="you@brand.com" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">WhatsApp Number</label>
-                        <input name="whatsapp" type="tel" placeholder="+86 ..." class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-yellow-400 text-sm transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Estimated Quantity</label>
-                        <input name="quantity" type="text" placeholder="e.g. 50 pcs" class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#c9a84c] transition text-sm">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-widest mb-2 text-gray-500">Project Details</label>
-                    <textarea name="message" rows="4" placeholder="Describe your preferred size, material, or design details..." class="w-full px-6 py-4 bg-white border border-gray-200 rounded-xl outline-none resize-none text-sm"></textarea>
-                </div>
-                <div class="pt-4 text-center">
-                    <button type="submit" class="w-full py-5 rounded-full text-white font-bold text-lg hover:opacity-90 transition shadow-lg" style="background:var(--gold)">SEND INQUIRY</button>
-                    <p class="text-xs text-gray-400 mt-4 italic">To get a quote faster, please send your design directly via WhatsApp.</p>
-                </div>
-            </form>
-
-        </div>
-    </section>
-    
-    <footer style="background:#050505" class="py-16 border-t border-white/5 text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-3xl font-bold text-white mb-8">YFON <span class="rainbow-text">HOME</span></div>
-            <div class="flex flex-wrap justify-center gap-8 text-xs text-gray-500 mb-10">
-                <a href="rugs.html" class="hover:text-white transition">Rugs</a>
-                <a href="pillows.html" class="hover:text-white transition">Pillows</a>
-                <a href="blankets.html" class="hover:text-white transition">Blankets</a>
-                <a href="pins.html" class="hover:text-white transition">Pins</a>
-                <a href="gifts.html" class="hover:text-white transition">Gifts</a>
+            <div class="grid grid-cols-4 gap-3 mb-10">
+                <button class="thumb-btn active border-2 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H7c1d4f350a29425c9c20055e48480793d.jpg')">
+                    <img src="https://sc02.alicdn.com/kf/H7c1d4f350a29425c9c20055e48480793d.jpg" class="w-full h-full object-contain" alt="Die-Cut Pillow 1"></button>
+                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H15bf8fabbc784b39ae73f8fe72b401c4n.jpg')">
+                    <img src="https://sc02.alicdn.com/kf/H15bf8fabbc784b39ae73f8fe72b401c4n.jpg" class="w-full h-full object-contain" alt="Die-Cut Pillow 2"></button>
+                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/H2cf9f60c2c0143b6979fe8abe139ce6aY.jpg')">
+                    <img src="https://sc02.alicdn.com/kf/H2cf9f60c2c0143b6979fe8abe139ce6aY.jpg" class="w-full h-full object-contain" alt="Die-Cut Pillow 3"></button>
+                <button class="thumb-btn border-2 border-transparent rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:100%;aspect-ratio:1/1;" onclick="switchImg(this,'https://sc02.alicdn.com/kf/Hcc2455929bcb41a68438c7056db7f540V.jpg')">
+                    <img src="https://sc02.alicdn.com/kf/Hcc2455929bcb41a68438c7056db7f540V.jpg" class="w-full h-full object-contain" alt="Die-Cut Pillow 4"></button>
             </div>
-            <p class="text-sm text-gray-600 uppercase tracking-widest">&copy; 2026 YFON HOME. All Rights Reserved.</p>
+
+            <!-- Specification Table -->
+            <div class="mb-12 fade-up">
+                <h2 class="font-serif text-2xl text-gray-900 mb-5">Specification</h2>
+                <div class="border border-gray-100 rounded-2xl overflow-hidden text-sm">
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Material</div><div class="px-6 py-3">100% Polyester</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Fill</div><div class="px-6 py-3">PP Cotton (Anti-pilling)</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Shape</div><div class="px-6 py-3">Any Custom Shape (Die-Cut)</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Size</div><div class="px-6 py-3">Custom Size</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Print</div><div class="px-6 py-3">Full Color, Both Sides</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Closure</div><div class="px-6 py-3">Hidden Zipper</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Packaging</div><div class="px-6 py-3">Single Vacuum Packaging</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">MOQ</div><div class="px-6 py-3">1 piece</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Production Capacity</div><div class="px-6 py-3">2,000 pcs / day</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Sample Time</div><div class="px-6 py-3">5-7 business days</div></div>
+                    <div class="spec-row grid grid-cols-2"><div class="px-6 py-3 font-semibold text-gray-500 text-xs">Production Time</div><div class="px-6 py-3">10-20 days after approval</div></div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-12 fade-up">
+                <h2 class="font-serif text-2xl text-gray-900 mb-4">What Is A Custom Die-Cut Pillow</h2>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">From pets and people to cars, trophies, and unforgettable moments — we transform your favorite photo or artwork into a custom-shaped, ultra-soft pillow you can actually hug. Each pillow is precision die-cut to match the exact silhouette of your image, printed in vibrant full color on both sides, and handmade with care.</p>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">Unlike standard square pillows, die-cut pillows follow the contour of your design — whether it's a character shape, brand mascot, logo, or any irregular form. This makes them ideal for brand merchandise, fan collections, promotional gifts, and retail product lines.</p>
+                <p class="text-gray-600 text-sm leading-relaxed">Whether it's a heartfelt gift or a high-impact branded product, our die-cut pillows combine comfort with personality. Premium PP cotton fill gives a plush, soft feel that lasts, while the hidden zipper allows easy refilling or washing.</p>
+            </div>
+
+            <!-- Key Benefits -->
+            <div class="mb-12 fade-up">
+                <h2 class="font-serif text-2xl text-gray-900 mb-6">Key Benefits of Custom Die-Cut Pillows</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3"><span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs font-bold mt-0.5" style="background:var(--gold)">1</span><div><strong class="text-gray-800 text-sm">Any Shape, Any Design</strong><p class="text-gray-500 text-xs mt-1">Cut to the exact silhouette of your artwork — characters, logos, animals, portraits, or abstract shapes. Zero limitations.</p></div></div>
+                    <div class="flex items-start gap-3"><span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs font-bold mt-0.5" style="background:var(--gold)">2</span><div><strong class="text-gray-800 text-sm">Vibrant Full-Color Print</strong><p class="text-gray-500 text-xs mt-1">High-definition sublimation printing on both sides. Colors stay vivid and sharp — gradients, fine details, and logos all reproduced with precision.</p></div></div>
+                    <div class="flex items-start gap-3"><span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs font-bold mt-0.5" style="background:var(--gold)">3</span><div><strong class="text-gray-800 text-sm">Premium Soft Feel</strong><p class="text-gray-500 text-xs mt-1">Filled with high-quality anti-pilling PP cotton for a plush, huggable feel that retains shape even after heavy use.</p></div></div>
+                    <div class="flex items-start gap-3"><span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs font-bold mt-0.5" style="background:var(--gold)">4</span><div><strong class="text-gray-800 text-sm">Hidden Zipper &amp; Vacuum Pack</strong><p class="text-gray-500 text-xs mt-1">Hidden zipper for a clean finish. Single vacuum packaging protects shape during shipping and storage.</p></div></div>
+                    <div class="flex items-start gap-3"><span class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs font-bold mt-0.5" style="background:var(--gold)">5</span><div><strong class="text-gray-800 text-sm">Fast Production, Low MOQ</strong><p class="text-gray-500 text-xs mt-1">Start from just 1 piece. With a daily capacity of 2,000 pcs, bulk orders ship on time for product launches and seasonal campaigns.</p></div></div>
+                </div>
+            </div>
+
+            <!-- Product Showcase Gallery -->
+            <div class="mb-12 fade-up">
+                <h2 class="font-serif text-2xl text-gray-900 mb-6">Product Showcase</h2>
+                <div class="overflow-hidden rounded-2xl">
+                    <div class="showcase-track flex gap-4" style="width:max-content; animation: showcaseScroll 32s linear infinite;">
+                        <!-- First set (8 images) -->
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H7c1d4f350a29425c9c20055e48480793d.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H15bf8fabbc784b39ae73f8fe72b401c4n.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H75f3bdc0f97844c2930ea4d5cd3810dcR.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H032addce591340748f0b07dc24b69af53.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H21fcd533c79e4dc68a89a34c6df29acdC.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H58b07dfac2554b898b793fc796335187c.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H0da69b8029e04b18953c697d3c6f9d56Q.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/Ha991e3bc322b4be8bee4ab70b196e3c2c.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H7c1d4f350a29425c9c20055e48480793d.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H15bf8fabbc784b39ae73f8fe72b401c4n.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H75f3bdc0f97844c2930ea4d5cd3810dcR.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H032addce591340748f0b07dc24b69af53.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H21fcd533c79e4dc68a89a34c6df29acdC.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H58b07dfac2554b898b793fc796335187c.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/H0da69b8029e04b18953c697d3c6f9d56Q.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                        <div class="shrink-0 rounded-xl overflow-hidden bg-[#f8f8f8]" style="width:280px;height:220px;"><img src="https://sc02.alicdn.com/kf/Ha991e3bc322b4be8bee4ab70b196e3c2c.jpg" class="w-full h-full object-contain" alt="Custom Pillow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mb-12 fade-up">
+                <h2 class="font-serif text-2xl text-gray-900 mb-6">Quick Q&amp;A</h2>
+                <div class="space-y-3">
+                    <div class="border border-gray-100 rounded-xl bg-white">
+                        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">What is your pricing?<span class="text-gray-400">+</span></button>
+                        <div class="faq-answer px-6 pb-4 text-sm text-gray-500">Price varies with design, size and order quantity. Send your design to us first and we will quote our best price immediately.</div>
+                    </div>
+                    <div class="border border-gray-100 rounded-xl bg-white">
+                        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">What is the production &amp; shipping time?<span class="text-gray-400">+</span></button>
+                        <div class="faq-answer px-6 pb-4 text-sm text-gray-500">Production time is usually 10-20 days depending on order quantity. Shipping takes about 10-15 days by UPS or FedEx.</div>
+                    </div>
+                    <div class="border border-gray-100 rounded-xl bg-white">
+                        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">How can I pay?<span class="text-gray-400">+</span></button>
+                        <div class="faq-answer px-6 pb-4 text-sm text-gray-500">Visa, Mastercard, T/T, PayPal, Apple Pay, Google Pay, Alibaba Trade Assurance.</div>
+                    </div>
+                    <div class="border border-gray-100 rounded-xl bg-white">
+                        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">Can I get any irregular shape?<span class="text-gray-400">+</span></button>
+                        <div class="faq-answer px-6 pb-4 text-sm text-gray-500">Yes. Any shape including character silhouettes, brand logos, animals, and abstract forms. Send us your artwork and we will die-cut accordingly.</div>
+                    </div>
+                    <div class="border border-gray-100 rounded-xl bg-white">
+                        <button class="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-sm text-gray-800" onclick="this.nextElementSibling.classList.toggle('open')">What file format do you need?<span class="text-gray-400">+</span></button>
+                        <div class="faq-answer px-6 pb-4 text-sm text-gray-500">AI, PDF, PNG (300 dpi+), or PSD files are preferred. JPG is also accepted. Send via WhatsApp or email for a free mockup.</div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <a href="#contact" class="fixed bottom-8 right-8 z-50 pulse-btn rounded-full px-8 py-4 text-white font-bold text-sm shadow-2xl flex items-center gap-2" style="background:var(--gold)">GET QUOTE</a>
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-    </script>
+
+        <!-- RIGHT: Sticky Inquiry Form (1/3) -->
+        <div class="lg:col-span-1" id="inquiry">
+            <div class="sticky-form">
+                <div class="border border-gray-100 rounded-2xl overflow-hidden shadow-lg">
+                    <div class="p-6 text-white" style="background:#0a0a0a">
+                        <h2 class="font-serif text-xl mb-1">Get a Free Quote</h2>
+                        <p class="text-xs text-gray-400">We respond within 6 hours</p>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <form action="https://formspree.io/f/xbdvdjdy" method="POST" class="space-y-4">
+                            <input type="hidden" name="product" value="Custom Die-Cut Pillow">
+                            <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Full Name *</label><input name="name" type="text" required placeholder="Your name" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                            <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Email *</label><input name="email" type="email" required placeholder="you@brand.com" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                            <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">WhatsApp Number</label><input name="whatsapp" type="tel" placeholder="+86 136 1386 6590" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                            <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Pillow Type</label>
+                                <select name="type" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm">
+                                    <option>Die-Cut Custom Shape</option><option>Character / Mascot Pillow</option><option>Pet / Portrait Pillow</option><option>Brand Logo Pillow</option><option>Not Sure - Advise Me</option>
+                                </select>
+                            </div>
+                            <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Quantity</label><input name="quantity" type="text" placeholder="e.g. 50 pcs" class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:border-yellow-400 text-sm transition"></div>
+                            <div><label class="block text-xs font-semibold uppercase tracking-widest mb-1.5 text-gray-500">Project Details</label><textarea name="message" rows="3" placeholder="Shape, size, design idea..." class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm resize-none"></textarea></div>
+                            <button type="submit" class="w-full py-4 rounded-xl text-black font-bold text-sm hover:opacity-90 transition pulse-cta" style="background:var(--gold)">SEND INQUIRY</button>
+                            <a href="https://wa.me/8613613866590" target="_blank" class="w-full py-3 rounded-xl text-white font-bold text-sm text-center transition block" style="background:#25D366">WhatsApp Us Directly</a>
+                            <p class="text-xs text-gray-400 italic text-center">Send design via WhatsApp for faster mockup.</p>
+                        </form>
+                        <div class="mt-5 pt-5 border-t border-gray-100 space-y-2">
+                            <div class="flex items-center gap-2 text-xs text-gray-400"><span style="color:var(--gold)">&#10003;</span> Free mockup, reply in 6 hours</div>
+                            <div class="flex items-center gap-2 text-xs text-gray-400"><span style="color:var(--gold)">&#10003;</span> MOQ from 1 piece</div>
+                            <div class="flex items-center gap-2 text-xs text-gray-400"><span style="color:var(--gold)">&#10003;</span> 10+ years manufacturing</div>
+                            <div class="flex items-center gap-2 text-xs text-gray-400"><span style="color:var(--gold)">&#10003;</span> Global shipping, 120+ countries</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer style="background:#050505" class="py-10 text-center text-xs text-gray-600">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-xl font-bold text-white mb-4">YFON <span class="rainbow-text">HOME</span></div>
+        <div class="flex flex-wrap justify-center gap-5 mb-5">
+            <a href="index.html" class="hover:text-white">Home</a>
+            <a href="rugs.html" class="hover:text-white">Rugs</a>
+            <a href="pillows.html" class="text-[#c9a84c]">Pillows</a>
+            <a href="blankets.html" class="hover:text-white">Blankets</a>
+            <a href="pins.html" class="hover:text-white">Pins</a>
+        </div>
+        <p>&copy; 2026 YFON HOME . www.yfonhomecustom.com</p>
+    </div>
+</footer>
+
+<a href="#inquiry" class="fixed bottom-8 right-8 z-50 pulse-cta rounded-full px-6 py-4 text-black font-bold text-sm shadow-2xl hidden lg:block" style="background:var(--gold)">GET QUOTE</a>
+
+<script>
+    function switchImg(btn, src) {
+        document.getElementById('mainImg').src = src;
+        document.querySelectorAll('.thumb-btn').forEach(b => { b.classList.remove('active'); b.style.borderColor = 'transparent'; });
+        btn.classList.add('active');
+        btn.style.borderColor = 'var(--gold)';
+    }
+    const obs = new IntersectionObserver(e => e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }), {threshold:0.1});
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
