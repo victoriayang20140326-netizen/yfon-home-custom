@@ -289,5 +289,13 @@
     const obs = new IntersectionObserver(e => { e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }) }, {threshold:0.1});
     document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 </script>
+<!-- Okki / Xiaoman visitor tracking (siteId 35311-33971) -->
+<script>
+  window.okkiConfigs = window.okkiConfigs || [];
+  function okkiAdd() { okkiConfigs.push(arguments); };
+  okkiAdd("analytics", { siteId: "35311-33971", gId: "" });
+</script>
+<script async src="//tfile.xiaoman.cn/okki/analyze.js?id=35311-33971-"></script>
+<!-- Okki / Xiaoman visitor tracking - end -->
 </body>
 </html>
